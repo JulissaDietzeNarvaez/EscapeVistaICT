@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(175, 211, 211);
+    font-family: 'Poppins', sans-serif;
+}
+
+.div1 {
+    text-align: center;
+}
+
+h2 {
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+p {
+    width: auto;
+    text-align: center;
+}
+
+.div2 {
+    text-align: left;
+}
