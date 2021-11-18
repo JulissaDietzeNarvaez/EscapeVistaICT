@@ -109,7 +109,7 @@ Sidebar: icons
 Chev elements
 ----------------*/ 
   & > ul > li > a:after {
-    content: '\f125';
+    content: caret-forward-outline;
     font-family: ionicons;
     font-size: 0.5em;
     width: 10px;
