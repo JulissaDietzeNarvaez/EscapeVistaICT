@@ -1,0 +1,22 @@
+<!DOCTYPE html>	
+<html>
+    <head>
+        <title>Escape Vista</title>
+        <script src="../JS/EscapeVista.js"></script>
+    </head>
+    <body>
+        <!--Image om te gebruiken in de image map-->
+        <img id="ImageHolder" src="../IMAGES/Test Image.png" alt="Image Not Found" usemap="#TestMap">
+        <!--Imagemap waarin de image gebruikt wordt-->
+        <map name="TestMap" id="TestMap">
+            <!--Click areas in de imagemap waarop geklikt kunnen worden-->
+            <area shape="circle" coords="170,110,50" alt="Test" href="#" onclick="HideTestImage()">
+            <area shape="rect" coords="170,110,350,400" alt="Test" href='InformatiePagina.html'>
+        </map>
+        <!--Test knoppen om de area's wel en niet klikbaar te maken-->
+        <button onclick="HideTestImage()">Hide Image</button>
+        <button onclick="ShowTestImage()">Show Image</button>
+        <button onclick="ShowImage1()">Test Image 1</button>
+        <button onclick="ShowImage2()">test image 2</button>
+    </body>
+</html>
