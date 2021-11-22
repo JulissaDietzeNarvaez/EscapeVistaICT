@@ -84,3 +84,11 @@ img {
 .mt-80 {
     margin-top: 80px
 }
+.element {
+    float: left;
+    width: 360px;
+    height: 250px;
+    background: #ffffff;
+    margin: 5px;
+    margin-bottom: 250px;
+  }
