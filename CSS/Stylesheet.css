@@ -4,3 +4,28 @@
     font-size: 30px;
     fill: white;
 }
+#EscapeVistaBody{
+    background-image: url('../IMAGES/Escape-Vista-Background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+#ImageMap{
+    grid-area: ImageGrid;
+}
+#ImageHolder{
+    width: 100%;
+    height: auto;
+    grid-area: ImageGrid;
+}
+#GridContainer{
+    display: grid; 
+    grid-template-columns: 25% 50% 25%; 
+    grid-template-rows: 20vh 80vh; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "TopGrid TopGrid TopGrid"
+    "LeftGrid ImageGrid RightGrid"; 
+    height: 100%;
+    width: 100%;
+}
