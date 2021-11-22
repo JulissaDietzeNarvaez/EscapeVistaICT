@@ -2,24 +2,21 @@
 <html>
     <head>
         <title>Escape Vista</title>
-        <script src="../JS/EscapeVista.js"></script>
+        
         <link rel="stylesheet" href="../CSS/Stylesheet.css">
     </head>
     <body id="EscapeVistaBody">
         <div id="GridContainer">
-            <!--Image om te gebruiken in de image map-->
-            <img id="ImageHolder" src="../IMAGES/School/Hoofdweg.jpg" alt="Image Not Found" usemap="#ImageMap">
             <!--Imagemap waarin de image gebruikt wordt-->
             <map name="ImageMap" id="ImageMap">
                 <!--Click areas in de imagemap waarop geklikt kunnen worden-->
-                <area shape="circle" coords="170,110,50" alt="Test" href="#" onclick="HideTestImage()">
-                <area shape="rect" coords="170,110,350,400" alt="Test" href='InformatiePagina.html'>
+                <area shape="rect" coords="340,255,410,310" style="cursor: pointer;" alt="Test" onclick="TravelPath('Hoofdingang')">
+                <area shape="rect" coords="230,500,550,575" style="cursor: pointer;" alt="Test" onclick="TravelPath('Hoofdweg')">
             </map>
+            <!--Image om te gebruiken in de image map-->
+            <img id="ImageHolder" src="../IMAGES/School/Pad naar Hoofdingang.jpg" alt="Image Not Found" usemap="#ImageMap">
         </div>
-        <!--Test knoppen om de area's wel en niet klikbaar te maken-->
-        <button onclick="HideTestImage()">Hide Image</button>
-        <button onclick="ShowTestImage()">Show Image</button>
-        <button onclick="ShowImage1()">Test Image 1</button>
-        <button onclick="ShowImage2()">test image 2</button>
     </body>
 </html>
+<script src="../JS/EscapeVistaImageInfo.JS"></script>
+<script src="../JS/EscapeVista.js"></script>

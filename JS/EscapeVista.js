@@ -17,3 +17,6 @@ function ShowImage1(){
 function ShowImage2(){
     document.getElementById("ImageHolder").src='../IMAGES/Test Image2.png'
 }
+function Travelpath(Destination){
+    
+}
