@@ -4,16 +4,12 @@
 <html>
     <head>
         <link rel="stylesheet" href="../CSS/InformatiePagina.css">
-        <link rel="stylesheet" href="../CSS/InformatiePaginaSideBar.css">
         <link rel="stylesheet" href="../SCSS/InformatiePagina.scss">
-        <link rel="icon"       href="../IMAGES/vista.jpg" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap">
+        <link rel="icon"       href="../IMAGES/vista.jpg" type="image/x-icon">                        
         <script src="/JS/script.js"></script>
         <script src="/JS/jquery.min.js"></script>
-        <title>Escape Vista ICT</title>  
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Escape Vista ICT</title>                 
     </head>
     <body>         
       <nav class="vertical-menu-wrapper">
@@ -21,27 +17,27 @@
           <div><a href="#top">Vista College ICT</a></div>
             <span class="open-menu-btn" onClick="close"><hr><hr><hr></span>
           </div>
-            <ul class="vertical-menu">
-              <li><a href="#opleidingen" class="collapsible">Opleidingen</a>
-                <div  class="submenu">
-                  <ul>
-                      <a href="#">Medewerker ICT Support</a>
-                      <a href="#">Allround Medewerker IT-Systems & Devices</a>
-                      <a href="#">Expert IT-Systems & Devices</a>
-                      <a href="#">Software Developer</a>
-                      <a href="#">Vakexpert Geo, Data & Design</a>
-                  </ul>
-                </div>
-              </li>
-
+          <ul class="vertical-menu">
+            <li><a href="#opleidingen" class="collapsible"><button class="dropdown-btn">Opleidingen
+              <i class="fa fa-caret-down"></i></button></a>
+              <div  class="dropdown-container">
+                
+                    <a href="#">Medewerker ICT Support</a>
+                    <a href="#">Allround Medewerker IT-Systems & Devices</a>
+                    <a href="#">Expert IT-Systems & Devices</a>
+                    <a href="#">Software Developer</a>
+                    <a href="#">Vakexpert Geo, Data & Design</a>
+                
+              </div>
+            </li>
               <li><a href="#vakken">Vakken</a></li>
               <li><a href="#docenten">Docenten</a></li>
               <li><a href="#plattegrond">Plattegrond</a></li>
               <li><a href="#huisregels">Huisregels</a></li>
               <li><a href="#contact">Contact</a></li>
-            </ul>
+          </ul>
+        </div>
       </nav>
-      
       
 
       <div class="content-wrapper">
@@ -146,9 +142,9 @@
           <!-- Contact -->
           <h1 class="contact"><a class="target" name="contact">Contact</a></h1>
         </div>
-     </div>          
+      </div>          
         
-              <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
+              
 
     </body>
 </html>
