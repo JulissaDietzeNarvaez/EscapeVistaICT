@@ -1,191 +1,158 @@
 <!DOCTYPE html>
+<!-- Informatie pagina waar alle informatie staat over de 
+     opleidingen, vakken, docenten, huisregels, plattegrond en contactgegevens. -->
 <html>
     <head>
-        <link rel="stylesheet" href="../CSS/EscapeVistaICT.css">
-        <link rel="stylesheet" href="../CSS/style.css">
-        <link rel="stylesheet" href="../SCSS/SCCS.scss">
-        <link rel="icon" href="../IMAGES/vista.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="../CSS/InformatiePagina.css">
+        <link rel="stylesheet" href="../CSS/InformatiePaginaSideBar.css">
+        <link rel="stylesheet" href="../SCSS/InformatiePagina.scss">
+        <link rel="icon"       href="../IMAGES/vista.jpg" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
-        <title>Escape Vista ICT</title>        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap">
+        <script src="/JS/script.js"></script>
+        <script src="/JS/jquery.min.js"></script>
+        <title>Escape Vista ICT</title>  
+        
     </head>
-    <body>
-        <div class="div1">
-            <h2>Welkom bij Vista</h2>
-            <p>
-                Met een escape room willen we studenten bekend maken met de ICT afdeling van het
-                VISTA college, locatie Heerlen.
-            </p>
+    <body>         
+      <nav class="vertical-menu-wrapper">
+        <div class="vertical-menu-logo">
+          <div><a href="#top">Vista College ICT</a></div>
+            <span class="open-menu-btn" onClick="close"><hr><hr><hr></span>
           </div>
+            <ul class="vertical-menu">
+              <li><a href="#opleidingen" class="collapsible">Opleidingen</a>
+                <div  class="submenu">
+                  <ul>
+                      <a href="#">Medewerker ICT Support</a>
+                      <a href="#">Allround Medewerker IT-Systems & Devices</a>
+                      <a href="#">Expert IT-Systems & Devices</a>
+                      <a href="#">Software Developer</a>
+                      <a href="#">Vakexpert Geo, Data & Design</a>
+                  </ul>
+                </div>
+              </li>
 
-         
+              <li><a href="#vakken">Vakken</a></li>
+              <li><a href="#docenten">Docenten</a></li>
+              <li><a href="#plattegrond">Plattegrond</a></li>
+              <li><a href="#huisregels">Huisregels</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+      </nav>
+      
+      
 
-          <section class="app">
-            <aside class="sidebar">
-                   <header>
-                  Menu
-                </header>
-              <nav class="sidebar-nav">
-           
-                <ul>
-                  <li>
-                    <a href="#"><i class="ion-bag"></i> <span>Opleidingen</span></a>
-                    <ul class="nav-flyout">
-                      <li>
-                        <a href="#"><i class="ion-ios-color-filter-outline"></i>Allround medewerker IT-systems & devices - Niveau 3</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-clock-outline"></i>Expert IT-systems and devices - Niveau 4</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-android-star-outline"></i>Medewerker ICT support - Niveau 2</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-heart-broken"></i>Software developer (ICT) - Niveau 4</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-heart-broken"></i>Vakexpert geo, data & design - Niveau 4</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#"><i class="ion-ios-settings"></i> <span class="">Vakken</span></a>
-                    <ul class="nav-flyout">
-                      <li>
-                        <a href="#"><i class="ion-ios-alarm-outline"></i>AMO (Applicatie- en media ontwikkelaar)</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-camera-outline"></i>Burgerschap</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-chatboxes-outline"></i>C#</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>CCCCC</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>Database</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>Dataverwerking</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>Engels</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>Geo- Kennis en digitaal ontwerpen</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>Hard- en software</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>ICT security</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>Nederlands</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>Netwerk beheer</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>Netwerkbesturingssystemen</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>PHP</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-cog-outline"></i>Rekenen</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#"><i class="ion-ios-briefcase-outline"></i> <span class="">Docenten</span></a>
-                    <ul class="nav-flyout">
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Guy Bastiaens</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-lightbulb-outline"></i>Dieter Bollen</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-location-outline"></i>Mark van den Bosch</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-locked-outline"></i>Egbert Buchem</a>
-                      </li>
-                       <li>
-                        <a href="#"><i class="ion-ios-navigate-outline"></i>Jeroen Busselman</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Paul Derix</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Joan van Deur</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Nicole Dubuisson</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Erik van Heusden</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Ivo Heuts</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Johan de Klijn</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Jo Limpens</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Ron Limpens</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Gert-Jan Lonussen</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Arend Lunenborg</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Lennert de Moor</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>John Munnichs</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Yvonne Schwochow</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Erika Vallinga</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>Eva Wagemans</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="ion-ios-flame-outline"></i>René van der Zander</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="#"><i class="ion-ios-analytics-outline"></i> <span class="">Plattegrond</span></a>                    
-                  </li>
-                  <li>
-                    <a href="#"><i class="ion-ios-paper-outline"></i> <span class="">Huisregels</span></a>                    
-                  </li>                  
-                  <li>
-                    <a href="#"><i class="ion-ios-medical-outline"></i> <span class="">Contact</span></a>
-                  </li>
-                </ul>
-              </nav>
-            </aside>
-          </section>
+      <div class="content-wrapper">
+        <div class="content">       
+          <!-- Opleidingen -->
+          <h1 class="opleidingen"><a class="target" name="//opleidingen">Opleidingen</a></h1>
+            <h3 class="opleiding1">Medewerker ICT Support - Niveau 2</h3>
+              <p class="p">tekst</p>
+            <h3 class="opleiding2">Allround Medewerker IT-Systems & Devices - Niveau 3</h3>
+              <p class="p">tekst</p>
+            <h3 class="opleiding3">Expert IT-Systems & Devices - Niveau 4</h3>
+              <p class="p">tekst</p>
+            <h3 class="opleiding4">Software Developer (ICT) - Niveau 4</h3>
+              <p class="p">tekst</p>                  
+            <h3 class="opleiding5">Vakexpert Geo, Data & Design - Niveau 4</h3>
+              <p class="p">tekst</p>
+
+          <!-- Vakken -->
+          <h1 class="vakken"><a class="target" name="vakken">Vakken</a></h1>
+            <h3>AMO (Applicatie- en Media Ontwikkelaar)</h3>
+              <p class="p">tekst</p>
+            <h3>Burgerschap</h3>
+              <p class="p">tekst</p>
+            <h3>C#</h3>
+              <p class="p">tekst</p>
+            <h3>CCCCC</h3>
+              <p class="p">tekst</p>
+            <h3>Database</h3>
+              <p class="p">tekst</p>
+            <h3>Dataverwerking</h3>
+              <p class="p">tekst</p>
+            <h3>Engels</h3>
+              <p class="p">tekst</p>
+            <h3>Geo- Kennis en Digitaal Ontwerpen</h3>
+              <p class="p">tekst</p>
+            <h3>Hard- en software</h3>
+              <p class="p">tekst</p>
+            <h3>ICT Security</h3>
+              <p class="p">tekst</p>
+            <h3>Nederlands</h3>
+              <p class="p">tekst</p>
+            <h3>Netwerk Beheer</h3>
+              <p class="p">tekst</p>
+            <h3>Netwerkbesturingssystemen</h3>
+              <p class="p">tekst</p>
+            <h3>PHP</h3>
+              <p class="p">tekst</p>
+            <h3>Rekenen</h3>
+              <p class="p">tekst</p>
+                
+          <!-- Docenten -->
+          <h1 class="docenten"><a class="target" name="docenten">Docenten</a></h1>
+            <h3>Guy Bastiaens</h3>
+              <p class="p">tekst</p>
+            <h3>Dieter Bollen</h3>
+              <p class="p">tekst</p>
+            <h3>Mark van den Bosch</h3>
+              <p class="p">tekst</p>
+            <h3>Egbert Buchem</h3>
+              <p class="p">tekst</p>
+            <h3>Jeroen Busselman</h3>
+              <p class="p">tekst</p>
+            <h3>Paul Derix</h3>
+              <p class="p">tekst</p>
+            <h3>Joan van Deur</h3>
+              <p class="p">tekst</p>
+            <h3>Nicole Dubuisson</h3>
+              <p class="p">tekst</p>
+            <h3>Erik van Heusden</h3>
+              <p class="p">tekst</p>
+            <h3>Ivo Heuts</h3>
+              <p class="p">tekst</p>
+            <h3>Johan de klijn</h3>
+              <p class="p">tekst</p>
+            <h3>Jo Limpens</h3>
+              <p class="p">tekst</p>
+            <h3>Ron Limpens</h3>
+              <p class="p">tekst</p>
+            <h3>Gert-Jan Lonussen</h3>
+              <p class="p">tekst</p>
+            <h3>Arend Lunenborg</h3>
+              <p class="p">tekst</p>
+            <h3>Lennert de Moor</h3>
+              <p class="p">tekst</p>
+            <h3>John Munnichs</h3>
+              <p class="p">tekst</p>
+            <h3>Yvonne Schwochow</h3>
+              <p class="p">tekst</p>
+            <h3>Erika Vallinga</h3>
+              <p class="p">tekst</p>
+            <h3>Eva Wagemans</h3>
+              <p class="p">tekst</p>
+            <h3>René van der Zander</h3>
+              <p class="p">tekst</p>
+
+          <!-- Plattegrond -->
+          <h1 class="plattegrond"><a class="target" name="plattegrond">Plattegrond</a></h1>
+
+          <!-- Huisregels -->
+          <h1 class="huisregels"><a class="target" name="huisregels">Huisregels</a></h1>
+
+          <!-- Contact -->
+          <h1 class="contact"><a class="target" name="contact">Contact</a></h1>
+        </div>
+     </div>          
+        
+              <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script><script  src="./script.js"></script>
 
     </body>
 </html>
 
-<!--    Door middel van een escape-room willen we nieuwe studenten op een interactieve 
-        en ict-waardige manier bekend maken met onze opleidingen.
-        Deze escape-room zal onderdeel zijn van het introductieprogramma.-->
+
 
         
