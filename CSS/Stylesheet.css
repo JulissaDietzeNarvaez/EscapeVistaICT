@@ -9,6 +9,8 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
+    margin: 0px;
+    padding: 0px;
 }
 #ImageMap{
     grid-area: ImageGrid;
@@ -21,11 +23,11 @@
 #GridContainer{
     display: grid; 
     grid-template-columns: 25% 50% 25%; 
-    grid-template-rows: 20vh 80vh; 
+    grid-template-rows: 15% 80%; 
     gap: 0px 0px; 
     grid-template-areas: 
     "TopGrid TopGrid TopGrid"
     "LeftGrid ImageGrid RightGrid"; 
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
