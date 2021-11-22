@@ -11,12 +11,9 @@ function ShowTestImage(){
 
 //switch the test image
 function ShowImage1(){
-    document.getElementById("ImageHolder").src='../IMAGES/Test Image.png'
+    document.getElementById("ImageHolder").src='../IMAGES/School/Hoofdweg.jpg'
 }
 //switch the test image
 function ShowImage2(){
-    document.getElementById("ImageHolder").src='../IMAGES/Test Image2.png'
-}
-function Travelpath(Destination){
-    
+    document.getElementById("ImageHolder").src='../IMAGES/School/Hoofdingang.jpg'
 }
