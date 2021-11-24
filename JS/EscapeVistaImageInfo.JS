@@ -85,7 +85,7 @@ var ImageDataList = [
         Coordinates2: "300,525,475,575",
         Coordinates3: "225,250,270,315",
         Coordinates4: "680,355,755,435",
-        Destination1: null,
+        Destination1: "Kantine",
         Destination2: "FietsenStalling",
         Destination3: "Toilet",
         Destination4: "Gang van Receptie naar Fietsenstalling",
@@ -115,6 +115,18 @@ var ImageDataList = [
         Destination4: null,
         Task: null,
     },
+    {
+        ImageID: "Kantine",
+        Coordinates1: "125,220,200,270",
+        Coordinates2: "285,505,480,575",
+        Coordinates3: null,
+        Coordinates4: null,
+        Destination1: null,
+        Destination2: "Gang met Toiletten",
+        Destination3: null,
+        Destination4: null,
+        Task: null,
+    }
 ]
 
 //Tasklist uitleg

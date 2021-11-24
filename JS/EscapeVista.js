@@ -38,5 +38,5 @@ function TravelPath(Destination){
     });
 }
 
-ImageMap.areas[1].focus();
+ImageMap.areas[0].focus();
 
