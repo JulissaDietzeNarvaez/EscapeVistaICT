@@ -37,3 +37,6 @@ function TravelPath(Destination){
         }
     });
 }
+
+ImageMap.areas[1].focus();
+
