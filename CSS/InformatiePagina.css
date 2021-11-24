@@ -1,6 +1,16 @@
+
 body {margin: 0; background: #181824; font-family: Arial; }
 nav {
     
+body {
+  background-color: #fefefe;
+  margin: 0; 
+  font-family: Arial;
+}
+html{
+  scroll-behavior: smooth;
+}
+nav {    
   position: fixed;
   width: 100%;
   max-width: 300px;
@@ -56,6 +66,214 @@ nav li#user-info > span:after{
 .vertical-menu li ul li:open{
 
 }
+
+nav .vertical-menu hr{opacity: 0.1; border-width: 0.5px;}
+nav ul{width: 90%; padding-inline-start: 0; margin: 10px; height: calc(100% - 20px); }
+nav .vertical-menu-logo{padding: 20px; font-size: 1.3em; position: relative}
+nav .vertical-menu-logo .open-menu-btn{width: 30px; height: max-content; position: absolute; display: block; 
+    right: 20px; top: 0; bottom: 0; margin: auto; cursor: pointer;}
+nav .vertical-menu-logo .open-menu-btn hr{margin: 5px 0}
+nav li{list-style: none; padding: 10px 10px; cursor: pointer;}
+nav li:hover{ color: rgba(75, 105, 176,1); }
+nav li#user-info{position: absolute; bottom: 0; width: 80%;}
+nav li#user-info > span{display: block; float: right; font-size: 0.9em; position: relative; opacity: 0.6;}
+nav li#user-info > span:after{
+  content: '';
+  width: 12px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  background: green;
+  left: -20px; top: 0; bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+}
+.content-wrapper{
+  width: calc(100% - 300px);
+  height: auto;
+  position: absolute;
+  left: 300px;
+  padding: 20px;
+}
+.closed-menu .content-wrapper{
+  width: 100%;
+  left: 50px;
+}
+.content-wrapper{
+  transition: all 300ms;
+}
+.vertical-menu-wrapper .vertical-menu-logo div{transition: all 100ms;}
+.closed-menu .vertical-menu-wrapper .vertical-menu-logo div{
+  margin-left: -100px;
+}
+.vertical-menu-wrapper .vertical-menu-logo .open-menu-btn{transition: all 300ms;}
+.closed-menu .vertical-menu-wrapper .vertical-menu-logo .open-menu-btn{
+  left: 7px;
+  right: 100%;
+}
+
+.closed-menu .vertical-menu-wrapper ul,.closed-menu .vertical-menu-wrapper hr{margin-left: -300px;}
+.vertical-menu-wrapper ul, .vertical-menu-wrapper hr{transition: all 100ms;}
+.content-wrapper{background: #ebebeb;}
+.content{
+  width: 90%;
+  min-height: 90%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+a {
+  color: #111;
+  text-decoration: none;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+a:hover {
+  color: rgb(139, 139, 139);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.app {
+  height: 100vh;
+}
+
+/* -------------
+Sidebar
+----------------*/
+.sidebar {
+  position: fixed;
+  width: 17em;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+  background-color: #19222a;
+  -webkit-transform: translateZ(0);
+  visibility: visible;
+  -webkit-backface-visibility: hidden;
+}
+.sidebar header {
+  background-color: #e56a54;
+  font-size: 22px;
+  width: 100%;
+  height: 5%;
+  display: block;
+  padding: 0.75em 1em;
+}
+
+/* -------------
+Sidebar Nav
+----------------*/
+.sidebar-nav {
+  position: absolute;
+  background-color: #19222a;
+  height: 100%;
+  font-weight: 400;
+  font-size: 1.2em;
+  overflow: auto;
+  padding-bottom: 6em;
+  z-index: 9;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  /* -------------
+  Chev elements
+  ----------------*/
+  /* -------------
+  Nav-Flyout
+  ----------------*/
+  /* -------------
+  Hover
+  ----------------*/
+}
+.sidebar-nav ul {
+  list-style: none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.sidebar-nav ul li {
+  margin-left: 0;
+  padding-left: 0;
+  display: inline-block;
+  width: 100%;
+  /* -------------
+  Sidebar: icons
+  ----------------*/
+}
+.sidebar-nav ul li a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.75em;
+  padding: 1.05em 1em;
+  position: relative;
+  display: block;
+}
+.sidebar-nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+.sidebar-nav ul li i {
+  font-size: 1.8em;
+  padding-right: 0.5em;
+  width: 9em;
+  display: inline;
+  vertical-align: middle;
+}
+.sidebar-nav > ul > li > a:after {
+  /*content: caret-forward-outline;*/
+  font-family: ionicons;
+  font-size: 0.5em;
+  width: 10px;
+  color: #fff;
+  position: absolute;
+  right: 0.75em;
+  top: 45%;
+}
+.sidebar-nav .nav-flyout {
+  position: absolute;
+  background-color: #080D11;
+  z-index: 9;
+  left: 2.5em;
+  top: 0;
+  height: 100vh;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  overflow-y: auto;
+  
+  top: 0;
+  bottom: 0;
+}
+
+
+.sidebar-nav .nav-flyout a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.sidebar-nav ul > li:hover .nav-flyout {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+
+.opleidingen{
+  color: black;
+}
 */
 
 .content-wrapper{
@@ -108,6 +326,18 @@ nav li#user-info > span:after{
 
 .vakken{
 
+}
+
+.opleiding1{
+  color: black;
+}
+
+.p{
+  color: black;
+}
+
+.vakken{
+  color: black;
 }
 
 .target{

@@ -18,3 +18,7 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+  if ($("body").hasClass("closed-menu")) {
+    $("body").removeClass("closed-menu");
+  } else $("body").addClass("closed-menu");
+}); 
