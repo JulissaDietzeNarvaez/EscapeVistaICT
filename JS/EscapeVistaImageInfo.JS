@@ -1,8 +1,16 @@
+//Lijst uitleg
+//ImageID: De naam van de item and de naam van de image die moet verschijnen
+//Coordinates: de coordinaten voor de areas waarop geklikt kan worden
+//Destination: Waar de gebruiker naartoe gaat als op de bijbehorende area geklikt wordt
+//task: als de image een opdracht of bericht heeft voor de gebruiker dan wordt deze hier aan gegeven, bij het laden van de image wordt dan de task uit de TaskList[] gehaald.
+
+
+
 var ImageDataList = [
     {
         ImageID: "Hoofdweg",
-        Coordinates1: "20,170,125,230",
-        Coordinates2: "670,215,735,260",
+        Coordinates1: "20,180,125,230",
+        Coordinates2: "690,220,755,270",
         Coordinates3: null,
         Coordinates4: null,
         Destination1: "Pad naar Hoofdingang",
@@ -53,17 +61,78 @@ var ImageDataList = [
         Coordinates2: "45,500,265,575",
         Coordinates3: "525,160,575,210",
         Coordinates4: null,
-        Destination1: "",
+        Destination1: "FietsenStalling",
         Destination2: "Zijweg aan Hoofdweg",
         Destination3: "",
         Destination4: null,
         Task: null,
     },
+    {
+        ImageID: "FietsenStalling",
+        Coordinates1: "415,185,465,235",
+        Coordinates2: "270,500,500,575",
+        Coordinates3: null,
+        Coordinates4: null,
+        Destination1: "Gang met Toiletten",
+        Destination2: "Zij pad",
+        Destination3: null,
+        Destination4: null,
+        Task: null,
+    },
+    {
+        ImageID: "Gang met Toiletten",
+        Coordinates1: "370,245,435,300",
+        Coordinates2: "300,525,475,575",
+        Coordinates3: "225,250,270,315",
+        Coordinates4: "680,355,755,435",
+        Destination1: null,
+        Destination2: "FietsenStalling",
+        Destination3: "Toilet",
+        Destination4: "Gang van Receptie naar Fietsenstalling",
+        Task: null,
+    },
+    {
+        ImageID: "Toilet",
+        Coordinates1: "280,510,495,575",
+        Coordinates2: null,
+        Coordinates3: null,
+        Coordinates4: null,
+        Destination1: "Gang met Toiletten",
+        Destination2: null,
+        Destination3: null,
+        Destination4: null,
+        Task: "Toilet",
+    },
+    {
+        ImageID: "Gang van Receptie naar Fietsenstalling",
+        Coordinates1: "360,245,435,310",
+        Coordinates2: "285,510,480,575",
+        Coordinates3: null,
+        Coordinates4: null,
+        Destination1: "Gang met Toiletten",
+        Destination2: "Receptie",
+        Destination3: null,
+        Destination4: null,
+        Task: null,
+    },
 ]
+
+//Tasklist uitleg
+//TaskID: waar naar gekeken worden waar de opdracht bij hoort
+//TaskQuestion: De vraag die wordt gesteld aan de gebruiker, dit kan ook eventuele tekst zijn om iets aan de gebruiker duidelijk te maken.
+//TaskAnswer:
+//Completed: als de opdracht deze variable op 'true' heeft staan dan heeft de gebruiker deze opdracht gezien en wordt deze niet nogmaals weergegeven.
 var TaskList = [
     {
         TaskID: "Rekenen",
         TaskQuestion: "",
         TaskAnwser: "",
+        Completed: false,
+    },
+    {
+        TaskID: "Toilet",
+        TaskQuestion: "Je hebt de toiletten gevonden, gefeliciteerd.",
+        TaskAnwser: "",
+        Completed: false,
     },
 ]
