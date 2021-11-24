@@ -38,5 +38,6 @@ function TravelPath(Destination){
     });
 }
 
-ImageMap.areas[0].focus();
+ImageMap.areas[1].focus();
+alert("Dit is een alert.");
 
