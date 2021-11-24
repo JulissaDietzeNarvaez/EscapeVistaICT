@@ -39,4 +39,5 @@ function TravelPath(Destination){
 }
 
 ImageMap.areas[1].focus();
+alert("Dit is een alert.");
 
