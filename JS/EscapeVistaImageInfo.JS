@@ -137,7 +137,7 @@ var ImageDataList = [
         Destination2: "",
         Destination3: null,
         Destination4: null,
-        Task: null,
+        Task: "Mees",
     }
 ]
 
@@ -151,12 +151,21 @@ var TaskList = [
         TaskID: "Rekenen",
         TaskQuestion: "",
         TaskAnwser: "",
-        Completed: false,
+        TaskCompleted: false,
+        TaskHint:"'../IMAGES/School/Hint Rekenen.jpg'",
     },
     {
         TaskID: "Toilet",
         TaskQuestion: "Je hebt de toiletten gevonden, gefeliciteerd.",
         TaskAnwser: "",
-        Completed: false,
+        TaskCompleted: false,
+        TaskHint:"",
+    },
+    {
+        TaskID: "Mees",
+        TaskQuestion: "Dit is Mees, hier kun je eten en drinken kopen.",
+        TaskAnwser: "",
+        TaskCompleted: false,
+        TaskHint:"",
     },
 ]
