@@ -96,9 +96,7 @@ a:hover {
   height: 100vh;
 }
 
-/* -------------
-Sidebar
-----------------*/
+/* ------------- Sidebar ----------------*/
 .sidebar {
   position: fixed;
   width: 17em;
@@ -106,9 +104,9 @@ Sidebar
   top: 0;
   overflow: hidden;
   background-color: #19222a;
-  -webkit-transform: translateZ(0);
+  /*-webkit-transform: translateZ(0);*/
   visibility: visible;
-  -webkit-backface-visibility: hidden;
+  /*-webkit-backface-visibility: hidden;*/
 }
 .sidebar header {
   background-color: #e56a54;
@@ -119,9 +117,7 @@ Sidebar
   padding: 0.75em 1em;
 }
 
-/* -------------
-Sidebar Nav
-----------------*/
+/* ------------- Sidebar Nav ----------------*/
 .sidebar-nav {
   position: absolute;
   background-color: #19222a;
@@ -223,6 +219,8 @@ Sidebar Nav
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+
+/* ----------------- General --------------------*/
 h1{
  font-size: 26px; 
 }
@@ -238,9 +236,9 @@ p{
   transition: all 0.5s ease;
   margin: 0,10,0,0;
 }
+/* ----------------- General --------------------*/
 
 /* ----------------- Opleidingen --------------------*/
-
 .opleidingen{
   color: black;
 }
@@ -249,6 +247,48 @@ p{
   color: black;
 }
 
+/*Bron: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol */
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 60%;
+  height: max-content;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 60%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 /* ----------------- Opleidingen --------------------*/
 
 
@@ -259,7 +299,6 @@ p{
 .vakken{
   color: black;
 }
-
 /* ----------------- Vakken --------------------*/
 
 
@@ -301,8 +340,19 @@ Bron: https://www.w3schools.com/howto/howto_css_team.asp
 .title {
   color: grey;
 }
-
 /* ----------------- Docenten --------------------*/
 
 
 
+/* ----------------- Plattegrond --------------------*/
+/* ----------------- Plattegrond --------------------*/
+
+
+/* ----------------- Huisregels --------------------*/
+.pdf{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/* ----------------- Huisregels --------------------*/
+
+/* ----------------- Contact --------------------*/
+/* ----------------- Contact --------------------*/

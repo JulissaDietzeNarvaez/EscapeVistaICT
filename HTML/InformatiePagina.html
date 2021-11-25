@@ -3,11 +3,10 @@
      opleidingen, vakken, docenten, huisregels, plattegrond en contactgegevens. -->
 <html>
     <head>
-        <link rel="stylesheet" href="../CSS/InformatiePagina.css">
-        <link rel="stylesheet" href="../SCSS/InformatiePagina.scss">
+        <link rel="stylesheet" href="../CSS/InformatiePagina.css">        
         <link rel="icon"       href="../IMAGES/vista.jpg" type="image/x-icon">                        
-        <script src="/JS/script.js"></script>
-        <script src="/JS/jquery.min.js"></script>        
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <title>Escape Vista ICT</title>                 
     </head>
     <body>         
@@ -17,16 +16,7 @@
             <span class="open-menu-btn" onClick="close"><hr><hr><hr></span>
           </div>
           <ul class="vertical-menu">            
-            <li>
-              <a href="#opleidingen"class="collapsible">Opleidingen</a></br>               
-                <!--
-                <a href="#">Medewerker ICT Support</a></br>
-                <a href="#">Allround Medewerker IT-Systems & Devices</a></br>
-                <a href="#">Expert IT-Systems & Devices</a></br>
-                <a href="#">Software Developer</a></br>
-                <a href="#">Vakexpert Geo, Data & Design</a></br>
-                -->
-            </li>
+              <li><a href="#opleidingen">Opleidingen</a></li>
               <li><a href="#vakken">Vakken</a></li>
               <li><a href="#docenten">Docenten</a></li>
               <li><a href="#plattegrond">Plattegrond</a></li>
@@ -35,6 +25,7 @@
           </ul>
         </div>
       </nav>
+
       
 
       <div class="content-wrapper">
@@ -42,7 +33,38 @@
           <!-- Opleidingen -->
           <h1 class="opleidingen"><a class="target" name="opleidingen" style="pointer-events: none;">Opleidingen</a></h1>
             <h3 class="opleiding1">Medewerker ICT Support - Niveau 2</h3>
-              <p class="p">tekst</p>
+              <button class="accordion">Opleidingsinformatie</button>
+                <div class="panel">
+                  <p>Als medewerker ICT ben je klantgericht, kritisch, creatief en flexibel. Je kunt goed samenwerken in multidisciplinaire teams én communiceren met mensen op alle niveaus. Van tijdsdruk word jij niet koud of warm. Jij zorgt ervoor dat alle medewerkers op hun werkplek een goed functionerende computer vinden. Je stelt aan de hand van procedures gebruiksklare computers samen uit onderdelen en vervangt wat kapot is.
+                  </br>
+                  </br>
+                  Je installeert en onderhoud hardware, software, verbindingen en netwerken en behandelt incidentmeldingen van klanten of collega's. Het is een divers vak, waarin veel vaardigheden van je gevraagd worden. Om die reden krijg je tijdens je opleiding theorie én praktijklessen waarmee je straks een mooie en brede basis hebt om aan de slag te gaan. Op welke plek dan ook. Je volgt onder andere de vakken basis netwerkbeheer en hard- en software, maar ook avo (algemeen vormend onderwijs) vakken als Nederlands, Engels en rekenen.</p>
+                </br>
+                </div>
+            
+              <button class="accordion">Keuzedelen</button>
+                <div class="panel">
+                  <p>Jouw opleiding bestaat uit een basis-, profiel- en keuzedeel (of -delen). Het keuzedeel - verbredend of verdiepend - maakt je studie interessanter. Zo zorgen de keuzedelen voor een betere aansluiting op een eventuele vervolgstudie en bieden ze meerwaarde als je gaat solliciteren op de arbeidsmarkt.</p>
+                </div>
+            
+              <button class="accordion">Stage(s)</button>
+                <div class="panel">
+                  <p>Naast de theoretische en praktische lessen op school loop je stage, ook wel beroepspraktijkvorming (BPV) genoemd. Uiteraard betreft dit een erkend leerbedrijf (SBB). De praktijkbegeleider van school en je praktijkopleiders van het leerbedrijf beoordelen je beroepshouding, resultaten en je inzet. Een positieve beoordeling van je stage is een voorwaarde om je diploma te halen.
+                </br>
+                </br>
+                Je kunt stage lopen in een computerzaak, een technisch bedrijf of een kantoor of bij een helpdesk.</p>
+                </div>
+              
+              <button class="accordion">Verder leren/werken</button>
+                <div class="panel">
+                <p>Als je wilt doorleren na deze opleiding, dan is onze opleiding Medewerker beheer ICT (niveau 3) misschien wel wat voor jou.
+                  </br>
+                  </br>
+                  Je kunt ook gaan werken. Medewerkers ICT zijn in allerlei organisaties te vinden. Je werk is te combineren met commerciële activiteiten, bijvoorbeeld in de computer-detailhandel of met technische en administratieve activiteiten binnen diverse bedrijf. Er zijn ook Medewerkers ICT die ondersteunend werk doen in het onderwijs of die worden ingezet bij het hergebruik (recyclen) van hardware-onderdelen.</p>
+                </div>  
+
+
+
             <h3 class="opleiding2">Allround Medewerker IT-Systems & Devices - Niveau 3</h3>
               <p class="p">tekst</p>
             <h3 class="opleiding3">Expert IT-Systems & Devices - Niveau 4</h3>
@@ -51,6 +73,7 @@
               <p class="p">tekst</p>                  
             <h3 class="opleiding5">Vakexpert Geo, Data & Design - Niveau 4</h3>
               <p class="p">tekst</p>
+
 
           <!-- Vakken -->
           <h1 class="vakken"><a class="target" name="vakken" style="pointer-events: none;">Vakken</a></h1>
@@ -87,14 +110,13 @@
                 
           <!-- Docenten -->
           <h1 class="docenten"><a class="target" name="docenten" style="pointer-events: none;">Docenten</a></h1>
-
           <div class="row">
             <div class="column">
               <div class="card">
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Guy Bastiaens</h3>
-                  <p class="title">Docent - IT Systems & Devices</p>
+                  <p class="title">Docent</p>
                   <p>Server, cloud, security en keuzedeel</p>
                   <p>g.bastiaens@vistacollege.nl</p>        
                 </div>
@@ -129,7 +151,7 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Egbert Buchem</h3>
-                  <p class="title">Docent - IT Systems & Devices</p>
+                  <p class="title">Docent</p>
                   <p>Simulatie en hardware</p>
                   <p>e.buchem@vistacollege.nl</p>
                 </div>
@@ -141,7 +163,7 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Jeroen Busselman</h3>
-                  <p class="title">Docent - IT Systems & Devices</p>
+                  <p class="title">Docent</p>
                   <p>Simulatie en project management</p>
                   <p>j.busselman@vistacollege.nl</p>
                 </div>
@@ -189,7 +211,7 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Erik van Heusden</h3>
-                  <p class="title">Docent - It Systems & Devices</p>
+                  <p class="title">Docent</p>
                   <p>Server en servicedesk</p>
                   <p>e.vanheusden@vistacollege.nl</p>
                 </div>
@@ -225,9 +247,9 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Jo Limpens</h3>
-                  <p class="title">Docent - </p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>example@example.com</p>
+                  <p class="title">Docent</p>
+                  <p>Database en infosystemen</p>
+                  <p>j.limpens@vistacollege.nl</p>
                 </div>
               </div>
             </div>
@@ -237,9 +259,9 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Ron Limpens</h3>
-                  <p class="title">Docent - </p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>example@example.com</p>
+                  <p class="title">Docent</p>
+                  <p>Database en droning</p>
+                  <p>r.limpens@vistacollege.nl</p>
                 </div>
               </div>
             </div>
@@ -249,9 +271,9 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Gert-Jan Lonussen</h3>
-                  <p class="title">Docent - </p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>example@example.com</p>
+                  <p class="title">Docent</p>
+                  <p>Operating systems en virtualisatie</p>
+                  <p>g.lonussen@vistacollege.nl</p>
                 </div>
               </div>
             </div>
@@ -261,9 +283,9 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Arend Lunenborg</h3>
-                  <p class="title">Docent - </p>
+                  <p class="title">Interne begeleider</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>example@example.com</p>
+                  <p>a.lunenborg@vistacollege.nl</p>
                 </div>
               </div>
             </div>
@@ -273,9 +295,9 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Lennert de Moor</h3>
-                  <p class="title">Docent - </p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>example@example.com</p>
+                  <p class="title">Docent</p>
+                  <p>C#</p>
+                  <p>l.demoor@vistacollege.nl</p>
                 </div>
               </div>
             </div>
@@ -285,9 +307,9 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>John Munnichs</h3>
-                  <p class="title">Docent - </p>
+                  <p class="title">studieondersteuner</p>
                   <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>example@example.com</p>
+                  <p>j.munnichs@vistacollege.nl</p>
                 </div>
               </div>
             </div>
@@ -297,9 +319,9 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Yvonne Schwochow</h3>
-                  <p class="title">Docent - </p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>example@example.com</p>
+                  <p class="title">Docent</p>
+                  <p>Linux en server</p>
+                  <p>y.niessen@vistacollege.nl</p>
                 </div>
               </div>
             </div>
@@ -309,9 +331,9 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Erika Vallinga</h3>
-                  <p class="title">Docent - </p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>example@example.com</p>
+                  <p class="title">Docent - Stagecoördinator</p>
+                  <p>Rekenen en keuzedeel ondernemend gedrag</p>
+                  <p>e.aalders@vistacollege.nl</p>
                 </div>
               </div>
             </div>
@@ -321,9 +343,9 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>Eva Wagemans</h3>
-                  <p class="title">Docent - </p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>example@example.com</p>
+                  <p class="title">Docent - Teamafgevaardigde - hoofd AVO curriculum</p>
+                  <p>Nederlands, Engels, en burgerschap</p>
+                  <p>e.wagemans@vistacollege.nl</p>
                 </div>
               </div>
             </div>
@@ -333,9 +355,9 @@
                 <img src="../IMAGES/istockphoto.jpg" style="width:100%">
                 <div class="container">
                   <h3>René van der Zander</h3>
-                  <p class="title">Docent - </p>
-                  <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                  <p>example@example.com</p>
+                  <p class="title">Docent - teamafgevaardigde </p>
+                  <p>Rekenen, keuzedeel en software</p>
+                  <p>r.vanderzander@vistacollege.nl</p>
                 </div>
               </div>
             </div>
@@ -347,13 +369,16 @@
 
           <!-- Huisregels -->
           <h1 class="huisregels"><a class="target" name="huisregels" style="pointer-events: none;">Huisregels</a></h1>
+          <center><embed class="pdf" src="../Documenten/Studentenstatuut-VISTA-college.pdf" width="99%" height="800px"/></center>
 
           <!-- Contact -->
           <h1 class="contact"><a class="target" name="contact" style="pointer-events: none;">Contact</a></h1>
         </div>
       </div>          
-        
-              
+      
+      
+      <script src="../JS/jquery.min.js"></script>
+      <script src="../JS/script.js"></script>
 
     </body>
 </html>
