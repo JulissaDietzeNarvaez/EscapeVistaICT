@@ -149,7 +149,7 @@ var ImageDataList = [
 var TaskList = [
     {
         TaskID: "Rekenen",
-        TaskQuestion: "",
+        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal",
         TaskAnwser: "",
         TaskCompleted: false,
         TaskHint:"'../IMAGES/School/Hint Rekenen.jpg'",

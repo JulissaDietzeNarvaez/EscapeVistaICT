@@ -44,4 +44,4 @@ function TravelPath(Destination){
 }
 
 //voor testen, zodat ik niet telkens handmatig de areas moet focusen, aangezien dat de enige manier om ze op de website te zien.
-ImageMap.areas[1].focus();
+//ImageMap.areas[1].focus();
