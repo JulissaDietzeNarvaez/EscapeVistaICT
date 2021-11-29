@@ -7,43 +7,55 @@
 
 var ImageDataList = [
     {
+        //Id
         ImageID: "Hoofdweg",
-        Arrow1CoordsX: 30,
-        Arrow2CoordsX: 680,
-        Arrow3CoordsX: -50,
-        Arrow4CoordsX: -50,
-        Arrow1CoordsY: 180,
-        Arrow2CoordsY: 220,
-        Arrow3CoordsY: -50,
-        Arrow4CoordsY: -50,
+        //x Coordinates
+        Arrow1CoordsX: "30",
+        Arrow2CoordsX: "680",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "180",
+        Arrow2CoordsY: "220",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
         Arrow1Direction: "Left",
         Arrow2Direction: "Up",
         Arrow3Direction: null,
         Arrow4Direction: null,
+        //Destinations
         Destination1: "Pad naar Hoofdingang",
         Destination2: "Zijweg aan Hoofdweg",
         Destination3: null,
         Destination4: null,
+        //tasks
         Task: "Rekenen",
     },
     {
-        ImageID: "Zijpad",
-        Arrow1CoordsX: 30,
-        Arrow2CoordsX: 680,
-        Arrow3CoordsX: -50,
-        Arrow4CoordsX: -50,
-        Arrow1CoordsY: 180,
-        Arrow2CoordsY: 220,
-        Arrow3CoordsY: -50,
-        Arrow4CoordsY: -50,
+        //Id
+        ImageID: "Zijweg aan Hoofdweg",
+        //x Coordinates
+        Arrow1CoordsX: "30",
+        Arrow2CoordsX: "320",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "200",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
         Arrow1Direction: "Left",
         Arrow2Direction: "Up",
         Arrow3Direction: null,
         Arrow4Direction: null,
-        Destination1: "Pad naar Hoofdingang",
+        //Destinations
+        Destination1: "Hoofdweg",
         Destination2: "Zijweg aan Hoofdweg",
         Destination3: null,
         Destination4: null,
+        //tasks
         Task: "Rekenen",
     },
 ]

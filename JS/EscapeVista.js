@@ -13,27 +13,28 @@ function TravelPath(Destination){
         //als het ImageID overeen komt doe de volgende aanpassingen
         if (i.ImageID == Destination) {
             //======================================================showen van destination image en arrows verplaatsen=======================================
-            console.log("Image found");
             //===========X coordinates=============
             Arrow1.setAttribute('x', i.Arrow1CoordsX);
-            Arrow2.setAttribute('x', i.Arrow1CoordsX);
-            Arrow3.setAttribute('x', i.Arrow1CoordsX);
-            Arrow4.setAttribute('x', i.Arrow1CoordsX);
-            console.log("X coordinates");
+            Arrow2.setAttribute('x', i.Arrow2CoordsX);
+            Arrow3.setAttribute('x', i.Arrow3CoordsX);
+            Arrow4.setAttribute('x', i.Arrow4CoordsX);
             //===========Y Coordinates=============
-            Arrow1.setAttribute('y', i.Arrow1CoordsX);
-            Arrow2.setAttribute('y', i.Arrow1CoordsX);
-            Arrow3.setAttribute('y', i.Arrow1CoordsX);
-            Arrow4.setAttribute('y', i.Arrow1CoordsX);
-            console.log("y coordinates");
+            Arrow1.setAttribute('y', i.Arrow1CoordsY);
+            Arrow2.setAttribute('y', i.Arrow2CoordsY);
+            Arrow3.setAttribute('y', i.Arrow3CoordsY);
+            Arrow4.setAttribute('y', i.Arrow4CoordsY);
             //=============Image===================
             document.getElementById("ImageHolder").src='../IMAGES/School/'+i.ImageID+'.jpg';
-            console.log("Image");
             //==========Destinations===============
             Arrow1.setAttribute('onclick','TravelPath("'+i.Destination1+'")'); 
             Arrow2.setAttribute('onclick','TravelPath("'+i.Destination2+'")'); 
             Arrow3.setAttribute('onclick','TravelPath("'+i.Destination3+'")'); 
             Arrow4.setAttribute('onclick','TravelPath("'+i.Destination4+'")'); 
+            //==========Arrow Directions===========
+            Arrow1.src='../IMAGES/Blue arrow '+i.Arrow1Direction+'.png';
+            Arrow2.src='../IMAGES/Blue arrow '+i.Arrow2Direction+'.png';
+            Arrow3.src='../IMAGES/Blue arrow '+i.Arrow3Direction+'.png';
+            Arrow4.src='../IMAGES/Blue arrow '+i.Arrow4Direction+'.png';
         }
         if (i.Task != null) {
             //als de destination een task heeft, loop door de tasklist totdat een task gevonden is met de bijbehorende taskID
@@ -61,24 +62,6 @@ document.getElementById("Taskholder").style.display=("block");
 document.getElementById("Taskholder").innerHTML= TaskList[0].TaskQuestion+ "<br><br><br><p>Hint:</p><img id='TaskHint'>";
 document.getElementById("TaskHint").src=TaskList[0].TaskHint;
 
-//function TravelPath(Destination){
-    //loop door ieder item in de lijst heen en check of de destination overeen komt met de ImageID of het item
-    
-        
-        
-
-            //verander de onclick attribut van de area zodat deze correct overeen komt met het gewenste resultaat
-            //ImageMap.areas[0].setAttribute('onclick','TravelPath("'+i.Destination1+'")'); 
-            //ImageMap.areas[1].setAttribute('onclick','TravelPath("'+i.Destination2+'")'); 
-            //ImageMap.areas[2].setAttribute('onclick','TravelPath("'+i.Destination3+'")'); 
-            //ImageMap.areas[3].setAttribute('onclick','TravelPath("'+i.Destination4+'")'); 
-            //verander de image zodat de juiste image geplaatst worden
-            //document.getElementById("ImageHolder").src='../IMAGES/School/'+i.ImageID+'.jpg'
-            //======================================================checken van task en displayen=======================================================
-            //check of the destination een task heeft
-            
-     
-//}
 function AnwserTask(inputVal, InputTask){
     console.log(inputVal, InputTask);
     if (inputVal.value == 213) {
