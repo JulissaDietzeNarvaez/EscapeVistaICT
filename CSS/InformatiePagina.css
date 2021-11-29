@@ -1,7 +1,11 @@
+/* Side Navbar bron: https://codepen.io/MijeongLee/pen/LYEXMzR */
+*{
+  font-family: 'Raleway', sans-serif;
+}
 body {
   background-color: #fefefe;
   margin: 0; 
-  font-family: Arial;
+  
 }
 html{
   scroll-behavior: smooth;
@@ -70,8 +74,8 @@ nav li#user-info > span:after{
 .vertical-menu-wrapper ul, .vertical-menu-wrapper hr{transition: all 100ms;}
 .content-wrapper{background: #ebebeb;}
 .content{
-  width: 90%;
-  min-height: 90%;
+  width: 100%;
+  min-height: 100%;
   background: #fff;
   border-radius: 10px;
   padding: 30px;
@@ -95,9 +99,7 @@ a:hover {
   height: 100vh;
 }
 
-/* -------------
-Sidebar
-----------------*/
+/* ------------- Sidebar ----------------*/
 .sidebar {
   position: fixed;
   width: 17em;
@@ -105,9 +107,9 @@ Sidebar
   top: 0;
   overflow: hidden;
   background-color: #19222a;
-  -webkit-transform: translateZ(0);
+  /*-webkit-transform: translateZ(0);*/
   visibility: visible;
-  -webkit-backface-visibility: hidden;
+  /*-webkit-backface-visibility: hidden;*/
 }
 .sidebar header {
   background-color: #e56a54;
@@ -118,9 +120,7 @@ Sidebar
   padding: 0.75em 1em;
 }
 
-/* -------------
-Sidebar Nav
-----------------*/
+/* ------------- Sidebar Nav ----------------*/
 .sidebar-nav {
   position: absolute;
   background-color: #19222a;
@@ -223,8 +223,33 @@ Sidebar Nav
   transition: all 0.5s ease;
 }
 
+/* ----------------- General start --------------------*/
+h1{
+ font-size: 26px; 
+ margin-bottom: 50px;
+ margin-top: 75px;
+}
+h1.opleidingen{
+  margin-top: 0px;
+}
+h3{
+  font-size: 18px;
+  color:#111;
+}
+p{
+  color: #111;
+}
+.email{
+  font-size: 13px;
+}
 
+.target{
+  transition: all 0.5s ease;
+  margin: 0,10,0,0;
+}
+/* ----------------- General eind --------------------*/
 
+/* ----------------- Opleidingen start--------------------*/
 .opleidingen{
   color: black;
 }
@@ -233,16 +258,114 @@ Sidebar Nav
   color: black;
 }
 
-.p{
-  color: black;
+/*Bron: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol */
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 99%;
+  height: max-content;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.active, .accordion:hover {
+  background-color: #ccc;
+  
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 99%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ----------------- Opleidingen eind --------------------*/
+
+
+
+
+
+/* ----------------- Vakken start --------------------*/
 .vakken{
   color: black;
 }
+/* ----------------- Vakken eind --------------------*/
 
-.target{
-    transition: all 0.5s ease;
-    margin: 0,10,0,0;
+
+
+
+
+
+/* ----------------- Docenten start --------------------*/
+/*
+Bron: https://www.w3schools.com/howto/howto_css_team.asp
+*/
+*, *:before, *:after {
+  box-sizing: border-box;
 }
+.column {
+  float: left;
+  width: 33%;  
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.card {
+  height: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.container {
+  padding: 0 16px;
+}
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.title {
+  color: grey;
+}
+/* ----------------- Docenten eind --------------------*/
 
+
+
+/* ----------------- Plattegrond start --------------------*/
+/* ----------------- Plattegrond eind --------------------*/
+
+
+/* ----------------- Huisregels start --------------------*/
+.pdf{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+/* ----------------- Huisregels eind --------------------*/
+
+/* ----------------- Contact start --------------------*/
+/* ----------------- Contact eind --------------------*/
