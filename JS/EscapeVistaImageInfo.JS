@@ -52,12 +52,90 @@ var ImageDataList = [
         Arrow4Direction: null,
         //Destinations
         Destination1: "Hoofdweg",
-        Destination2: "Zijweg aan Hoofdweg",
+        Destination2: "Zij pad",
         Destination3: null,
         Destination4: null,
         //tasks
         Task: "Rekenen",
     },
+    {
+        //Id
+        ImageID: "Zij pad",
+        //x Coordinates
+        Arrow1CoordsX: "70",
+        Arrow2CoordsX: "485",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "180",
+        Arrow2CoordsY: "160",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Left",
+        Arrow2Direction: "Left",
+        Arrow3Direction: "Down",
+        Arrow4Direction: null,
+        //Destinations
+        Destination1: "Fietsenstalling",
+        Destination2: "Receptie",
+        Destination3: "Zijweg aan Hoofdweg",
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Pad naar Hoofdingang",
+        //x Coordinates
+        Arrow1CoordsX: "350",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "250",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Hoofdingang",
+        Destination2: "Hoofdweg",
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Hoofdingang",
+        //x Coordinates
+        Arrow1CoordsX: "390",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "220",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Receptie",
+        Destination2: "Pad naar Hoofdingang",
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    }
 ]
 //Tasklist uitleg
 //TaskID: waar naar gekeken worden waar de opdracht bij hoort

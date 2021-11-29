@@ -31,10 +31,10 @@ function TravelPath(Destination){
             Arrow3.setAttribute('onclick','TravelPath("'+i.Destination3+'")'); 
             Arrow4.setAttribute('onclick','TravelPath("'+i.Destination4+'")'); 
             //==========Arrow Directions===========
-            Arrow1.src='../IMAGES/Blue arrow '+i.Arrow1Direction+'.png';
-            Arrow2.src='../IMAGES/Blue arrow '+i.Arrow2Direction+'.png';
-            Arrow3.src='../IMAGES/Blue arrow '+i.Arrow3Direction+'.png';
-            Arrow4.src='../IMAGES/Blue arrow '+i.Arrow4Direction+'.png';
+            Arrow1.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow1Direction+'.png');
+            Arrow2.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow2Direction+'.png');
+            Arrow3.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow3Direction+'.png');
+            Arrow4.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow4Direction+'.png');
         }
         if (i.Task != null) {
             //als de destination een task heeft, loop door de tasklist totdat een task gevonden is met de bijbehorende taskID
