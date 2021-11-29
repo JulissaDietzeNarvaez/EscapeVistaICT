@@ -1,15 +1,39 @@
 //List voor bijhouden welke punten verdient zijn.
 var PointList = {"Rekenen": 0,};
 //maak een variable aan zodat de hoeveelheid getypte tekst minder wordt
-var ImageMap = document.getElementById("ImageMap");
+var Arrow1 = document.getElementById("ImageArrow1");
+var Arrow2 = document.getElementById("ImageArrow2");
+var Arrow3 = document.getElementById("ImageArrow3");
+var Arrow4 = document.getElementById("ImageArrow4");
+
 
 //een functie om door het pa te lopen
 function TravelPath(Destination){
     ImageDataList.forEach(i => {
-        document.getElementById("ImageHolder").src='../IMAGES/School/Hoofdingang.jpg';
         //als het ImageID overeen komt doe de volgende aanpassingen
         if (i.ImageID == Destination) {
             //======================================================showen van destination image en arrows verplaatsen=======================================
+            console.log("Image found");
+            //===========X coordinates=============
+            Arrow1.setAttribute('x', i.Arrow1CoordsX);
+            Arrow2.setAttribute('x', i.Arrow1CoordsX);
+            Arrow3.setAttribute('x', i.Arrow1CoordsX);
+            Arrow4.setAttribute('x', i.Arrow1CoordsX);
+            console.log("X coordinates");
+            //===========Y Coordinates=============
+            Arrow1.setAttribute('y', i.Arrow1CoordsX);
+            Arrow2.setAttribute('y', i.Arrow1CoordsX);
+            Arrow3.setAttribute('y', i.Arrow1CoordsX);
+            Arrow4.setAttribute('y', i.Arrow1CoordsX);
+            console.log("y coordinates");
+            //=============Image===================
+            document.getElementById("ImageHolder").src='../IMAGES/School/'+i.ImageID+'.jpg';
+            console.log("Image");
+            //==========Destinations===============
+            Arrow1.setAttribute('onclick','TravelPath("'+i.Destination1+'")'); 
+            Arrow2.setAttribute('onclick','TravelPath("'+i.Destination2+'")'); 
+            Arrow3.setAttribute('onclick','TravelPath("'+i.Destination3+'")'); 
+            Arrow4.setAttribute('onclick','TravelPath("'+i.Destination4+'")'); 
         }
         if (i.Task != null) {
             //als de destination een task heeft, loop door de tasklist totdat een task gevonden is met de bijbehorende taskID
