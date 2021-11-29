@@ -4,18 +4,29 @@
     font-size: 30px;
     fill: white;
 }
-#EscapeVistaBody{
-    background-image: url('../IMAGES/Escape-Vista-Background.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+
+#EscapeVistaBody {
+    background-color: #e56a54;
+    background-image:  linear-gradient(135deg, #004f59 25%, transparent 25%), linear-gradient(225deg, #004f59 25%, transparent 25%), linear-gradient(45deg, #004f59 25%, transparent 25%), linear-gradient(315deg, #004f59 25%, #e56a54 25%);
+    background-position:  40px 0, 40px 0, 0 0, 0 0;
+    background-size: 80px 80px;
+    background-repeat: repeat;
     margin: 0px;
     padding: 0px;
+  }
+#TaskHint{
+    width: 100%;
+    height: auto;
 }
 #ImageMap{
     grid-area: ImageGrid;
 }
 #ImageHolder{
+    width: 100%;
+    height: auto;
+    grid-area: ImageGrid;
+}
+#PathHolder{
     width: 100%;
     height: auto;
     grid-area: ImageGrid;

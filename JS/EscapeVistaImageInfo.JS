@@ -5,7 +5,6 @@
 //task: als de image een opdracht of bericht heeft voor de gebruiker dan wordt deze hier aan gegeven, bij het laden van de image wordt dan de task uit de TaskList[] gehaald.
 
 
-
 var ImageDataList = [
     {
         ImageID: "Hoofdweg",
@@ -37,7 +36,7 @@ var ImageDataList = [
         Coordinates2: "250,520,525,575",
         Coordinates3: null,
         Coordinates4: null,
-        Destination1: "",
+        Destination1: "Receptie",
         Destination2: "Pad naar Hoofdingang",
         Destination3: null,
         Destination4: null,
@@ -63,7 +62,7 @@ var ImageDataList = [
         Coordinates4: null,
         Destination1: "FietsenStalling",
         Destination2: "Zijweg aan Hoofdweg",
-        Destination3: "",
+        Destination3: "Receptie",
         Destination4: null,
         Task: null,
     },
@@ -137,7 +136,19 @@ var ImageDataList = [
         Destination2: "",
         Destination3: null,
         Destination4: null,
-        Task: "Mees",
+        Task: "Rekenen",
+    },
+    {
+        ImageID: "Receptie",
+        Coordinates1: "590,125,650,200",
+        Coordinates2: "675,280,760,340",
+        Coordinates3: "5,250,70,325",
+        Coordinates4: "340,300,425,350",
+        Destination1: "Zij pad",
+        Destination2: "Gang van Receptie naar Fietsenstalling",
+        Destination3: "",
+        Destination4: "Hoofdingang",
+        Task: null,
     }
 ]
 
@@ -149,22 +160,19 @@ var ImageDataList = [
 var TaskList = [
     {
         TaskID: "Rekenen",
-        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal",
-        TaskAnwser: "",
+        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal. <br><br><br><input type='text placeholder='antwoord'  id='RekenInput'><button type='button' onclick='AnwserTask(document.getElementById("+'"'+"RekenInput"+'"'+"), "+'"'+"Rekenen"+'"'+");'>beantwoord vraag</button>",
         TaskCompleted: false,
-        TaskHint:"'../IMAGES/School/Hint Rekenen.jpg'",
+        TaskHint:"../IMAGES/School/Hint Rekenen.png",
     },
     {
         TaskID: "Toilet",
         TaskQuestion: "Je hebt de toiletten gevonden, gefeliciteerd.",
-        TaskAnwser: "",
         TaskCompleted: false,
         TaskHint:"",
     },
     {
         TaskID: "Mees",
         TaskQuestion: "Dit is Mees, hier kun je eten en drinken kopen.",
-        TaskAnwser: "",
         TaskCompleted: false,
         TaskHint:"",
     },

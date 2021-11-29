@@ -4,18 +4,14 @@
         <title>Escape Vista</title>
         <link rel="stylesheet" href="../CSS/Stylesheet.css">
     </head>
-    <body id="EscapeVistaBody">
+    <!--oncontextmenu="return false;" zorgt ervoor dat het rechtsklik menu niet verschijnt, zodat gebruiker niet "element inspecteren" kunnen gebruiken. -->
+    <body id="EscapeVistaBody" >
         <div id="GridContainer">
-            <!--Imagemap waarin de image gebruikt wordt-->
-            <map name="ImageMap" id="ImageMap">
-                <!--Click areas in de imagemap waarop geklikt kunnen worden-->
-                <area shape="rect" coords="20,180,125,230" tabindex="1" style="cursor: pointer;" alt="Test" onclick="TravelPath('Pad naar Hoofdingang')">
-                <area shape="rect" coords="690,220,755,270" tabindex="2" style="cursor: pointer;" alt="Test" onclick="TravelPath('Zijweg aan Hoofdweg')">
-                <area shape="rect" coords="0,0,0,0" tabindex="3" style="cursor: pointer;" alt="Test" onclick="TravelPath(null)">
-                <area shape="rect" coords="0,0,0,0" tabindex="4" style="cursor: pointer;" alt="Test" onclick="TravelPath(null)">
-            </map>
             <!--Image om te gebruiken in de image map-->
-            <img id="ImageHolder" src="../IMAGES/School/Hoofdweg.jpg" alt="Image Not Found" usemap="#ImageMap">
+            <img id="ImageHolder" src="../IMAGES/School/Hoofdweg (1).jpg" alt="Image Not Found">
+            <svg id="PathHolder" width=100% height=100% viewbox="0 0 768 576" preserveAspectRatio="none">
+                <image href="../IMAGES/Blue arrow.png" x="100" y="100" height="50px" width="50px" onclick="Test('Zijweg aan Hoofdweg')"></image>
+            </svg>
             <div id="Taskholder"></div>
         </div>
     </body>

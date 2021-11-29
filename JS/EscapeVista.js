@@ -1,5 +1,12 @@
+//List voor bijhouden welke punten verdient zijn.
+var PointList = {"Rekenen": 0,};
 //maak een variable aan zodat de hoeveelheid getypte tekst minder wordt
 var ImageMap = document.getElementById("ImageMap");
+
+function Test(){
+    document.getElementById("ImageHolder").src='../IMAGES/School/Hoofdingang.jpg'
+}
+
 //een functie om door het pa te lopen
 function TravelPath(Destination){
     //loop door ieder item in de lijst heen en check of de destination overeen komt met de ImageID of het item
@@ -29,7 +36,8 @@ function TravelPath(Destination){
                         if (j.TaskCompleted != true) {
                             //als de task niet eerder voltooid is, laat de bijbehorende tekst zien, en display de div waarin deze geplaatst wodt
                             document.getElementById("Taskholder").style.display=("block");
-                            document.getElementById("Taskholder").innerHTML=j.TaskQuestion;
+                            document.getElementById("Taskholder").innerHTML=j.TaskQuestion + "<br><br><br><p>Hint:</p><img id='TaskHint'>";
+                            document.getElementById("TaskHint").src=j.TaskHint;
                             //zet de task naar completed zodat deze niet nogmaals gedaan kan worden.
                             j.TaskCompleted = true;
                         }
@@ -42,6 +50,13 @@ function TravelPath(Destination){
         }
     });
 }
-
+function AnwserTask(inputVal, InputTask){
+    console.log(inputVal, InputTask);
+    if (inputVal.value == 213) {
+        console.log(InputTask);
+        PointList[InputTask]=50;
+    }
+    console.log(PointList);
+}
 //voor testen, zodat ik niet telkens handmatig de areas moet focusen, aangezien dat de enige manier om ze op de website te zien.
-//ImageMap.areas[1].focus();
+ImageMap.areas[0].focus();
