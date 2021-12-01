@@ -35,26 +35,34 @@ function TravelPath(Destination){
             Arrow2.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow2Direction+'.png');
             Arrow3.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow3Direction+'.png');
             Arrow4.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow4Direction+'.png');
-        }
-        if (i.Task != null) {
-            //als de destination een task heeft, loop door de tasklist totdat een task gevonden is met de bijbehorende taskID
-            TaskList.forEach(j => {
-                if (i.Task == j.TaskID) {
-                    //check of the task al eens eerder voltooid is.
-                    if (j.TaskCompleted != true) {
-                        //als de task niet eerder voltooid is, laat de bijbehorende tekst zien, en display de div waarin deze geplaatst wodt
-                        document.getElementById("Taskholder").style.display=("block");
-                        document.getElementById("Taskholder").innerHTML=j.TaskQuestion + "<br><br><br><p>Hint:</p><img id='TaskHint'>";
-                        document.getElementById("TaskHint").src=j.TaskHint;
-                        //zet de task naar completed zodat deze niet nogmaals gedaan kan worden.
-                        j.TaskCompleted = true;
-                    }
-                };
-            });
-        } else{
-            //als de destination geen bijbehorende task heeft, zet de display van de div naar 'none' zodat deze niet continue zichtbaar is.
-            document.getElementById("Taskholder").style.display=("none");
-        }
+        
+            if (i.Task != null) {
+                //als de destination een task heeft, loop door de tasklist totdat een task gevonden is met de bijbehorende taskID
+                TaskList.forEach(j => {
+                    if (i.Task == j.TaskID) {
+                        //check of the task al eens eerder voltooid is.
+                        if (j.TaskCompleted != true) {
+                            //als de task niet eerder voltooid is, laat de bijbehorende tekst zien, en display de div waarin deze geplaatst wodt
+                            document.getElementById("Taskholder").style.display=("block");
+                            //als de task een hint geeft, zet deze neer in het block
+                            if (j.TaskHint != null) {
+                                document.getElementById("Taskholder").innerHTML=j.TaskQuestion + "<br><br><br><p>Hint:</p><img id='TaskHint'>";
+                                document.getElementById("TaskHint").src=j.TaskHint;
+                            } 
+                            //als de task geen hint heeft, zet alleen de task tekst neer.
+                            else{ 
+                                document.getElementById("Taskholder").innerHTML=j.TaskQuestion;
+                            }
+                            //zet de task naar completed zodat deze niet nogmaals gedaan kan worden.
+                            j.TaskCompleted = true;
+                        }
+                    };
+                });
+            } else{
+                //als de destination geen bijbehorende task heeft, zet de display van de div naar 'none' zodat deze niet continue zichtbaar is.
+                document.getElementById("Taskholder").style.display=("none");
+            }
+        } 
     })
 }
 

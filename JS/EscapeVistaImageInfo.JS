@@ -22,15 +22,15 @@ var ImageDataList = [
         //Arrow Direction
         Arrow1Direction: "Left",
         Arrow2Direction: "Up",
-        Arrow3Direction: null,
-        Arrow4Direction: null,
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
         //Destinations
         Destination1: "Pad naar Hoofdingang",
         Destination2: "Zijweg aan Hoofdweg",
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -48,15 +48,15 @@ var ImageDataList = [
         //Arrow Direction
         Arrow1Direction: "Left",
         Arrow2Direction: "Up",
-        Arrow3Direction: null,
-        Arrow4Direction: null,
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
         //Destinations
         Destination1: "Hoofdweg",
         Destination2: "Zij pad",
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -75,14 +75,14 @@ var ImageDataList = [
         Arrow1Direction: "Left",
         Arrow2Direction: "Left",
         Arrow3Direction: "Down",
-        Arrow4Direction: null,
+        Arrow4Direction: "Down",
         //Destinations
         Destination1: "FietsenStalling",
         Destination2: "Receptie",
         Destination3: "Zijweg aan Hoofdweg",
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -108,7 +108,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -134,7 +134,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -160,7 +160,7 @@ var ImageDataList = [
         Destination3: "Hoofdingang",
         Destination4: "Gang van Receptie naar Fietsenstalling",
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -186,7 +186,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: "IT helpdesk",
     },
     {
         //Id
@@ -208,11 +208,11 @@ var ImageDataList = [
         Arrow4Direction: "Down",
         //Destinations
         Destination1: "gang met Toiletten",
-        Destination2: "Zij Pad",
+        Destination2: "Zij pad",
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -238,7 +238,7 @@ var ImageDataList = [
         Destination3: "FietsenStalling",
         Destination4: "Gang van Receptie naar Fietsenstalling",
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -264,7 +264,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -290,7 +290,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: "Toilet",
     },
     {
         //Id
@@ -316,7 +316,7 @@ var ImageDataList = [
         Destination3: "gang met Toiletten",
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -342,7 +342,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: "Mees",
     },
     {
         //Id
@@ -368,7 +368,7 @@ var ImageDataList = [
         Destination3: "Kantine",
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -394,7 +394,7 @@ var ImageDataList = [
         Destination3: "B Toren",
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -420,7 +420,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -446,7 +446,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: "Docenten Kamer",
     },
     {
         //Id
@@ -472,7 +472,7 @@ var ImageDataList = [
         Destination3: "B Toren Etage 1",
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -498,7 +498,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -524,7 +524,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     }
 ]
 //Tasklist uitleg
@@ -535,7 +535,7 @@ var ImageDataList = [
 var TaskList = [
     {
         TaskID: "Rekenen",
-        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal. <br><br><br><input type='text placeholder='antwoord'  id='RekenInput'><button type='button' onclick='AnwserTask(document.getElementById("+'"'+"RekenInput"+'"'+"), "+'"'+"Rekenen"+'"'+");'>beantwoord vraag</button>",
+        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal. <br><br>11010101<br><br><input type='text placeholder='antwoord'  id='RekenInput'><button type='button' onclick='AnwserTask(document.getElementById("+'"'+"RekenInput"+'"'+"), "+'"'+"Rekenen"+'"'+");'>beantwoord vraag</button>",
         TaskAnswer: 213,
         TaskCompleted: false,
         TaskHint:"../IMAGES/School/Hint Rekenen.png",
@@ -544,12 +544,12 @@ var TaskList = [
         TaskID: "Toilet",
         TaskQuestion: "Je hebt de toiletten gevonden, gefeliciteerd.",
         TaskCompleted: false,
-        TaskHint:"",
+        TaskHint: null,
     },
     {
         TaskID: "Mees",
         TaskQuestion: "Dit is Mees, hier kun je eten en drinken kopen.",
         TaskCompleted: false,
-        TaskHint:"",
+        TaskHint: null,
     },
 ]
