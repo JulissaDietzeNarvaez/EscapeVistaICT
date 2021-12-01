@@ -5,142 +5,138 @@
 //task: als de image een opdracht of bericht heeft voor de gebruiker dan wordt deze hier aan gegeven, bij het laden van de image wordt dan de task uit de TaskList[] gehaald.
 
 
-
 var ImageDataList = [
     {
+        //Id
         ImageID: "Hoofdweg",
-        Coordinates1: "20,180,125,230",
-        Coordinates2: "690,220,755,270",
-        Coordinates3: null,
-        Coordinates4: null,
+        //x Coordinates
+        Arrow1CoordsX: "30",
+        Arrow2CoordsX: "680",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "180",
+        Arrow2CoordsY: "220",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Left",
+        Arrow2Direction: "Up",
+        Arrow3Direction: null,
+        Arrow4Direction: null,
+        //Destinations
         Destination1: "Pad naar Hoofdingang",
         Destination2: "Zijweg aan Hoofdweg",
         Destination3: null,
         Destination4: null,
-        Task: null,
+        //tasks
+        Task: "Rekenen",
     },
     {
+        //Id
+        ImageID: "Zijweg aan Hoofdweg",
+        //x Coordinates
+        Arrow1CoordsX: "30",
+        Arrow2CoordsX: "320",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "200",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Left",
+        Arrow2Direction: "Up",
+        Arrow3Direction: null,
+        Arrow4Direction: null,
+        //Destinations
+        Destination1: "Hoofdweg",
+        Destination2: "Zij pad",
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Zij pad",
+        //x Coordinates
+        Arrow1CoordsX: "70",
+        Arrow2CoordsX: "485",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "180",
+        Arrow2CoordsY: "160",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Left",
+        Arrow2Direction: "Left",
+        Arrow3Direction: "Down",
+        Arrow4Direction: null,
+        //Destinations
+        Destination1: "Fietsenstalling",
+        Destination2: "Receptie",
+        Destination3: "Zijweg aan Hoofdweg",
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
         ImageID: "Pad naar Hoofdingang",
-        Coordinates1: "340,255,410,310",
-        Coordinates2: "230,500,550,575",
-        Coordinates3: null,
-        Coordinates4: null,
+        //x Coordinates
+        Arrow1CoordsX: "350",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "250",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
         Destination1: "Hoofdingang",
         Destination2: "Hoofdweg",
         Destination3: null,
         Destination4: null,
-        Task: null,
+        //tasks
+        Task: "Rekenen",
     },
     {
+        //Id
         ImageID: "Hoofdingang",
-        Coordinates1: "390,220,455,290",
-        Coordinates2: "250,520,525,575",
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "",
+        //x Coordinates
+        Arrow1CoordsX: "390",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "220",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Receptie",
         Destination2: "Pad naar Hoofdingang",
         Destination3: null,
         Destination4: null,
-        Task: null,
-    },
-    {
-        ImageID: "Zijweg aan Hoofdweg",
-        Coordinates1: "305,190,375,270",
-        Coordinates2: "20,460,150,560",
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "Zij pad",
-        Destination2: "Hoofdweg",
-        Destination3: null,
-        Destination4: null,
-        Task: null,
-    },
-    {
-        ImageID: "Zij pad",
-        Coordinates1: "75,170,175,250",
-        Coordinates2: "45,500,265,575",
-        Coordinates3: "525,160,575,210",
-        Coordinates4: null,
-        Destination1: "FietsenStalling",
-        Destination2: "Zijweg aan Hoofdweg",
-        Destination3: "",
-        Destination4: null,
-        Task: null,
-    },
-    {
-        ImageID: "FietsenStalling",
-        Coordinates1: "415,185,465,235",
-        Coordinates2: "270,500,500,575",
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "Gang met Toiletten",
-        Destination2: "Zij pad",
-        Destination3: null,
-        Destination4: null,
-        Task: null,
-    },
-    {
-        ImageID: "Gang met Toiletten",
-        Coordinates1: "370,245,435,300",
-        Coordinates2: "300,525,475,575",
-        Coordinates3: "225,250,270,315",
-        Coordinates4: "680,355,755,435",
-        Destination1: "Kantine",
-        Destination2: "FietsenStalling",
-        Destination3: "Toilet",
-        Destination4: "Gang van Receptie naar Fietsenstalling",
-        Task: null,
-    },
-    {
-        ImageID: "Toilet",
-        Coordinates1: "280,510,495,575",
-        Coordinates2: null,
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "Gang met Toiletten",
-        Destination2: null,
-        Destination3: null,
-        Destination4: null,
-        Task: "Toilet",
-    },
-    {
-        ImageID: "Gang van Receptie naar Fietsenstalling",
-        Coordinates1: "360,245,435,310",
-        Coordinates2: "285,510,480,575",
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "Gang met Toiletten",
-        Destination2: "Receptie",
-        Destination3: null,
-        Destination4: null,
-        Task: null,
-    },
-    {
-        ImageID: "Kantine",
-        Coordinates1: "125,220,200,270",
-        Coordinates2: "285,505,480,575",
-        Coordinates3: "5,290,100,355",
-        Coordinates4: null,
-        Destination1: null,
-        Destination2: "Gang met Toiletten",
-        Destination3: "Mees",
-        Destination4: null,
-        Task: null,
-    },
-    {
-        ImageID: "Mees",
-        Coordinates1: "10,290,120,360",
-        Coordinates2: "650,290,765,350",
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "Kantine",
-        Destination2: "",
-        Destination3: null,
-        Destination4: null,
-        Task: null,
+        //tasks
+        Task: "Rekenen",
     }
 ]
-
 //Tasklist uitleg
 //TaskID: waar naar gekeken worden waar de opdracht bij hoort
 //TaskQuestion: De vraag die wordt gesteld aan de gebruiker, dit kan ook eventuele tekst zijn om iets aan de gebruiker duidelijk te maken.
@@ -149,14 +145,20 @@ var ImageDataList = [
 var TaskList = [
     {
         TaskID: "Rekenen",
-        TaskQuestion: "",
-        TaskAnwser: "",
-        Completed: false,
+        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal. <br><br><br><input type='text placeholder='antwoord'  id='RekenInput'><button type='button' onclick='AnwserTask(document.getElementById("+'"'+"RekenInput"+'"'+"), "+'"'+"Rekenen"+'"'+");'>beantwoord vraag</button>",
+        TaskCompleted: false,
+        TaskHint:"../IMAGES/School/Hint Rekenen.png",
     },
     {
         TaskID: "Toilet",
         TaskQuestion: "Je hebt de toiletten gevonden, gefeliciteerd.",
-        TaskAnwser: "",
-        Completed: false,
+        TaskCompleted: false,
+        TaskHint:"",
+    },
+    {
+        TaskID: "Mees",
+        TaskQuestion: "Dit is Mees, hier kun je eten en drinken kopen.",
+        TaskCompleted: false,
+        TaskHint:"",
     },
 ]
