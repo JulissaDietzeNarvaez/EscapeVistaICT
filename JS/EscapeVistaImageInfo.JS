@@ -77,7 +77,7 @@ var ImageDataList = [
         Arrow3Direction: "Down",
         Arrow4Direction: null,
         //Destinations
-        Destination1: "Fietsenstalling",
+        Destination1: "FietsenStalling",
         Destination2: "Receptie",
         Destination3: "Zijweg aan Hoofdweg",
         Destination4: null,
@@ -135,6 +135,396 @@ var ImageDataList = [
         Destination4: null,
         //tasks
         Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Receptie",
+        //x Coordinates
+        Arrow1CoordsX: "10",
+        Arrow2CoordsX: "575",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "700",
+        //y coordinates
+        Arrow1CoordsY: "375",
+        Arrow2CoordsY: "280",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "450",
+        //Arrow Direction
+        Arrow1Direction: "Left",
+        Arrow2Direction: "Up",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Right",
+        //Destinations
+        Destination1: "IT helpdesk",
+        Destination2: "Zij pad",
+        Destination3: "Hoofdingang",
+        Destination4: "Gang van Receptie naar Fietsenstalling",
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "IT helpdesk",
+        //x Coordinates
+        Arrow1CoordsX: "360",
+        Arrow2CoordsX: "-50",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "-50",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Down",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Receptie",
+        Destination2: null,
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "FietsenStalling",
+        //x Coordinates
+        Arrow1CoordsX: "480",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "225",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "gang met Toiletten",
+        Destination2: "Zij Pad",
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "gang met Toiletten",
+        //x Coordinates
+        Arrow1CoordsX: "380",
+        Arrow2CoordsX: "240",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "680",
+        //y coordinates
+        Arrow1CoordsY: "275",
+        Arrow2CoordsY: "300",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "500",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Left",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Right",
+        //Destinations
+        Destination1: "Kantine",
+        Destination2: "Toilet",
+        Destination3: "FietsenStalling",
+        Destination4: "Gang van Receptie naar Fietsenstalling",
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Gang van Receptie naar Fietsenstalling",
+        //x Coordinates
+        Arrow1CoordsX: "380",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "250",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "gang met Toiletten",
+        Destination2: "Receptie",
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Toilet",
+        //x Coordinates
+        Arrow1CoordsX: "360",
+        Arrow2CoordsX: "-50",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "-50",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Down",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "gang met Toiletten",
+        Destination2: null,
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Kantine",
+        //x Coordinates
+        Arrow1CoordsX: "210",
+        Arrow2CoordsX: "20",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "200",
+        Arrow2CoordsY: "290",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Left",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren",
+        Destination2: "Mees",
+        Destination3: "gang met Toiletten",
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Mees",
+        //x Coordinates
+        Arrow1CoordsX: "700",
+        Arrow2CoordsX: "20",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "290",
+        Arrow2CoordsY: "290",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Right",
+        Arrow2Direction: "Left",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren",
+        Destination2: "Kantine",
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "B Toren",
+        //x Coordinates
+        Arrow1CoordsX: "600",
+        Arrow2CoordsX: "240",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "10",
+        Arrow2CoordsY: "290",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Up",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren Etage 1",
+        Destination2: "Lokaal B0.01",
+        Destination3: "Kantine",
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "B Toren Etage 1",
+        //x Coordinates
+        Arrow1CoordsX: "725",
+        Arrow2CoordsX: "260",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "250",
+        Arrow2CoordsY: "220",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Left",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren Etage 2",
+        Destination2: "Gang naar docenten kamer",
+        Destination3: "B Toren",
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Gang naar docenten kamer",
+        //x Coordinates
+        Arrow1CoordsX: "230",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "250",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Docenten Kamer",
+        Destination2: "B Toren Etage 1",
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Docenten Kamer",
+        //x Coordinates
+        Arrow1CoordsX: "360",
+        Arrow2CoordsX: "-50",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "-50",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Down",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Gang naar docenten kamer",
+        Destination2: null,
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "B Toren Etage 2",
+        //x Coordinates
+        Arrow1CoordsX: "120",
+        Arrow2CoordsX: "120",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "125",
+        Arrow2CoordsY: "175",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Left",
+        Arrow2Direction: "Right",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Lokaal B2.08",
+        Destination2: "Kluisjes Etage 2",
+        Destination3: "B Toren Etage 1",
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Lokaal B2.08",
+        //x Coordinates
+        Arrow1CoordsX: "360",
+        Arrow2CoordsX: "-50",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "-50",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Down",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren Etage 2",
+        Destination2: null,
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
+    },
+    {
+        //Id
+        ImageID: "Kluisjes Etage 2",
+        //x Coordinates
+        Arrow1CoordsX: "360",
+        Arrow2CoordsX: "-50",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "-50",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Down",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren Etage 2",
+        Destination2: null,
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Rekenen",
     }
 ]
 //Tasklist uitleg
@@ -146,6 +536,7 @@ var TaskList = [
     {
         TaskID: "Rekenen",
         TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal. <br><br><br><input type='text placeholder='antwoord'  id='RekenInput'><button type='button' onclick='AnwserTask(document.getElementById("+'"'+"RekenInput"+'"'+"), "+'"'+"Rekenen"+'"'+");'>beantwoord vraag</button>",
+        TaskAnswer: 213,
         TaskCompleted: false,
         TaskHint:"../IMAGES/School/Hint Rekenen.png",
     },
