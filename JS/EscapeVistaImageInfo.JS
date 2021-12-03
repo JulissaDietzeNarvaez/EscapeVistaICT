@@ -22,15 +22,15 @@ var ImageDataList = [
         //Arrow Direction
         Arrow1Direction: "Left",
         Arrow2Direction: "Up",
-        Arrow3Direction: null,
-        Arrow4Direction: null,
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
         //Destinations
         Destination1: "Pad naar Hoofdingang",
         Destination2: "Zijweg aan Hoofdweg",
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -48,15 +48,15 @@ var ImageDataList = [
         //Arrow Direction
         Arrow1Direction: "Left",
         Arrow2Direction: "Up",
-        Arrow3Direction: null,
-        Arrow4Direction: null,
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
         //Destinations
         Destination1: "Hoofdweg",
         Destination2: "Zij pad",
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -75,14 +75,14 @@ var ImageDataList = [
         Arrow1Direction: "Left",
         Arrow2Direction: "Left",
         Arrow3Direction: "Down",
-        Arrow4Direction: null,
+        Arrow4Direction: "Down",
         //Destinations
         Destination1: "FietsenStalling",
         Destination2: "Receptie",
         Destination3: "Zijweg aan Hoofdweg",
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -108,7 +108,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -134,7 +134,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -186,7 +186,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: "IT helpdesk",
     },
     {
         //Id
@@ -208,11 +208,11 @@ var ImageDataList = [
         Arrow4Direction: "Down",
         //Destinations
         Destination1: "gang met Toiletten",
-        Destination2: "Zij Pad",
+        Destination2: "Zij pad",
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -238,7 +238,7 @@ var ImageDataList = [
         Destination3: "FietsenStalling",
         Destination4: "Gang van Receptie naar Fietsenstalling",
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -264,7 +264,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -290,7 +290,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: "Toilet",
     },
     {
         //Id
@@ -316,7 +316,7 @@ var ImageDataList = [
         Destination3: "gang met Toiletten",
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -342,7 +342,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: "Mees",
     },
     {
         //Id
@@ -368,7 +368,7 @@ var ImageDataList = [
         Destination3: "Kantine",
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -394,7 +394,7 @@ var ImageDataList = [
         Destination3: "B Toren",
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -420,7 +420,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -446,7 +446,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: "Docenten Kamer",
     },
     {
         //Id
@@ -472,7 +472,7 @@ var ImageDataList = [
         Destination3: "B Toren Etage 1",
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -498,7 +498,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     },
     {
         //Id
@@ -524,7 +524,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Rekenen",
+        Task: null,
     }
 ]
 //Tasklist uitleg
@@ -535,21 +535,91 @@ var ImageDataList = [
 var TaskList = [
     {
         TaskID: "Rekenen",
-        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal. <br><br><br><input type='text placeholder='antwoord'  id='RekenInput'><button type='button' onclick='AnwserTask(document.getElementById("+'"'+"RekenInput"+'"'+"), "+'"'+"Rekenen"+'"'+");'>beantwoord vraag</button>",
-        TaskAnswer: 213,
+        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal.<br><br>11010101",
+        TaskAnswers: {
+            A: "213",
+            B: "220",
+            C: "185",
+            D: "253"
+        },
+        TaskCorrectAnswer: "A",
         TaskCompleted: false,
         TaskHint:"../IMAGES/School/Hint Rekenen.png",
     },
     {
-        TaskID: "Toilet",
-        TaskQuestion: "Je hebt de toiletten gevonden, gefeliciteerd.",
+        TaskID: "Hard- en Software",
+        TaskQuestion: "Wat is het verschil tussen Hardware en Software?",
+        TaskAnswers: {
+            A: "",
+            B: "",
+            C: "Hardware is alles wat je kunt aan raken van een pc en software is alles van programma en applicaties die op de pc staan.",
+            D: ""
+        },
+        TaskCorrectAnswer: "C",
         TaskCompleted: false,
         TaskHint:"",
     },
     {
-        TaskID: "Mees",
-        TaskQuestion: "Dit is Mees, hier kun je eten en drinken kopen.",
+        TaskID: "Database",
+        TaskQuestion: "Wat is het verschil tussen een Primary Key en een Foreign Key?",
+        TaskAnswers: {
+            A: "Een Primary key is nodig om in de database te komen en een Foreign key is nodig voor iedere tabel in een database",
+            B: "Een Primary key is uniek voor iedere tabel en een Foreign Key legt een link vast tussen tabellen.",
+            C: "",
+            D: ""
+        },
+        TaskCorrectAnswer: "B",
         TaskCompleted: false,
         TaskHint:"",
     },
+    {
+        TaskID: "AMO",
+        TaskQuestion: "Waar staat de afkorting HTML voor?",
+        TaskAnswers: {
+            A: "Hyperlinks and Text Markup Language",
+            B: "Hyper Type Machine Language",
+            C: "Hypertext Meta-Language",
+            D: "Hypertext Markup Language"
+        },
+        TaskCorrectAnswer: "D",
+        TaskCompleted: false,
+        TaskHint:"",
+    },
+    {
+        TaskID: "CCCCC",
+        TaskQuestion: "Waar staat de afkorting CCCCC voor?",
+        TaskAnswers: {
+            A: "Composing Clean Coders Code of Conduct",
+            B: "Comments, Code Conventions, Clean Coding ",
+            C: "Copy, Corrupt, Copyright, Circulate, Control",
+            D: "Cascade, Code, Copy, Create, "
+        },
+        TaskCorrectAnswer: "B",
+        TaskCompleted: false,
+        TaskHint:"",
+    },
+    {
+        TaskID: "Toilet",
+        TaskQuestion: "Je hebt de toiletten gevonden, gefeliciteerd.",
+        TaskAnswers: null,
+        TaskCorrectAnswer: null,
+        TaskCompleted: false,
+        TaskHint: null,
+    },
+    {
+        TaskID: "Mees",
+        TaskQuestion: "Dit is Mees, hier kun je eten en drinken kopen.",
+        TaskAnswers: null,
+        TaskCorrectAnswer: null,
+        TaskCompleted: false,
+        TaskHint: null,
+    },
+    {
+        TaskID: "IT Helpdesk",
+        TaskQuestion: "Hier bij de IT helpdesk kun je terecht komen als je ICT problemen hebt met je apparatuur.",
+        TaskAnswers: null,
+        TaskCorrectAnswer: null,
+        TaskCompleted: false,
+        TaskHint: null,
+    }
 ]

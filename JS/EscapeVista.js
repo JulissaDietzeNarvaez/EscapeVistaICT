@@ -35,39 +35,61 @@ function TravelPath(Destination){
             Arrow2.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow2Direction+'.png');
             Arrow3.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow3Direction+'.png');
             Arrow4.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow4Direction+'.png');
-        }
-        if (i.Task != null) {
-            //als de destination een task heeft, loop door de tasklist totdat een task gevonden is met de bijbehorende taskID
-            TaskList.forEach(j => {
-                if (i.Task == j.TaskID) {
-                    //check of the task al eens eerder voltooid is.
-                    if (j.TaskCompleted != true) {
-                        //als de task niet eerder voltooid is, laat de bijbehorende tekst zien, en display de div waarin deze geplaatst wodt
-                        document.getElementById("Taskholder").style.display=("block");
-                        document.getElementById("Taskholder").innerHTML=j.TaskQuestion + "<br><br><br><p>Hint:</p><img id='TaskHint'>";
-                        document.getElementById("TaskHint").src=j.TaskHint;
-                        //zet de task naar completed zodat deze niet nogmaals gedaan kan worden.
-                        j.TaskCompleted = true;
-                    }
-                };
-            });
-        } else{
-            //als de destination geen bijbehorende task heeft, zet de display van de div naar 'none' zodat deze niet continue zichtbaar is.
-            document.getElementById("Taskholder").style.display=("none");
-        }
+            //als de destination een task defined heeft, loop door de functie.
+            if (i.Task != null) {
+                TaskQuestioning(i.Task);
+            } else{
+                //als de destination geen bijbehorende task heeft, zet de display van de div naar 'none' zodat deze niet continue zichtbaar is.
+                document.getElementById("Taskholder").style.display=("none");
+            }
+        } 
     })
 }
-
-document.getElementById("Taskholder").style.display=("block");
-document.getElementById("Taskholder").innerHTML= TaskList[0].TaskQuestion+ "<br><br><br><p>Hint:</p><img id='TaskHint'>";
-document.getElementById("TaskHint").src=TaskList[0].TaskHint;
-
-function AnwserTask(inputVal, InputTask){
-    console.log(inputVal, InputTask);
-    if (inputVal.value == 213) {
-        console.log(InputTask);
+function TaskQuestioning(QuestionTaskID){
+    //lege variable om de antwoorden in op te slaan
+    var TaskAnswers = [];
+    //als de destination een task heeft, loop door de tasklist totdat een task gevonden is met de bijbehorende taskID
+    TaskList.forEach(j => {
+        if (QuestionTaskID == j.TaskID) {
+            //check of the task al eens eerder voltooid is.
+            if (j.TaskCompleted != true) {
+                //als de task niet eerder voltooid is, laat de bijbehorende tekst zien, en display de div waarin deze geplaatst wodt
+                document.getElementById("Taskholder").style.display=("block");
+                //als de task een hint geeft, zet deze neer in het block
+                if (j.TaskHint != null) {
+                    //loop door de antwoorden van de vraag
+                    for(k in j.TaskAnswers){
+                        //voeg het antwoord toe aan de variable
+                        TaskAnswers.push("<label><input type='radio' name='TaskQuestion' value='"+k+"'> "+k+":"+j.TaskAnswers[k]+"</label><br>");
+                    };
+                    //zet de array om naar een string
+                    TaskAnswers = TaskAnswers.toString();
+                    //clean de string
+                    TaskAnswersCleaned = TaskAnswers.replace(/,/g,"");
+                    //zet de opdracht samen met de antwoorden en hint in de TaskHolder.
+                    document.getElementById("Taskholder").innerHTML=j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button onclick=AnwserTask("+"'"+j.TaskID+"'"+","+"'"+j.TaskCorrectAnswer+"'"+")>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
+                } 
+                //als de task geen hint heeft, zet alleen de task tekst neer.
+                else{ 
+                    document.getElementById("Taskholder").innerHTML=j.TaskQuestion;
+                }
+                //zet de task naar completed zodat deze niet nogmaals gedaan kan worden.
+                j.TaskCompleted = true;
+            }
+        };
+    });
+}
+function AnwserTask(InputTask, TrueAnswer){
+    //pakt de value van het gekozen antwoord
+    var AnswerGiven = document.querySelector('input[name="TaskQuestion"]:checked').value;
+    //check de gekozen waarde tegenover de correcte waarde
+    if (AnswerGiven == TrueAnswer) {
+        //als de waarde overeen komen, zet de verkregen punten naar 50
         PointList[InputTask]=50;
+    }else{
+        //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
+        PointList[InputTask]=0;
     }
+    //check de huidige punten stand.
     console.log(PointList);
 }
-//voor testen, zodat ik niet telkens handmatig de areas moet focusen, aangezien dat de enige manier om ze op de website te zien.

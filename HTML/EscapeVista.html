@@ -4,8 +4,8 @@
         <title>Escape Vista</title>
         <link rel="stylesheet" href="../CSS/Stylesheet.css">
     </head>
-    <!--oncontextmenu="return false;" zorgt ervoor dat het rechtsklik menu niet verschijnt, zodat gebruiker niet "element inspecteren" kunnen gebruiken. -->
-    <body id="EscapeVistaBody" >
+    <!--oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;" zorgt ervoor dat de gebruikers niet "inspect element" kunnen uitvoeren om zo te voorkomen dat ze de antwoorden voor de vragen uit de code kunnen terug vinden. -->
+    <body id="EscapeVistaBody"> <!--to prevent "inspect element" place: oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;" in the 'body' tag-->  
         <div id="GridContainer">
             <!--Image om te gebruiken in de image map-->
             <img id="ImageHolder" src="../IMAGES/School/Kluisjes Etage 2.jpg" alt="Image Not Found">
@@ -15,7 +15,7 @@
                 <image id="ImageArrow3" href="../IMAGES/Blue arrow Down.png" x=360 y=500 height="50px" width="50px" onclick="TravelPath(null)"></image>
                 <image id="ImageArrow4" href="../IMAGES/Blue arrow Right.png" x=-50 y=-50 height="50px" width="50px" onclick="Travelpath(null)"></image>
             </svg>
-            <div id="Taskholder"></div>
+            <div id="Taskholder">TODO: prevent "Inspect element"</div>
         </div>
     </body>
 </html>
