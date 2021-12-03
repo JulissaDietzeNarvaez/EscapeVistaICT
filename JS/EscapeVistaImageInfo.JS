@@ -160,7 +160,7 @@ var ImageDataList = [
         Destination3: "Hoofdingang",
         Destination4: "Gang van Receptie naar Fietsenstalling",
         //tasks
-        Task: null,
+        Task: "Rekenen",
     },
     {
         //Id
@@ -535,21 +535,91 @@ var ImageDataList = [
 var TaskList = [
     {
         TaskID: "Rekenen",
-        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal. <br><br>11010101<br><br><input type='text placeholder='antwoord'  id='RekenInput'><button type='button' onclick='AnwserTask(document.getElementById("+'"'+"RekenInput"+'"'+"), "+'"'+"Rekenen"+'"'+");'>beantwoord vraag</button>",
-        TaskAnswer: 213,
+        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal.<br><br>11010101",
+        TaskAnswers: {
+            A: "213",
+            B: "220",
+            C: "185",
+            D: "253"
+        },
+        TaskCorrectAnswer: "A",
         TaskCompleted: false,
         TaskHint:"../IMAGES/School/Hint Rekenen.png",
     },
     {
+        TaskID: "Hard- en Software",
+        TaskQuestion: "Wat is het verschil tussen Hardware en Software?",
+        TaskAnswers: {
+            A: "",
+            B: "",
+            C: "Hardware is alles wat je kunt aan raken van een pc en software is alles van programma en applicaties die op de pc staan.",
+            D: ""
+        },
+        TaskCorrectAnswer: "C",
+        TaskCompleted: false,
+        TaskHint:"",
+    },
+    {
+        TaskID: "Database",
+        TaskQuestion: "Wat is het verschil tussen een Primary Key en een Foreign Key?",
+        TaskAnswers: {
+            A: "Een Primary key is nodig om in de database te komen en een Foreign key is nodig voor iedere tabel in een database",
+            B: "Een Primary key is uniek voor iedere tabel en een Foreign Key legt een link vast tussen tabellen.",
+            C: "",
+            D: ""
+        },
+        TaskCorrectAnswer: "B",
+        TaskCompleted: false,
+        TaskHint:"",
+    },
+    {
+        TaskID: "AMO",
+        TaskQuestion: "Waar staat de afkorting HTML voor?",
+        TaskAnswers: {
+            A: "Hyperlinks and Text Markup Language",
+            B: "Hyper Type Machine Language",
+            C: "Hypertext Meta-Language",
+            D: "Hypertext Markup Language"
+        },
+        TaskCorrectAnswer: "D",
+        TaskCompleted: false,
+        TaskHint:"",
+    },
+    {
+        TaskID: "CCCCC",
+        TaskQuestion: "Waar staat de afkorting CCCCC voor?",
+        TaskAnswers: {
+            A: "Composing Clean Coders Code of Conduct",
+            B: "Comments, Code Conventions, Clean Coding ",
+            C: "Copy, Corrupt, Copyright, Circulate, Control",
+            D: "Cascade, Code, Copy, Create, "
+        },
+        TaskCorrectAnswer: "B",
+        TaskCompleted: false,
+        TaskHint:"",
+    },
+    {
         TaskID: "Toilet",
         TaskQuestion: "Je hebt de toiletten gevonden, gefeliciteerd.",
+        TaskAnswers: null,
+        TaskCorrectAnswer: null,
         TaskCompleted: false,
         TaskHint: null,
     },
     {
         TaskID: "Mees",
         TaskQuestion: "Dit is Mees, hier kun je eten en drinken kopen.",
+        TaskAnswers: null,
+        TaskCorrectAnswer: null,
         TaskCompleted: false,
         TaskHint: null,
     },
+    {
+        TaskID: "IT Helpdesk",
+        TaskQuestion: "Hier bij de IT helpdesk kun je terecht komen als je ICT problemen hebt met je apparatuur.",
+        TaskAnswers: null,
+        TaskCorrectAnswer: null,
+        TaskCompleted: false,
+        TaskHint: null,
+    }
 ]
