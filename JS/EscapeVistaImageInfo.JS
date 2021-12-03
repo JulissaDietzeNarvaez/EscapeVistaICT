@@ -551,8 +551,8 @@ var TaskList = [
         TaskQuestion: "Wat is het verschil tussen Hardware en Software?",
         TaskAnswers: {
             A: "",
-            B: "",
-            C: "Hardware is alles wat je kunt aan raken van een pc en software is alles van programma en applicaties die op de pc staan.",
+            B: "Hardware is de CPU, GPU, en processor van de PC en Software is het toetsenbord, beeldscherm en de luidsprekers van de PC.",
+            C: "Hardware is alles wat je kunt aan raken van een PC en software is alles van programma en applicaties die op de pc staan.",
             D: ""
         },
         TaskCorrectAnswer: "C",
@@ -565,7 +565,7 @@ var TaskList = [
         TaskAnswers: {
             A: "Een Primary key is nodig om in de database te komen en een Foreign key is nodig voor iedere tabel in een database",
             B: "Een Primary key is uniek voor iedere tabel en een Foreign Key legt een link vast tussen tabellen.",
-            C: "",
+            C: "Een primary key is een unieke key voor iedere tabel en een Foreign key is de back-up als de Priamry Key niet werkt.",
             D: ""
         },
         TaskCorrectAnswer: "B",
