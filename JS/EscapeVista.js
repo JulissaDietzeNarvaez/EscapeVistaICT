@@ -1,19 +1,20 @@
-//List voor bijhouden welke punten verdient zijn.
+//List for keeping track which tasks have points
 var PointList = {"Rekenen": 0, "Hard- en Software": 0, "Database": 0, "AMO": 0, "CCCCC":0};
 var LocationList = {};
-//maak een variable aan zodat de hoeveelheid getypte tekst minder wordt
+//variables to make typing easier
 var Arrow1 = document.getElementById("ImageArrow1");
 var Arrow2 = document.getElementById("ImageArrow2");
 var Arrow3 = document.getElementById("ImageArrow3");
 var Arrow4 = document.getElementById("ImageArrow4");
 
 
-//een functie om door het pa te lopen
+//this function is called everytime a new destination is travelled to
 function TravelPath(Destination){
+    //travel through each destination in the ImageDataList array
     ImageDataList.forEach(i => {
-        //als het ImageID overeen komt doe de volgende aanpassingen
+        //if the Image ID is equal to the requested destination, perform the following acts
         if (i.ImageID == Destination) {
-            //======================================================showen van destination image en arrows verplaatsen=======================================
+            //======================================================showthe image and move the arrow to the correct place=======================================
             //===========X coordinates=============
             Arrow1.setAttribute('x', i.Arrow1CoordsX);
             Arrow2.setAttribute('x', i.Arrow2CoordsX);
@@ -36,52 +37,48 @@ function TravelPath(Destination){
             Arrow2.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow2Direction+'.png');
             Arrow3.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow3Direction+'.png');
             Arrow4.setAttribute('href', '../IMAGES/Blue arrow '+i.Arrow4Direction+'.png');
-            //als de destination een task defined heeft, loop door de functie.
+            //if the destination as a task, push that task through a function
             if (i.Task != null) {
                 TaskQuestioning(i.Task);
             } else{
-                //als de destination geen bijbehorende task heeft, zet de display van de div naar 'none' zodat deze niet continue zichtbaar is.
+                //If the destination has no task, set the style of the taskholder div to none, so it is not continously displayed
                 document.getElementById("Taskholder").style.display=("none");
             }
         } 
     })
 }
 function TaskQuestioning(QuestionTaskID){
-    //lege variable om de antwoorden in op te slaan
+    //empty variable to push the task to
     var TaskAnswers = [];
-    //als de destination een task heeft, loop door de tasklist totdat een task gevonden is met de bijbehorende taskID
+    //loop through the task array
     TaskList.forEach(j => {
+        //if the correct task is found, proceed with the function
         if (QuestionTaskID == j.TaskID) {
-            //check of the task al eens eerder voltooid is.
-            if (j.TaskCompleted != true) {
-                //als de task niet eerder voltooid is, laat de bijbehorende tekst zien, en display de div waarin deze geplaatst wodt
-                document.getElementById("Taskholder").style.display=("block");
-                //als de task een hint geeft, zet deze neer in het block
-                if (j.TaskHint != null) {
-                    //loop door de antwoorden van de vraag
-                    for(k in j.TaskAnswers){
-                        //voeg het antwoord toe aan de variable
-                        TaskAnswers.push("<label><input type='radio' name='TaskQuestion' value='"+k+"'> "+k+":"+j.TaskAnswers[k]+"</label><br>");
-                    };
-                    //zet de array om naar een string
-                    TaskAnswers = TaskAnswers.toString();
-                    //clean de string
-                    TaskAnswersCleaned = TaskAnswers.replace(/,/g,"");
-                    //zet de opdracht samen met de antwoorden en hint in de TaskHolder.
-                    document.getElementById("Taskholder").innerHTML=j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button onclick=AnwserTask("+"'"+j.TaskID+"'"+","+"'"+j.TaskCorrectAnswer+"'"+")>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
-                } 
-                //als de task geen hint heeft, zet alleen de task tekst neer.
-                else{ 
-                    document.getElementById("Taskholder").innerHTML=j.TaskQuestion;
-                    LocationVisit(QuestionTaskID);
-                }
-                //zet de task naar completed zodat deze niet nogmaals gedaan kan worden.
-                j.TaskCompleted = true;
+            //set the display of the taskholder div to block to show it
+            document.getElementById("Taskholder").style.display=("block");
+            //if the task has a hint, it is a task the student must complete
+            if (j.TaskHint != null) {
+                //loop through the answers of the task
+                for(k in j.TaskAnswers){
+                    //add the answer to the variable
+                    TaskAnswers.push("<label><input type='radio' name='TaskQuestion' value='"+k+"'> "+k+":"+j.TaskAnswers[k]+"</label><br>");
+                };
+                //convert the variable to a string
+                TaskAnswers = TaskAnswers.toString();
+                //clean de string, remove any unwanted , in the string
+                TaskAnswersCleaned = TaskAnswers.replace(/,/g,"");
+                //place the question along with the answers and hint in the task holder div.
+                document.getElementById("Taskholder").innerHTML=j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button onclick=AnwserTask("+"'"+j.TaskID+"'"+","+"'"+j.TaskCorrectAnswer+"'"+")>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
+            } 
+            //if the task has no hint, it is a destination for the student to visit
+            else{ 
+                document.getElementById("Taskholder").innerHTML=j.TaskQuestion;
+                LocationVisit(QuestionTaskID);
             }
         };
     });
 }
-//functie voor het bezoeken van bepaalde locaties.
+//function is called if the visited destination is a location
 function LocationVisit(LocationID){
     if (LocationList[LocationID] == null){
         LocationList.push(LocationID);
@@ -89,15 +86,15 @@ function LocationVisit(LocationID){
     }
 }
 function AnwserTask(InputTask, TrueAnswer){
-    //pakt de value van het gekozen antwoord
+    //grab the value of the chosen answer
     var AnswerGiven = document.querySelector('input[name="TaskQuestion"]:checked').value;
-    //check de gekozen waarde tegenover de correcte waarde
+    //check the given answer against the correct anser
     if (AnswerGiven == TrueAnswer) {
-        //als de waarde overeen komen, zet de verkregen punten naar 50
+        //if the correct answer was given, set the points of the task to 50
         PointList[InputTask]=50;
         alert("Vraag beantwoord.");
     }else{
-        //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
+        //if the correct answer was not given, set the points of the task to 0.        
         PointList[InputTask]=0;
         alert("Vraag beantwoord.");
     }
