@@ -2,30 +2,30 @@
 <html style="width:100%;height:100%;">
 <head>
     <title>Just try to Escape Vista</title>
-    <!--Style sheet die gebruikt is voor het styling van de tekst-->
+    <!--Style sheet-->
     <link rel="stylesheet" href="../CSS/Stylesheet.css">
 </head>
 <body style="width:100%;height:100%;margin:0;padding:0;">
-    <!--De bviewbox zorgt ervoor dat de SVG Graphics scalen naar de grote van het beeldscherm-->
+    <!--Viewbox with relevant details so it scales with the screen of the user-->
     <svg height="100vh" width="100vw" viewbox="0 0 1535 720" preserveAspectRatio="none">
-        <!--De rode en Cyaan polygons die op de webpagina staan. de onclick event werkt overal op de polygon-->
-        <!--De points die de polygon defineren zijn kloksweg definieert en beginnen bij het meeste rechtsbovenste punt van de polygon.-->
+        <!--The red and dark-Cyan polygon on the screen, the onclick event works on any area of the polygon-->
+        <!--The points to define the polygon, the points are declared clock-wise and start with the upper-right point of the polygon-->
         <polygon points="0,120 300,0, 300,400 0,310" style="fill:#004f59"></polygon>
         <polygon points="300,0 768,170 768,720 300,540" style="fill:#e56a54" onclick="location.href='InformatiePagina.html';"></polygon>
         <polygon points="768,0 1236,170 1236,720 768,540" style="fill:#004f59" onclick="location.href='EscapeVista.html';"></polygon>
         <polygon points="1236.5,300 1535.5,410 1535.5,630 1236.5,720" style="fill:#e56a54"></polygon>
-        <!--De cirkels die in het midden van de polygons staan-->
-        <!--cx en cy referen naar de x en y coordinaten van de cirkel-->
-        <!--Cirkel in het rode polygon voor informatie pagina-->
+        <!--The circels found on the polygons-->
+        <!--CX and CY are the x and y coordinates of the circle respective-->
+        <!--Circle in the red polygon leading to the informatie page-->
         <circle cx="540" cy="345" r="55" stroke-width="0" fill="#EB8E7E"></circle>
-        <!--Cirkel in het cyaan polygon voor "Escape Vista"-->
+        <!--Circle in the dark-cyan polygon leading to "Escape Vista"-->
         <circle cx="1002" cy="345" r="55" stroke-width="0" fill="#3E7A81"></circle>
-        <!--De pijltes die zich in de cirkels bevinden. De onclick werkt overop de pijl-->
-        <!--Pijl voor Informatie pagina-->
+        <!--The arrow in the circles-->
+        <!--arrow for the information page-->
         <image href="../IMAGES/VistaArrow.png" x="468" y="276" onclick="location.href='InformatiePagina.html';"/>
-        <!--Pijl voor spel-->
+        <!--arrow for the "Escape Vista" game-->
         <image href="../IMAGES/VistaArrow.png" x="930" y="276" onclick="location.href='EscapeVista.html';"/>
-        <!--De tekst die zich onder de cirkels bevinden-->
+        <!--The tekst underneath the arrows and circles-->
         <text x="445" y="440" class="LandingsPageText">Informatie Panel</text>
         <text x="925" y="440" class="LandingsPageText">Escape Vista</text>
     </svg>
