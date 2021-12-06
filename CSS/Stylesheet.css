@@ -52,6 +52,7 @@
 
 /*Styling for the progress bar, just change the name to the correct thing*/
 /*Firefox styling*/
+<<<<<<< HEAD
 #VistaScore::-moz-progress-bar { 
     background: #004f59; 
     transition: all 0.5s;
@@ -64,5 +65,19 @@
 /*Internet Explorer/Edge styling*/
 #VistaScore { 
     background: #004f59; 
+=======
+#MagicStorageUsage::-moz-progress-bar { 
+    background: blue; 
+    transition: all 0.5s;
+} 
+/*Chrome/Safari styling*/
+#MagicStorageUsage::-webkit-progress-value{
+    background: blue;
+    transition: all 0.5s;
+}
+/*Internet Explorer/Edge styling*/
+#MagicStorageUsage { 
+    background: blue; 
+>>>>>>> parent of 8cd03e9 (new branch update progressbar)
     transition: all 0.5s;
 } 
