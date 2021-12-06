@@ -53,16 +53,16 @@
 /*Styling for the progress bar, just change the name to the correct thing*/
 /*Firefox styling*/
 #MagicStorageUsage::-moz-progress-bar { 
-    background: blue; 
+    background: #004f59; 
     transition: all 0.5s;
 } 
 /*Chrome/Safari styling*/
 #MagicStorageUsage::-webkit-progress-value{
-    background: blue;
+    background: #004f59;
     transition: all 0.5s;
 }
 /*Internet Explorer/Edge styling*/
 #MagicStorageUsage { 
-    background: blue; 
+    background: #004f59; 
     transition: all 0.5s;
 } 
