@@ -1,4 +1,4 @@
-//Lijst explanation
+//List explanation
 //X coordinates: the X coordinates of the corresponding arrow
 //y Coordinates: the Y coordinates of the corresponding arrow
 //Arrow direction: the direction the arrow points
@@ -535,7 +535,7 @@ var ImageDataList = [
 var TaskList = [
     {
         TaskID: "Rekenen",
-        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal.<br><br>11010101",
+        TaskQuestion: "<h1>Rekenen</h1><br><br>Reken onderstaand Binair getal om naar Decimaal.<br><br>11010101",
         TaskAnswers: {
             A: "213",
             B: "220",
@@ -548,7 +548,7 @@ var TaskList = [
     },
     {
         TaskID: "Hard- en Software",
-        TaskQuestion: "Wat is het verschil tussen Hardware en Software?",
+        TaskQuestion: "<h1>Hard- en Software</h1><br><br>Wat is het verschil tussen Hardware en Software?",
         TaskAnswers: {
             A: " Hardware is gereedschap , Software is windows OS",
             B: "Hardware is de CPU, GPU, en processor van de PC en Software is het toetsenbord, beeldscherm en de luidsprekers van de PC.",
@@ -561,7 +561,7 @@ var TaskList = [
     },
     {
         TaskID: "Database",
-        TaskQuestion: "Wat is het verschil tussen een Primary Key en een Foreign Key?",
+        TaskQuestion: "<h1>Database</h1><br><br>Wat is het verschil tussen een Primary Key en een Foreign Key?",
         TaskAnswers: {
             A: "Een Primary key is nodig om in de database te komen en een Foreign key is nodig voor iedere tabel in een database",
             B: "Een Primary key is uniek voor iedere tabel en een Foreign Key legt een link vast tussen tabellen.",
@@ -574,7 +574,7 @@ var TaskList = [
     },
     {
         TaskID: "AMO",
-        TaskQuestion: "Waar staat de afkorting HTML voor?",
+        TaskQuestion: "<h1>AMO</h1><br><br>Waar staat de afkorting HTML voor?",
         TaskAnswers: {
             A: "Hyperlinks and Text Markup Language",
             B: "Hyper Type Machine Language",
@@ -587,7 +587,7 @@ var TaskList = [
     },
     {
         TaskID: "CCCCC",
-        TaskQuestion: "Waar staat de afkorting CCCCC voor?",
+        TaskQuestion: "<h1>CCCCC</h1><br><br>Waar staat de afkorting CCCCC voor?",
         TaskAnswers: {
             A: "Composing Clean Coders Code of Conduct",
             B: "Comments, Code Conventions, Clean Coding ",
@@ -615,7 +615,7 @@ var TaskList = [
         TaskHint: null,
     },
     {
-        TaskID: "IT Helpdesk",
+        TaskID: "IT helpdesk",
         TaskQuestion: "Hier bij de IT helpdesk kun je terecht komen als je ICT problemen hebt met je apparatuur.",
         TaskAnswers: null,
         TaskCorrectAnswer: null,
