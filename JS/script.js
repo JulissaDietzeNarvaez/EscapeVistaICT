@@ -1,11 +1,11 @@
 /* Side menu */
-$(".open-menu-btn").on("click", function () {
-  if ($("body").hasClass("closed-menu")) {
-    $("body").removeClass("closed-menu");
-  } else $("body").addClass("closed-menu");
+$(".open-menu-btn").on('click', function(){
+  if($('body').hasClass('closed-menu')){
+    $('body').removeClass('closed-menu');
+  }else $('body').addClass('closed-menu');
 }); 
 
-
+/* Accordion */
 var acc = document.getElementsByClassName("accordion");
 var i;
 

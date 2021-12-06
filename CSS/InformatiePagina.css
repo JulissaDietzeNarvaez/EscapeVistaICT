@@ -4,8 +4,7 @@
 }
 body {
   background-color: #fefefe;
-  margin: 0; 
-  
+  margin: 0;   
 }
 html{
   scroll-behavior: smooth;
@@ -18,7 +17,7 @@ nav {
   display: block;
   min-height: 300px;
   height: 100%;
-  color: rgb(0, 0, 0);
+  
   opacity: 0.8;
   transition: all 300ms;
   -moz-transition: all 300ms;
@@ -27,21 +26,18 @@ nav {
 
 nav .vertical-menu hr{opacity: 0.1; border-width: 0.5px;}
 nav ul{width: 90%; padding-inline-start: 0; margin: 10px; height: calc(100% - 20px); }
-nav .vertical-menu-logo{padding: 20px; font-size: 1.3em; position: relative}
+nav .vertical-menu-logo{ padding: 20px; font-size: 1.2em; position: relative}
 nav .vertical-menu-logo .open-menu-btn{width: 30px; height: max-content; position: absolute; display: block; 
     right: 20px; top: 0; bottom: 0; margin: auto; cursor: pointer;}
 nav .vertical-menu-logo .open-menu-btn hr{margin: 5px 0}
-nav li{list-style: none; padding: 10px 10px; cursor: pointer;}
-nav li:hover{ color: rgba(75, 105, 176,1); }
-nav li#user-info{position: absolute; bottom: 0; width: 80%;}
-nav li#user-info > span{display: block; float: right; font-size: 0.9em; position: relative; opacity: 0.6;}
-nav li#user-info > span:after{
+nav li{list-style: none; padding: 10px 10px; cursor: pointer; font-size: 18px;}
+
+nav span:after{
   content: '';
   width: 12px;
   height: 12px;
   display: block;
   position: absolute;
-  background: green;
   left: -20px; top: 0; bottom: 0;
   margin: auto;
   border-radius: 50%;
@@ -72,7 +68,7 @@ nav li#user-info > span:after{
 
 .closed-menu .vertical-menu-wrapper ul,.closed-menu .vertical-menu-wrapper hr{margin-left: -300px;}
 .vertical-menu-wrapper ul, .vertical-menu-wrapper hr{transition: all 100ms;}
-.content-wrapper{background: #ebebeb;}
+.content-wrapper{background: #ec644a;}
 .content{
   width: 100%;
   min-height: 100%;
@@ -82,14 +78,14 @@ nav li#user-info > span:after{
 }
 
 a {
-  color: #111;
+  color: #00555c;
   text-decoration: none;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 a:hover {
-  color: rgb(139, 139, 139);
+  color: #012427;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
   transition: all 0.6s ease;
@@ -228,21 +224,33 @@ h1{
  font-size: 26px; 
  margin-bottom: 50px;
  margin-top: 75px;
+ color: #00555c;
 }
-h1.opleidingen{
-  margin-top: 0px;
+h1.welkom{
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+p.welkom{
+  margin-bottom: 30px;
 }
 h3{
   font-size: 18px;
   color:#111;
+  
+}
+h4{
+  font-size: 18px;
+  color: #111;
+  margin-bottom: 0;
 }
 p{
+  font-size: 15px;
   color: #111;
+  margin-top: 3px;
+  margin-bottom: 20px;
+  font-weight:400; 
 }
-.email{
-  font-size: 13px;
-}
-
 .target{
   transition: all 0.5s ease;
   margin: 0,10,0,0;
@@ -250,19 +258,29 @@ p{
 /* ----------------- General eind --------------------*/
 
 /* ----------------- Opleidingen start--------------------*/
-.opleidingen{
-  color: black;
+h1.opleidingen{
+  margin-top: 0px;
+  font-size: 26px;
+  font-weight: bolder;
 }
-
-.opleiding1{
-  color: black;
+h3.opleiding{
+  margin-bottom: 35px;
+  font-size: 22px;
+  color: #ec644a;
+}
+h6.meerInformatie{
+  color: #ec644a;
+  font-size: 16px;
+  font-weight: bolder;  
+  margin-bottom: 20px;
 }
 
 /*Bron: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_accordion_symbol */
 
 .accordion {
-  background-color: #eee;
-  color: #444;
+  background-color: rgb(255, 255, 255);
+  color: #00555c;
+  font-weight: 400;
   cursor: pointer;
   padding: 18px;
   width: 99%;
@@ -270,14 +288,14 @@ p{
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 16px;
   transition: 0.4s;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0,85,92,.1);
 }
 
 .active, .accordion:hover {
-  background-color: #ccc;
-  
+  background-color: rgba(0,85,92,.1); 
+  padding-left: 1.75rem;
 }
 
 .accordion:after {
@@ -299,7 +317,7 @@ p{
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   width: 99%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
 }
 
 /* ----------------- Opleidingen eind --------------------*/
@@ -311,6 +329,11 @@ p{
 /* ----------------- Vakken start --------------------*/
 .vakken{
   color: black;
+}
+h3.vakken{
+  margin-bottom: 35px;
+  font-size: 22px;
+  color: #ec644a;
 }
 /* ----------------- Vakken eind --------------------*/
 
@@ -339,7 +362,7 @@ Bron: https://www.w3schools.com/howto/howto_css_team.asp
   }
 }
 .card {
-  height: 500px;
+  height: 550px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .container {
@@ -350,8 +373,17 @@ Bron: https://www.w3schools.com/howto/howto_css_team.asp
   clear: both;
   display: table;
 }
+
 .title {
   color: grey;
+}
+
+.email{
+  font-size: 13px; 
+  margin-top: 8px; 
+}
+.name{
+  color: #ec644a;
 }
 /* ----------------- Docenten eind --------------------*/
 
