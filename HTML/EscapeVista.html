@@ -4,18 +4,18 @@
         <title>Escape Vista</title>
         <link rel="stylesheet" href="../CSS/Stylesheet.css">
     </head>
-    <body id="EscapeVistaBody">
+    <!--oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;" zorgt ervoor dat de gebruikers niet "inspect element" kunnen uitvoeren om zo te voorkomen dat ze de antwoorden voor de vragen uit de code kunnen terug vinden. -->
+    <body id="EscapeVistaBody"> <!--to prevent "inspect element" place: oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;" in the 'body' tag-->  
         <div id="GridContainer">
-            <!--Imagemap waarin de image gebruikt wordt-->
-            <map name="ImageMap" id="ImageMap">
-                <!--Click areas in de imagemap waarop geklikt kunnen worden-->
-                <area shape="rect" coords="10,290,120,360" tabindex="1" style="cursor: pointer;" alt="Test" onclick="TravelPath('Hoofdingang')">
-                <area shape="rect" coords="650,290,765,350" tabindex="2" style="cursor: pointer;" alt="Test" onclick="TravelPath('Hoofdingang')">
-                <area shape="rect" coords="0,0,0,0" tabindex="3" style="cursor: pointer;" alt="Test" onclick="TravelPath(null)">
-                <area shape="rect" coords="0,0,0,0" tabindex="4" style="cursor: pointer;" alt="Test" onclick="TravelPath(null)">
-            </map>
             <!--Image om te gebruiken in de image map-->
-            <img id="ImageHolder" src="../IMAGES/School/Mees.jpg" alt="Image Not Found" usemap="#ImageMap">
+            <img id="ImageHolder" src="../IMAGES/School/Kluisjes Etage 2.jpg" alt="Image Not Found">
+            <svg id="PathHolder" width=100% height=100% viewbox="0 0 768 576" preserveAspectRatio="none">
+                <image id="ImageArrow1" href="../IMAGES/Blue arrow Left.png" x=120 y=125 height="50px" width="50px" onclick="TravelPath('Hoofdweg')"></image>
+                <image id="ImageArrow2" href="../IMAGES/Blue arrow Right.png" x=120 y=175 height="50px" width="50px" onclick="TravelPath('Zijweg aan Hoofdweg')"></image>
+                <image id="ImageArrow3" href="../IMAGES/Blue arrow Down.png" x=360 y=500 height="50px" width="50px" onclick="TravelPath(null)"></image>
+                <image id="ImageArrow4" href="../IMAGES/Blue arrow Right.png" x=-50 y=-50 height="50px" width="50px" onclick="Travelpath(null)"></image>
+            </svg>
+            <div id="Taskholder">TODO: prevent "Inspect element", navragen website design(eventueel frame om de images heen?)</div>
         </div>
     </body>
 </html>

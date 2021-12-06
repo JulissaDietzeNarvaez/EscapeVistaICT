@@ -1,146 +1,532 @@
 //Lijst uitleg
-//ImageID: De naam van de item and de naam van de image die moet verschijnen
-//Coordinates: de coordinaten voor de areas waarop geklikt kan worden
-//Destination: Waar de gebruiker naartoe gaat als op de bijbehorende area geklikt wordt
-//task: als de image een opdracht of bericht heeft voor de gebruiker dan wordt deze hier aan gegeven, bij het laden van de image wordt dan de task uit de TaskList[] gehaald.
-
-
+//X coordinates: de x coordinaten van de bij behorende pijl
+//y Coordinates: de y coordinaten van de bij behorende pijl
+//Arrow direction: De richting waarin de pijl wijst
+//Destinations: waar je heen gaat als je op de pijl klikt
+//tasks: eventuele opdrachten of tekst die verschijnt als je de destination bereikt.
 
 var ImageDataList = [
     {
+        //Id
         ImageID: "Hoofdweg",
-        Coordinates1: "20,180,125,230",
-        Coordinates2: "690,220,755,270",
-        Coordinates3: null,
-        Coordinates4: null,
+        //x Coordinates
+        Arrow1CoordsX: "30",
+        Arrow2CoordsX: "680",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "180",
+        Arrow2CoordsY: "220",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Left",
+        Arrow2Direction: "Up",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
         Destination1: "Pad naar Hoofdingang",
         Destination2: "Zijweg aan Hoofdweg",
         Destination3: null,
         Destination4: null,
+        //tasks
         Task: null,
     },
     {
+        //Id
+        ImageID: "Zijweg aan Hoofdweg",
+        //x Coordinates
+        Arrow1CoordsX: "30",
+        Arrow2CoordsX: "320",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "200",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Left",
+        Arrow2Direction: "Up",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Hoofdweg",
+        Destination2: "Zij pad",
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: null,
+    },
+    {
+        //Id
+        ImageID: "Zij pad",
+        //x Coordinates
+        Arrow1CoordsX: "70",
+        Arrow2CoordsX: "485",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "180",
+        Arrow2CoordsY: "160",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Left",
+        Arrow2Direction: "Left",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "FietsenStalling",
+        Destination2: "Receptie",
+        Destination3: "Zijweg aan Hoofdweg",
+        Destination4: null,
+        //tasks
+        Task: null,
+    },
+    {
+        //Id
         ImageID: "Pad naar Hoofdingang",
-        Coordinates1: "340,255,410,310",
-        Coordinates2: "230,500,550,575",
-        Coordinates3: null,
-        Coordinates4: null,
+        //x Coordinates
+        Arrow1CoordsX: "350",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "250",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
         Destination1: "Hoofdingang",
         Destination2: "Hoofdweg",
         Destination3: null,
         Destination4: null,
+        //tasks
         Task: null,
     },
     {
+        //Id
         ImageID: "Hoofdingang",
-        Coordinates1: "390,220,455,290",
-        Coordinates2: "250,520,525,575",
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "",
+        //x Coordinates
+        Arrow1CoordsX: "390",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "220",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Receptie",
         Destination2: "Pad naar Hoofdingang",
         Destination3: null,
         Destination4: null,
+        //tasks
         Task: null,
     },
     {
-        ImageID: "Zijweg aan Hoofdweg",
-        Coordinates1: "305,190,375,270",
-        Coordinates2: "20,460,150,560",
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "Zij pad",
-        Destination2: "Hoofdweg",
-        Destination3: null,
-        Destination4: null,
-        Task: null,
-    },
-    {
-        ImageID: "Zij pad",
-        Coordinates1: "75,170,175,250",
-        Coordinates2: "45,500,265,575",
-        Coordinates3: "525,160,575,210",
-        Coordinates4: null,
-        Destination1: "FietsenStalling",
-        Destination2: "Zijweg aan Hoofdweg",
-        Destination3: "",
-        Destination4: null,
-        Task: null,
-    },
-    {
-        ImageID: "FietsenStalling",
-        Coordinates1: "415,185,465,235",
-        Coordinates2: "270,500,500,575",
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "Gang met Toiletten",
+        //Id
+        ImageID: "Receptie",
+        //x Coordinates
+        Arrow1CoordsX: "10",
+        Arrow2CoordsX: "575",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "700",
+        //y coordinates
+        Arrow1CoordsY: "375",
+        Arrow2CoordsY: "280",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "450",
+        //Arrow Direction
+        Arrow1Direction: "Left",
+        Arrow2Direction: "Up",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Right",
+        //Destinations
+        Destination1: "IT helpdesk",
         Destination2: "Zij pad",
-        Destination3: null,
-        Destination4: null,
-        Task: null,
-    },
-    {
-        ImageID: "Gang met Toiletten",
-        Coordinates1: "370,245,435,300",
-        Coordinates2: "300,525,475,575",
-        Coordinates3: "225,250,270,315",
-        Coordinates4: "680,355,755,435",
-        Destination1: "Kantine",
-        Destination2: "FietsenStalling",
-        Destination3: "Toilet",
+        Destination3: "Hoofdingang",
         Destination4: "Gang van Receptie naar Fietsenstalling",
-        Task: null,
+        //tasks
+        Task: "Rekenen",
     },
     {
-        ImageID: "Toilet",
-        Coordinates1: "280,510,495,575",
-        Coordinates2: null,
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "Gang met Toiletten",
+        //Id
+        ImageID: "IT helpdesk",
+        //x Coordinates
+        Arrow1CoordsX: "360",
+        Arrow2CoordsX: "-50",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "-50",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Down",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Receptie",
         Destination2: null,
         Destination3: null,
         Destination4: null,
-        Task: "Toilet",
+        //tasks
+        Task: "IT helpdesk",
     },
     {
+        //Id
+        ImageID: "FietsenStalling",
+        //x Coordinates
+        Arrow1CoordsX: "480",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "225",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "gang met Toiletten",
+        Destination2: "Zij pad",
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: null,
+    },
+    {
+        //Id
+        ImageID: "gang met Toiletten",
+        //x Coordinates
+        Arrow1CoordsX: "380",
+        Arrow2CoordsX: "240",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "680",
+        //y coordinates
+        Arrow1CoordsY: "275",
+        Arrow2CoordsY: "300",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "500",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Left",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Right",
+        //Destinations
+        Destination1: "Kantine",
+        Destination2: "Toilet",
+        Destination3: "FietsenStalling",
+        Destination4: "Gang van Receptie naar Fietsenstalling",
+        //tasks
+        Task: null,
+    },
+    {
+        //Id
         ImageID: "Gang van Receptie naar Fietsenstalling",
-        Coordinates1: "360,245,435,310",
-        Coordinates2: "285,510,480,575",
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "Gang met Toiletten",
+        //x Coordinates
+        Arrow1CoordsX: "380",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "250",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "gang met Toiletten",
         Destination2: "Receptie",
         Destination3: null,
         Destination4: null,
+        //tasks
         Task: null,
     },
     {
-        ImageID: "Kantine",
-        Coordinates1: "125,220,200,270",
-        Coordinates2: "285,505,480,575",
-        Coordinates3: "5,290,100,355",
-        Coordinates4: null,
-        Destination1: null,
-        Destination2: "Gang met Toiletten",
-        Destination3: "Mees",
-        Destination4: null,
-        Task: null,
-    },
-    {
-        ImageID: "Mees",
-        Coordinates1: "10,290,120,360",
-        Coordinates2: "650,290,765,350",
-        Coordinates3: null,
-        Coordinates4: null,
-        Destination1: "Kantine",
-        Destination2: "",
+        //Id
+        ImageID: "Toilet",
+        //x Coordinates
+        Arrow1CoordsX: "360",
+        Arrow2CoordsX: "-50",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "-50",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Down",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "gang met Toiletten",
+        Destination2: null,
         Destination3: null,
         Destination4: null,
+        //tasks
+        Task: "Toilet",
+    },
+    {
+        //Id
+        ImageID: "Kantine",
+        //x Coordinates
+        Arrow1CoordsX: "210",
+        Arrow2CoordsX: "20",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "200",
+        Arrow2CoordsY: "290",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Left",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren",
+        Destination2: "Mees",
+        Destination3: "gang met Toiletten",
+        Destination4: null,
+        //tasks
+        Task: null,
+    },
+    {
+        //Id
+        ImageID: "Mees",
+        //x Coordinates
+        Arrow1CoordsX: "700",
+        Arrow2CoordsX: "20",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "290",
+        Arrow2CoordsY: "290",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Right",
+        Arrow2Direction: "Left",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren",
+        Destination2: "Kantine",
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Mees",
+    },
+    {
+        //Id
+        ImageID: "B Toren",
+        //x Coordinates
+        Arrow1CoordsX: "600",
+        Arrow2CoordsX: "240",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "10",
+        Arrow2CoordsY: "290",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Up",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren Etage 1",
+        Destination2: "Lokaal B0.01",
+        Destination3: "Kantine",
+        Destination4: null,
+        //tasks
+        Task: null,
+    },
+    {
+        //Id
+        ImageID: "B Toren Etage 1",
+        //x Coordinates
+        Arrow1CoordsX: "725",
+        Arrow2CoordsX: "260",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "250",
+        Arrow2CoordsY: "220",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Left",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren Etage 2",
+        Destination2: "Gang naar docenten kamer",
+        Destination3: "B Toren",
+        Destination4: null,
+        //tasks
+        Task: null,
+    },
+    {
+        //Id
+        ImageID: "Gang naar docenten kamer",
+        //x Coordinates
+        Arrow1CoordsX: "230",
+        Arrow2CoordsX: "360",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "250",
+        Arrow2CoordsY: "500",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Up",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Docenten Kamer",
+        Destination2: "B Toren Etage 1",
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: null,
+    },
+    {
+        //Id
+        ImageID: "Docenten Kamer",
+        //x Coordinates
+        Arrow1CoordsX: "360",
+        Arrow2CoordsX: "-50",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "-50",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Down",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Gang naar docenten kamer",
+        Destination2: null,
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: "Docenten Kamer",
+    },
+    {
+        //Id
+        ImageID: "B Toren Etage 2",
+        //x Coordinates
+        Arrow1CoordsX: "120",
+        Arrow2CoordsX: "120",
+        Arrow3CoordsX: "360",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "125",
+        Arrow2CoordsY: "175",
+        Arrow3CoordsY: "500",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Left",
+        Arrow2Direction: "Right",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "Lokaal B2.08",
+        Destination2: "Kluisjes Etage 2",
+        Destination3: "B Toren Etage 1",
+        Destination4: null,
+        //tasks
+        Task: null,
+    },
+    {
+        //Id
+        ImageID: "Lokaal B2.08",
+        //x Coordinates
+        Arrow1CoordsX: "360",
+        Arrow2CoordsX: "-50",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "-50",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Down",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren Etage 2",
+        Destination2: null,
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: null,
+    },
+    {
+        //Id
+        ImageID: "Kluisjes Etage 2",
+        //x Coordinates
+        Arrow1CoordsX: "360",
+        Arrow2CoordsX: "-50",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "-50",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Down",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren Etage 2",
+        Destination2: null,
+        Destination3: null,
+        Destination4: null,
+        //tasks
         Task: null,
     }
 ]
-
 //Tasklist uitleg
 //TaskID: waar naar gekeken worden waar de opdracht bij hoort
 //TaskQuestion: De vraag die wordt gesteld aan de gebruiker, dit kan ook eventuele tekst zijn om iets aan de gebruiker duidelijk te maken.
@@ -149,14 +535,91 @@ var ImageDataList = [
 var TaskList = [
     {
         TaskID: "Rekenen",
-        TaskQuestion: "",
-        TaskAnwser: "",
-        Completed: false,
+        TaskQuestion: "Reken onderstaand Binair getal om naar Decimaal.<br><br>11010101",
+        TaskAnswers: {
+            A: "213",
+            B: "220",
+            C: "185",
+            D: "253"
+        },
+        TaskCorrectAnswer: "A",
+        TaskCompleted: false,
+        TaskHint:"../IMAGES/School/Hint Rekenen.png",
+    },
+    {
+        TaskID: "Hard- en Software",
+        TaskQuestion: "Wat is het verschil tussen Hardware en Software?",
+        TaskAnswers: {
+            A: " Hardware is gereedschap , Software is windows OS",
+            B: "Hardware is de CPU, GPU, en processor van de PC en Software is het toetsenbord, beeldscherm en de luidsprekers van de PC.",
+            C: "Hardware is alles wat je kunt aan raken van een PC en software is alles van programma en applicaties die op de pc staan.",
+            D: "Hardware is de de bekabeling van de computer saoftware is de signaalen waar mee je de computer aanstuurd"
+        },
+        TaskCorrectAnswer: "C",
+        TaskCompleted: false,
+        TaskHint:"",
+    },
+    {
+        TaskID: "Database",
+        TaskQuestion: "Wat is het verschil tussen een Primary Key en een Foreign Key?",
+        TaskAnswers: {
+            A: "Een Primary key is nodig om in de database te komen en een Foreign key is nodig voor iedere tabel in een database",
+            B: "Een Primary key is uniek voor iedere tabel en een Foreign Key legt een link vast tussen tabellen.",
+            C: "Een Primary key is een unieke key voor iedere tabel en een Foreign key is de back-up als de Priamry Key niet werkt.",
+            D: "Een Primary key wordt gebruikt om een tabel te identificeren en een Foreign key is om een individuele record binnen de tabel te indentificeren."
+        },
+        TaskCorrectAnswer: "B",
+        TaskCompleted: false,
+        TaskHint:"",
+    },
+    {
+        TaskID: "AMO",
+        TaskQuestion: "Waar staat de afkorting HTML voor?",
+        TaskAnswers: {
+            A: "Hyperlinks and Text Markup Language",
+            B: "Hyper Type Machine Language",
+            C: "Hypertext Meta-Language",
+            D: "Hypertext Markup Language"
+        },
+        TaskCorrectAnswer: "D",
+        TaskCompleted: false,
+        TaskHint:"",
+    },
+    {
+        TaskID: "CCCCC",
+        TaskQuestion: "Waar staat de afkorting CCCCC voor?",
+        TaskAnswers: {
+            A: "Composing Clean Coders Code of Conduct",
+            B: "Comments, Code Conventions, Clean Coding ",
+            C: "Copy, Corrupt, Copyright, Circulate, Control",
+            D: "Cascade, Code, Copy, Create, "
+        },
+        TaskCorrectAnswer: "B",
+        TaskCompleted: false,
+        TaskHint:"",
     },
     {
         TaskID: "Toilet",
         TaskQuestion: "Je hebt de toiletten gevonden, gefeliciteerd.",
-        TaskAnwser: "",
-        Completed: false,
+        TaskAnswers: null,
+        TaskCorrectAnswer: null,
+        TaskCompleted: false,
+        TaskHint: null,
     },
+    {
+        TaskID: "Mees",
+        TaskQuestion: "Dit is Mees, hier kun je eten en drinken kopen.",
+        TaskAnswers: null,
+        TaskCorrectAnswer: null,
+        TaskCompleted: false,
+        TaskHint: null,
+    },
+    {
+        TaskID: "IT Helpdesk",
+        TaskQuestion: "Hier bij de IT helpdesk kun je terecht komen als je ICT problemen hebt met je apparatuur.",
+        TaskAnswers: null,
+        TaskCorrectAnswer: null,
+        TaskCompleted: false,
+        TaskHint: null,
+    }
 ]
