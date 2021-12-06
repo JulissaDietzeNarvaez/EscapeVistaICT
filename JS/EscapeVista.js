@@ -1,5 +1,5 @@
 //List voor bijhouden welke punten verdient zijn.
-var PointList = {"Rekenen": 0,};
+var PointList = {"Rekenen": 0, "Hard- en Software": 0, "Database": 0, "AMO": 0, "CCCCC":0};
 //maak een variable aan zodat de hoeveelheid getypte tekst minder wordt
 var Arrow1 = document.getElementById("ImageArrow1");
 var Arrow2 = document.getElementById("ImageArrow2");
@@ -72,12 +72,17 @@ function TaskQuestioning(QuestionTaskID){
                 //als de task geen hint heeft, zet alleen de task tekst neer.
                 else{ 
                     document.getElementById("Taskholder").innerHTML=j.TaskQuestion;
+                    LocationVisit(QuestionTaskID);
                 }
                 //zet de task naar completed zodat deze niet nogmaals gedaan kan worden.
                 j.TaskCompleted = true;
             }
         };
     });
+}
+//functie voor het bezoeken van bepaalde locaties.
+function LocationVisit(){
+
 }
 function AnwserTask(InputTask, TrueAnswer){
     //pakt de value van het gekozen antwoord

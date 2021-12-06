@@ -1,9 +1,9 @@
 //Lijst uitleg
-//ImageID: De naam van de item and de naam van de image die moet verschijnen
-//Coordinates: de coordinaten voor de areas waarop geklikt kan worden
-//Destination: Waar de gebruiker naartoe gaat als op de bijbehorende area geklikt wordt
-//task: als de image een opdracht of bericht heeft voor de gebruiker dan wordt deze hier aan gegeven, bij het laden van de image wordt dan de task uit de TaskList[] gehaald.
-
+//X coordinates: de x coordinaten van de bij behorende pijl
+//y Coordinates: de y coordinaten van de bij behorende pijl
+//Arrow direction: De richting waarin de pijl wijst
+//Destinations: waar je heen gaat als je op de pijl klikt
+//tasks: eventuele opdrachten of tekst die verschijnt als je de destination bereikt.
 
 var ImageDataList = [
     {
@@ -551,8 +551,8 @@ var TaskList = [
         TaskQuestion: "Wat is het verschil tussen Hardware en Software?",
         TaskAnswers: {
             A: "",
-            B: "",
-            C: "Hardware is alles wat je kunt aan raken van een pc en software is alles van programma en applicaties die op de pc staan.",
+            B: "Hardware is de CPU, GPU, en processor van de PC en Software is het toetsenbord, beeldscherm en de luidsprekers van de PC.",
+            C: "Hardware is alles wat je kunt aan raken van een PC en software is alles van programma en applicaties die op de pc staan.",
             D: ""
         },
         TaskCorrectAnswer: "C",
@@ -565,8 +565,8 @@ var TaskList = [
         TaskAnswers: {
             A: "Een Primary key is nodig om in de database te komen en een Foreign key is nodig voor iedere tabel in een database",
             B: "Een Primary key is uniek voor iedere tabel en een Foreign Key legt een link vast tussen tabellen.",
-            C: "",
-            D: ""
+            C: "Een Primary key is een unieke key voor iedere tabel en een Foreign key is de back-up als de Priamry Key niet werkt.",
+            D: "Een Primary key wordt gebruikt om een tabel te identificeren en een Foreign key is om een individuele record binnen de tabel te indentificeren."
         },
         TaskCorrectAnswer: "B",
         TaskCompleted: false,
