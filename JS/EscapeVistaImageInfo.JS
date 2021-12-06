@@ -550,10 +550,10 @@ var TaskList = [
         TaskID: "Hard- en Software",
         TaskQuestion: "Wat is het verschil tussen Hardware en Software?",
         TaskAnswers: {
-            A: "",
+            A: " Hardware is gereedschap , Software is windows OS",
             B: "Hardware is de CPU, GPU, en processor van de PC en Software is het toetsenbord, beeldscherm en de luidsprekers van de PC.",
             C: "Hardware is alles wat je kunt aan raken van een PC en software is alles van programma en applicaties die op de pc staan.",
-            D: ""
+            D: "Hardware is de de bekabeling van de computer saoftware is de signaalen waar mee je de computer aanstuurd"
         },
         TaskCorrectAnswer: "C",
         TaskCompleted: false,
