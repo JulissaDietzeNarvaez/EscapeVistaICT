@@ -74,6 +74,7 @@ function TaskQuestioning(QuestionTaskID){
             else{ 
                 document.getElementById("Taskholder").innerHTML=j.TaskQuestion;
                 LocationVisit(QuestionTaskID);
+                j.TaskCompleted = true;
             }
         };
     });
@@ -88,14 +89,21 @@ function LocationVisit(LocationID){
 function AnwserTask(InputTask, TrueAnswer){
     //grab the value of the chosen answer
     var AnswerGiven = document.querySelector('input[name="TaskQuestion"]:checked').value;
-    //check the given answer against the correct anser
-    if (AnswerGiven == TrueAnswer) {
-        //if the correct answer was given, set the points of the task to 50
-        PointList[InputTask]=50;
-        alert("Vraag beantwoord.");
-    }else{
-        //if the correct answer was not given, set the points of the task to 0.        
-        PointList[InputTask]=0;
-        alert("Vraag beantwoord.");
-    }
+    var TaskVari = (TaskList.find(i=>i.TaskID == InputTask));
+    if(TaskVari.TaskCompleted == false){
+        //check de gekozen waarde tegenover de correcte waarde
+        if (AnswerGiven == TrueAnswer) {
+            //als de waarde overeen komen, zet de verkregen punten naar 50
+            PointList[InputTask]= 50;
+            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
+            
+        }else{
+            //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
+            PointList[InputTask]=0;
+        }
+          
+    TaskVari.TaskCompleted = true;
+   }
+    //check de huidige punten stand.
+    console.log(PointList);
 }
