@@ -1,9 +1,9 @@
-//Lijst uitleg
-//X coordinates: de x coordinaten van de bij behorende pijl
-//y Coordinates: de y coordinaten van de bij behorende pijl
-//Arrow direction: De richting waarin de pijl wijst
-//Destinations: waar je heen gaat als je op de pijl klikt
-//tasks: eventuele opdrachten of tekst die verschijnt als je de destination bereikt.
+//Lijst explanation
+//X coordinates: the X coordinates of the corresponding arrow
+//y Coordinates: the Y coordinates of the corresponding arrow
+//Arrow direction: the direction the arrow points
+//Destinations: where you go to when you click the arrow
+//tasks: any tasks the destination has to give the user
 
 var ImageDataList = [
     {
@@ -527,11 +527,11 @@ var ImageDataList = [
         Task: null,
     }
 ]
-//Tasklist uitleg
-//TaskID: waar naar gekeken worden waar de opdracht bij hoort
-//TaskQuestion: De vraag die wordt gesteld aan de gebruiker, dit kan ook eventuele tekst zijn om iets aan de gebruiker duidelijk te maken.
-//TaskAnswer:
-//Completed: als de opdracht deze variable op 'true' heeft staan dan heeft de gebruiker deze opdracht gezien en wordt deze niet nogmaals weergegeven.
+//Tasklist explanation
+//TaskID: ID of the task
+//TaskQuestion: The question given to the student, if the destination is simply a location, it's just text
+//TaskAnswer: the multiple choice answers given to the user
+//Completed: whether or not the task has been answered of the locaction is visited.
 var TaskList = [
     {
         TaskID: "Rekenen",
