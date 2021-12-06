@@ -73,9 +73,10 @@ function TaskQuestioning(QuestionTaskID){
                 else{ 
                     document.getElementById("Taskholder").innerHTML=j.TaskQuestion;
                     LocationVisit(QuestionTaskID);
+                    j.TaskCompleted = true;
                 }
                 //zet de task naar completed zodat deze niet nogmaals gedaan kan worden.
-                j.TaskCompleted = true;
+                
             }
         };
     });
@@ -84,18 +85,32 @@ function TaskQuestioning(QuestionTaskID){
 function LocationVisit(){
 
 }
+
 function AnwserTask(InputTask, TrueAnswer){
     //pakt de value van het gekozen antwoord
     var AnswerGiven = document.querySelector('input[name="TaskQuestion"]:checked').value;
-    //check de gekozen waarde tegenover de correcte waarde
-    if (AnswerGiven == TrueAnswer) {
-        //als de waarde overeen komen, zet de verkregen punten naar 50
-        PointList[InputTask]=50;
-        document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
-    }else{
-        //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
-        PointList[InputTask]=0;
-    }
+    //check if question has been answerd ob session
+    var TaskVari = (TaskList.find(i=>i.TaskID == InputTask));
+    console.log(TaskVari.TaskCompleted);
+   if(TaskVari.TaskCompleted == false){
+        //check de gekozen waarde tegenover de correcte waarde
+        if (AnswerGiven == TrueAnswer) {
+            //als de waarde overeen komen, zet de verkregen punten naar 50
+            PointList[InputTask]= PointList[InputTask]+50;
+            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
+            
+        }else{
+            //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
+            PointList[InputTask]=0;
+            }
+          
+    TaskVari.TaskCompleted = true;
+    console.log(TaskVari.TaskCompleted);
+   }
+  
     //check de huidige punten stand.
     console.log(PointList);
+}
+function IsTaskCompleted(){
+
 }
