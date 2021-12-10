@@ -48,6 +48,8 @@ function TravelPath(Destination){
     })
 }
 function TaskQuestioning(QuestionTaskID){
+    //remove the taskholder if it is still visible from a previous task.
+    document.getElementById("Taskholder").style.display=("none");
     //empty variable to push the task to
     var TaskAnswers = [];
     //loop through the task array
