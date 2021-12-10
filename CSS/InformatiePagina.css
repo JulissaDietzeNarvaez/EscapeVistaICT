@@ -16,8 +16,7 @@ nav {
   bottom: 0; top: 0;
   display: block;
   min-height: 300px;
-  height: 100%;
-  
+  height: 100%;  
   opacity: 0.8;
   transition: all 300ms;
   -moz-transition: all 300ms;
@@ -198,12 +197,10 @@ a:hover {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  overflow-y: auto;
-  
+  overflow-y: auto;  
   top: 0;
   bottom: 0;
 }
-
 
 .sidebar-nav .nav-flyout a:hover {
   background-color: rgba(255, 255, 255, 0.05);
@@ -222,7 +219,7 @@ a:hover {
 /* ----------------- General start --------------------*/
 h1{
  font-size: 26px; 
- margin-bottom: 50px;
+ margin-bottom: 25px;
  margin-top: 75px;
  color: #00555c;
 }
@@ -236,8 +233,7 @@ p.welkom{
 }
 h3{
   font-size: 18px;
-  color:#111;
-  
+  color:#111;  
 }
 h4{
   font-size: 18px;
@@ -323,9 +319,6 @@ h6.meerInformatie{
 /* ----------------- Opleidingen eind --------------------*/
 
 
-
-
-
 /* ----------------- Vakken start --------------------*/
 .vakken{
   color: black;
@@ -336,10 +329,6 @@ h3.vakken{
   color: #ec644a;
 }
 /* ----------------- Vakken eind --------------------*/
-
-
-
-
 
 
 /* ----------------- Docenten start --------------------*/
@@ -388,7 +377,6 @@ Bron: https://www.w3schools.com/howto/howto_css_team.asp
 /* ----------------- Docenten eind --------------------*/
 
 
-
 /* ----------------- Plattegrond start --------------------*/
 /* ----------------- Plattegrond eind --------------------*/
 
@@ -400,4 +388,16 @@ Bron: https://www.w3schools.com/howto/howto_css_team.asp
 /* ----------------- Huisregels eind --------------------*/
 
 /* ----------------- Contact start --------------------*/
+
+
+h6.locatie{
+  color: #ec644a;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+p.locatie{
+  font-size: 14px;
+  margin-bottom: 35px;
+}
+
 /* ----------------- Contact eind --------------------*/
