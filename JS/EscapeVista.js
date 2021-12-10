@@ -69,7 +69,7 @@ function TaskQuestioning(QuestionTaskID){
                     };
                     //convert the variable to a string
                     TaskAnswers = TaskAnswers.toString();
-                    //clean de string, remove any unwanted , in the string
+                    //clean de string, remove any unwanted ',' in the string
                     TaskAnswersCleaned = TaskAnswers.replace(/,/g,"");
                     //place the question along with the answers and hint in the task holder div.
                     document.getElementById("Taskholder").innerHTML=j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button onclick=AnwserTask("+"'"+j.TaskID+"'"+","+"'"+j.TaskCorrectAnswer+"'"+")>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
