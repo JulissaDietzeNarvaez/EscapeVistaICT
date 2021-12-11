@@ -14,7 +14,7 @@ function TravelPath(Destination){
     ImageDataList.forEach(i => {
         //if the Image ID is equal to the requested destination, perform the following acts
         if (i.ImageID == Destination) {
-            //======================================================showthe image and move the arrow to the correct place=======================================
+            //======================================================show the image and move the arrow to the correct place=======================================
             //===========X coordinates=============
             Arrow1.setAttribute('x', i.Arrow1CoordsX);
             Arrow2.setAttribute('x', i.Arrow2CoordsX);
@@ -48,6 +48,8 @@ function TravelPath(Destination){
     })
 }
 function TaskQuestioning(QuestionTaskID){
+    //remove the taskholder if it is still visible from a previous task.
+    document.getElementById("Taskholder").style.display=("none");
     //empty variable to push the task to
     var TaskAnswers = [];
     //loop through the task array
@@ -83,34 +85,40 @@ function TaskQuestioning(QuestionTaskID){
 }
 //function is called if the visited destination is a location
 function LocationVisit(LocationID){
+    //place the destination info in a variable for easy access
     var LocationVari = (TaskList.find(i=>i.TaskID == LocationID));
-    console.log(LocationVari);
+    //check if the location has been visited before
     if(LocationVari.TaskCompleted == false){
+        //check if the locationList of visited locations is present
         if (LocationList[LocationID] == null){
+            //add the location to the list
             LocationList.push(LocationID);
-            LocationList[LocationID] = 25;  
+            //give the added location a value
+            LocationList[LocationID] = 25; 
+            //update the progress bar 
             document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
+            //set TaskCompleted to true so it's information won't show up a second time when visited.
             LocationVari.TaskCompleted = true;
         }
     }
 }
+//function is called if a question is answered
 function AnwserTask(InputTask, TrueAnswer){
     //grab the value of the chosen answer
     var AnswerGiven = document.querySelector('input[name="TaskQuestion"]:checked').value;
+    //place the task info in a variable for easy access
     var TaskVari = (TaskList.find(i=>i.TaskID == InputTask));
     if(TaskVari.TaskCompleted == false){
         //check de gekozen waarde tegenover de correcte waarde
         if (AnswerGiven == TrueAnswer) {
             //als de waarde overeen komen, zet de verkregen punten naar 50
             PointList[InputTask]= 50;
+            //update the progress bar
             document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
-            
         }else{
             //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
             PointList[InputTask]=0;
         }
     TaskVari.TaskCompleted = true;
     }
-    //check de huidige punten stand.
-    console.log(PointList);
 }
