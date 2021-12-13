@@ -109,16 +109,17 @@ function AnwserTask(InputTask, TrueAnswer){
     //place the task info in a variable for easy access
     var TaskVari = (TaskList.find(i=>i.TaskID == InputTask));
     if(TaskVari.TaskCompleted == false){
-        //check de gekozen waarde tegenover de correcte waarde
+        //check if the given value is the same as the correct answer
         if (AnswerGiven == TrueAnswer) {
-            //als de waarde overeen komen, zet de verkregen punten naar 50
+            //if the values are equal, set the points of that task to 50
             PointList[InputTask]= 50;
             //update the progress bar
             document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
         }else{
-            //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
+            //if the values are not equal, set the points of that task to 0.
             PointList[InputTask]=0;
         }
+    //set the TaskCompleted value to 'true', so the task won't be given a second time to the user
     TaskVari.TaskCompleted = true;
     }
 }
