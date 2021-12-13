@@ -96,7 +96,7 @@ function LocationVisit(LocationID){
             //give the added location a value
             LocationList[LocationID] = 25; 
             //update the progress bar 
-            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
+            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 10;
             //set TaskCompleted to true so it's information won't show up a second time when visited.
             LocationVari.TaskCompleted = true;
         }
@@ -114,7 +114,7 @@ function AnwserTask(InputTask, TrueAnswer){
             //if the values are equal, set the points of that task to 50
             PointList[InputTask]= 50;
             //update the progress bar
-            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
+            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 10;
         }else{
             //if the values are not equal, set the points of that task to 0.
             PointList[InputTask]=0;

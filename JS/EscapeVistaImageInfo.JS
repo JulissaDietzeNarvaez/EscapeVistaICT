@@ -368,7 +368,7 @@ var ImageDataList = [
         Destination3: "Kantine",
         Destination4: null,
         //tasks
-        Task: null,
+        Task: "B Toren",
     },
     {
         //Id
@@ -617,6 +617,22 @@ var TaskList = [
     {
         TaskID: "IT helpdesk",
         TaskQuestion: "Hier bij de IT helpdesk kun je terecht komen als je ICT problemen hebt met je apparatuur.",
+        TaskAnswers: null,
+        TaskCorrectAnswer: null,
+        TaskCompleted: false,
+        TaskHint: null,
+    },
+    {
+        TaskID: "Docenten Kamer",
+        TaskQuestion: "De docenten kamer, de eerste locatie waar je zult gaan kijken om een docent te vinden",
+        TaskAnswers: null,
+        TaskCorrectAnswer: null,
+        TaskCompleted: false,
+        TaskHint: null,
+    },
+    {
+        TaskID: "B Toren",
+        TaskQuestion: "In de B toren zul je de meeste tijd doorbrengen, want dit is de toren die gebruikt wordt door ICT opleidingen.",
         TaskAnswers: null,
         TaskCorrectAnswer: null,
         TaskCompleted: false,
