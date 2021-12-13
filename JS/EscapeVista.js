@@ -77,6 +77,7 @@ function TaskQuestioning(QuestionTaskID){
                 //if the task has no hint, it is a destination for the student to visit
                 else{ 
                     document.getElementById("Taskholder").innerHTML=j.TaskQuestion;
+                    //execute a function to handle the visit of the location.
                     LocationVisit(QuestionTaskID);
                 }
             };
