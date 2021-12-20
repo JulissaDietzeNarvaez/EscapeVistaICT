@@ -48,9 +48,9 @@ function TravelPath(Destination){
     })
 }
 function TaskQuestioning(QuestionTaskID){
-    //remove the taskholder to prevent it remaining active on a page with a completed task.
+    //remove the taskholder if it is still visible from a previous task.
     document.getElementById("Taskholder").style.display=("none");
-    //empty variable to push the html code of the task into
+    //empty variable to push the task to
     var TaskAnswers = [];
     //loop through the task array
     TaskList.forEach(j => {
@@ -69,7 +69,7 @@ function TaskQuestioning(QuestionTaskID){
                     };
                     //convert the variable to a string
                     TaskAnswers = TaskAnswers.toString();
-                    //clean de string, remove any unwanted ',' in the string
+                    //clean de string, remove any unwanted , in the string
                     TaskAnswersCleaned = TaskAnswers.replace(/,/g,"");
                     //place the question along with the answers and hint in the task holder div.
                     document.getElementById("Taskholder").innerHTML=j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button onclick=AnwserTask("+"'"+j.TaskID+"'"+","+"'"+j.TaskCorrectAnswer+"'"+")>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
@@ -77,7 +77,6 @@ function TaskQuestioning(QuestionTaskID){
                 //if the task has no hint, it is a destination for the student to visit
                 else{ 
                     document.getElementById("Taskholder").innerHTML=j.TaskQuestion;
-                    //execute a function to handle the visit of the location.
                     LocationVisit(QuestionTaskID);
                 }
             };
@@ -97,7 +96,7 @@ function LocationVisit(LocationID){
             //give the added location a value
             LocationList[LocationID] = 25; 
             //update the progress bar 
-            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 10;
+            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
             //set TaskCompleted to true so it's information won't show up a second time when visited.
             LocationVari.TaskCompleted = true;
         }
@@ -110,19 +109,16 @@ function AnwserTask(InputTask, TrueAnswer){
     //place the task info in a variable for easy access
     var TaskVari = (TaskList.find(i=>i.TaskID == InputTask));
     if(TaskVari.TaskCompleted == false){
-        //check if the given value is the same as the correct answer
+        //check de gekozen waarde tegenover de correcte waarde
         if (AnswerGiven == TrueAnswer) {
-            //if the values are equal, set the points of that task to 50
+            //als de waarde overeen komen, zet de verkregen punten naar 50
             PointList[InputTask]= 50;
             //update the progress bar
-            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 10;
+            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
         }else{
-            //if the values are not equal, set the points of that task to 0.
+            //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
             PointList[InputTask]=0;
-            //update the progress bar
-            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 10;
         }
-    //set the TaskCompleted value to 'true', so the task won't be given a second time to the user
     TaskVari.TaskCompleted = true;
     }
 }
