@@ -116,22 +116,27 @@ function AnwserTask(InputTask, TrueAnswer){
         }else{
             //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
             PointList[InputTask]=0;
-            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
         }
     TaskVari.TaskCompleted = true;
     } 
 }
-function test(){
+// function to view the score of the escape questions
+function escapeScore(){
     var PointOverview = "";
     for(var k in PointList){
         PointOverview = PointOverview.concat("<br>Points van "+k+": "+PointList[k]+"<br>");
         document.getElementById("score").innerHTML = PointOverview;
     }
-    Locations(PointOverview);
+    Locations(PointOverview);// adding the next fuction in the escape cal in the button in the Html
+    TotalScore(PointOverview)
 }
+// function to view the score of the Locations
 function Locations(PointOverview){
     for(var k in LocationList){
         PointOverview = PointOverview.concat("<br>Points van "+k+": "+LocationList[k]+"<br>");
         document.getElementById("score").innerHTML = PointOverview;
     }
 }
+function TotalScore(PointOverview){
+    PointOverview= TotalScore (PointList[k] + LocationList[k])
+     document.getElementById("score").innerHTML = PointOverview;}
