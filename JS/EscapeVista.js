@@ -128,7 +128,6 @@ function AnswerTask(InputTask, TrueAnswer){
     TaskVari.TaskCompleted = true;
     } 
 }
-
 // function to view the score of the Locations
 function Locations(Points){
     var PointOverview = "";
