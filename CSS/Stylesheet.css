@@ -56,7 +56,10 @@
     height: 100%;
     background-color: white;
 }
-
+#score{
+    grid-area: LeftGrid;
+    background-color: white;
+}
 /*Styling for the progress bar, just change the name to the correct thing*/
 /*Firefox styling*/
 #VistaScore::-moz-progress-bar { 

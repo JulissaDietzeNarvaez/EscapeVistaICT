@@ -212,7 +212,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Hard_en_Software",
+        Task: "Hard- en Software",
     },
     {
         //Id
@@ -547,7 +547,7 @@ var TaskList = [
         TaskHint:"../IMAGES/School/Hint Rekenen.png",
     },
     {
-        TaskID: "Hard_en_Software",
+        TaskID: "Hard- en Software",
         TaskQuestion: "<h1>Hard- en Software</h1><br><br>Wat is het verschil tussen Hardware en Software?",
         TaskAnswers: {
             A: " Hardware is gereedschap , Software is windows OS",
