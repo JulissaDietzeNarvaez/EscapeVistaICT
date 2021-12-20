@@ -14,13 +14,6 @@
     margin: 0px;
     padding: 0px;
   }
-#BackGroundFrame {
-    background-position: 0%;
-    position: absolute;
-    z-index: -1;
-    height: auto;
-    width: 100vw;
-}
 #TaskHint{
     width: 100%;
     height: auto;
@@ -32,6 +25,7 @@
     width: 100%;
     height: auto;
     grid-area: ImageGrid;
+    border: black solid 10px;
 }
 #PathHolder{
     width: 100%;
@@ -52,13 +46,16 @@
 #Taskholder{
     display: none;
     grid-area: RightGrid;
-    width: 100%;
-    height: 100%;
     background-color: white;
+    border: black solid 3px;
+    margin: 20px;
 }
 #score{
     grid-area: LeftGrid;
     background-color: white;
+    font-style:Raleway;
+    border: black solid 10px;
+    margin: 20px;; 
 }
 /*Styling for the progress bar, just change the name to the correct thing*/
 /*Firefox styling*/
