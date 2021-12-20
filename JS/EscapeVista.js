@@ -72,8 +72,12 @@ function TaskQuestioning(QuestionTaskID){
                     TaskAnswers = TaskAnswers.toString();
                     //clean de string, remove any unwanted , in the string
                     TaskAnswersCleaned = TaskAnswers.replace(/,/g,"");
+                    //variable to hold the Task Name
+                    TaskName = j.TaskID;
+                    Taskname = toString(TaskName);
                     //place the question along with the answers and hint in the task holder div.
-                    document.getElementById("Taskholder").innerHTML =j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button onclick=AnwserTask("+"'"+j.TaskID+"'"+","+"'"+j.TaskCorrectAnswer+"'"+")>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
+                    document.getElementById("Taskholder").innerHTML =j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button id='AnswerTaskButton'>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
+                    document.getElementById('AnswerTaskButton').setAttribute('onclick',"AnswerTask('"+TaskName+"','"+j.TaskCorrectAnswer+"')");
                 } 
                 //if the task has no hint, it is a destination for the student to visit
                 else{ 
@@ -103,7 +107,7 @@ function LocationVisit(LocationID){
     }
 }
 //function is called if a question is answered
-function AnwserTask(InputTask, TrueAnswer){
+function AnswerTask(InputTask, TrueAnswer){
     //grab the value of the chosen answer
     var AnswerGiven = document.querySelector('input[name="TaskQuestion"]:checked').value;
     //place the task info in a variable for easy access
@@ -122,8 +126,6 @@ function AnwserTask(InputTask, TrueAnswer){
             Locations(0);
         }
     TaskVari.TaskCompleted = true;
-    console.log(PointList);
-    
     } 
 }
 
@@ -137,25 +139,5 @@ function Locations(Points){
     for(var k in LocationList){
         PointOverview = PointOverview.concat("<br>Points van "+k+": "+LocationList[k]+"<br>");
         document.getElementById("score").innerHTML = PointOverview + "<br> Je Totale Score is: "+TotalScore;   
-    }
-}
-
-
-
-     // function to view the score of the escape questions
-function courses(){
-    var PointOverview = "";
-    for(var k in PointList){
-        PointOverview = PointOverview.concat("<br>Points van "+k+": "+PointList[k]+"<br>");
-        document.getElementById("score").innerHTML = PointOverview;
-    }
-    PathLocations(PointOverview);// adding the next fuction in the escape cal in the button in the Html
-  
-}
-// function to view the score of the Locations
-function PathLocations(PointOverview){
-    for(var k in LocationList){
-        PointOverview = PointOverview.concat("<br>Points van "+k+": "+LocationList[k]+"<br>");
-        document.getElementById("score").innerHTML = PointOverview;   
     }
 }
