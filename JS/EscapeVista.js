@@ -74,7 +74,6 @@ function TaskQuestioning(QuestionTaskID){
                     TaskAnswersCleaned = TaskAnswers.replace(/,/g,"");
                     //variable to hold the Task Name
                     TaskName = j.TaskID;
-                    Taskname = toString(TaskName);
                     //place the question along with the answers and hint in the task holder div.
                     document.getElementById("Taskholder").innerHTML =j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button id='AnswerTaskButton'>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
                     document.getElementById('AnswerTaskButton').setAttribute('onclick',"AnswerTask('"+TaskName+"','"+j.TaskCorrectAnswer+"')");
