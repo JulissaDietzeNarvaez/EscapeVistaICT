@@ -212,7 +212,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: null,
+        Task: "Hard- en Software",
     },
     {
         //Id

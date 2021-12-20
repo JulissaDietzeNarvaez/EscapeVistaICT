@@ -1,6 +1,6 @@
 //List for keeping track which tasks have points
 var PointList = {"Rekenen": 0, "Hard- en Software": 0, "Database": 0, "AMO": 0, "CCCCC":0};
-var LocationList = [];
+var LocationList = {};
 //variables to make typing easier
 var Arrow1 = document.getElementById("ImageArrow1");
 var Arrow2 = document.getElementById("ImageArrow2");
@@ -72,7 +72,7 @@ function TaskQuestioning(QuestionTaskID){
                     //clean de string, remove any unwanted , in the string
                     TaskAnswersCleaned = TaskAnswers.replace(/,/g,"");
                     //place the question along with the answers and hint in the task holder div.
-                    document.getElementById("Taskholder").innerHTML=j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button onclick=AnwserTask("+"'"+j.TaskID+"'"+","+"'"+j.TaskCorrectAnswer+"'"+")>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
+                    document.getElementById("Taskholder").innerHTML =j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button onclick=AnwserTask("+"'"+j.TaskID+"'"+","+"'"+j.TaskCorrectAnswer+"'"+")>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
                 } 
                 //if the task has no hint, it is a destination for the student to visit
                 else{ 
@@ -92,9 +92,7 @@ function LocationVisit(LocationID){
         //check if the locationList of visited locations is present
         if (LocationList[LocationID] == null){
             //add the location to the list
-            LocationList.push(LocationID);
-            //give the added location a value
-            LocationList[LocationID] = 25; 
+            LocationList[LocationID] = 25;
             //update the progress bar 
             document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
             //set TaskCompleted to true so it's information won't show up a second time when visited.
@@ -120,5 +118,28 @@ function AnwserTask(InputTask, TrueAnswer){
             PointList[InputTask]=0;
         }
     TaskVari.TaskCompleted = true;
-    }
+    } 
 }
+function test(){
+    console.log("yes");
+    var PointOverview = "";
+    for(var k in PointList){
+        //let score =("Points van "+k+": "+PointList[k]);
+        //document.getElementById("score").innerHTML = score;
+        PointOverview = PointOverview.concat("<br>Points van "+k+": "+PointList[k]+"<br>");
+        document.getElementById("score").innerHTML = PointOverview;
+    }
+    Locations(PointOverview);
+}
+function Locations(PointOverview){
+    console.log("yes");
+for(var k in LocationList){
+    //let score =("Points van "+k+": "+LocationList[k]);
+    //document.getElementById("score").innerHTML = score;
+    PointOverview = PointOverview.concat("<br>Points van "+k+": "+LocationList[k]+"<br>");
+    document.getElementById("score").innerHTML = PointOverview;
+}
+
+}
+
+//alert(`Je score is voor Rekenen:${PointList.Rekenen}, Databse: ${PointList.Database}, Amo: ${PointList.AMO},ccccc: ${PointList.CCCCC},${PointList.Hard- en Software}  , nice to see you!`);
