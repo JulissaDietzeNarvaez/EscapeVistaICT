@@ -121,25 +121,16 @@ function AnwserTask(InputTask, TrueAnswer){
     } 
 }
 function test(){
-    console.log("yes");
     var PointOverview = "";
     for(var k in PointList){
-        //let score =("Points van "+k+": "+PointList[k]);
-        //document.getElementById("score").innerHTML = score;
         PointOverview = PointOverview.concat("<br>Points van "+k+": "+PointList[k]+"<br>");
         document.getElementById("score").innerHTML = PointOverview;
     }
     Locations(PointOverview);
 }
 function Locations(PointOverview){
-    console.log("yes");
-for(var k in LocationList){
-    //let score =("Points van "+k+": "+LocationList[k]);
-    //document.getElementById("score").innerHTML = score;
-    PointOverview = PointOverview.concat("<br>Points van "+k+": "+LocationList[k]+"<br>");
-    document.getElementById("score").innerHTML = PointOverview;
+    for(var k in LocationList){
+        PointOverview = PointOverview.concat("<br>Points van "+k+": "+LocationList[k]+"<br>");
+        document.getElementById("score").innerHTML = PointOverview;
+    }
 }
-
-}
-
-//alert(`Je score is voor Rekenen:${PointList.Rekenen}, Databse: ${PointList.Database}, Amo: ${PointList.AMO},ccccc: ${PointList.CCCCC},${PointList.Hard- en Software}  , nice to see you!`);
