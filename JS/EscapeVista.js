@@ -50,7 +50,7 @@ function TravelPath(Destination){
 function TaskQuestioning(QuestionTaskID){
     //remove the taskholder to prevent it remaining active on a page with a completed task.
     document.getElementById("Taskholder").style.display=("none");
-    //empty variable to push the task to
+    //empty variable to push the html code of the task into
     var TaskAnswers = [];
     //loop through the task array
     TaskList.forEach(j => {
@@ -119,6 +119,8 @@ function AnwserTask(InputTask, TrueAnswer){
         }else{
             //if the values are not equal, set the points of that task to 0.
             PointList[InputTask]=0;
+            //update the progress bar
+            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 10;
         }
     //set the TaskCompleted value to 'true', so the task won't be given a second time to the user
     TaskVari.TaskCompleted = true;
