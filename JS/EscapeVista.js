@@ -1,6 +1,7 @@
 //List for keeping track which tasks have points
 var PointList = {};
 var LocationList = {};
+var TotalScore = 0;
 //variables to make typing easier
 var Arrow1 = document.getElementById("ImageArrow1");
 var Arrow2 = document.getElementById("ImageArrow2");
@@ -98,9 +99,10 @@ function LocationVisit(LocationID){
             //add the location to the list
             LocationList[LocationID] = 25;
             //update the progress bar 
-            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
+            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 10;
             //set TaskCompleted to true so it's information won't show up a second time when visited.
             LocationVari.TaskCompleted = true;
+            Locations(25);
         }
     }
 }
@@ -116,18 +118,26 @@ function AnswerTask(InputTask, TrueAnswer){
             //als de waarde overeen komen, zet de verkregen punten naar 50
             PointList[InputTask]= 50;
             //update the progress bar
-            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
+            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 10;
+            Locations(50);
         }else{
             //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
             PointList[InputTask]=0;
-            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
+            Locations(0);
         }
     TaskVari.TaskCompleted = true;
     } 
 }
-function Locations(PointOverview){
+
+// function to view the score of the Locations
+function Locations(Points){
+    var PointOverview = "";
+    TotalScore = TotalScore + Points;
+    for(var k in PointList){
+        PointOverview = PointOverview.concat("<br>Points van "+k+": "+PointList[k]+"<br>");
+    }
     for(var k in LocationList){
         PointOverview = PointOverview.concat("<br>Points van "+k+": "+LocationList[k]+"<br>");
-        document.getElementById("score").innerHTML = PointOverview;
+        document.getElementById("score").innerHTML = PointOverview + "<br> Je Totale Score is: "+TotalScore;   
     }
 }
