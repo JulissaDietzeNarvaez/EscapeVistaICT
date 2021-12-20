@@ -1,5 +1,5 @@
 //List for keeping track which tasks have points
-var PointList = {"Rekenen": 0, "Hard- en Software": 0, "Database": 0, "AMO": 0, "CCCCC":0};
+var PointList = {};
 var LocationList = {};
 //variables to make typing easier
 var Arrow1 = document.getElementById("ImageArrow1");
@@ -116,6 +116,7 @@ function AnwserTask(InputTask, TrueAnswer){
         }else{
             //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
             PointList[InputTask]=0;
+            document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 12.5;
         }
     TaskVari.TaskCompleted = true;
     } 
