@@ -1,6 +1,7 @@
 //List for keeping track which tasks have points
 var PointList = {};
 var LocationList = {};
+var TotalScore = 0;
 //variables to make typing easier
 var Arrow1 = document.getElementById("ImageArrow1");
 var Arrow2 = document.getElementById("ImageArrow2");
@@ -128,15 +129,16 @@ function escapeScore(){
         document.getElementById("score").innerHTML = PointOverview;
     }
     Locations(PointOverview);// adding the next fuction in the escape cal in the button in the Html
-    TotalScore(PointOverview)
+  
 }
 // function to view the score of the Locations
 function Locations(PointOverview){
     for(var k in LocationList){
         PointOverview = PointOverview.concat("<br>Points van "+k+": "+LocationList[k]+"<br>");
         document.getElementById("score").innerHTML = PointOverview;
+        TotalScoreFunc(LocationList[k]);
     }
 }
-function TotalScore(PointOverview){
-    PointOverview= TotalScore (PointList[k] + LocationList[k])
-     document.getElementById("score").innerHTML = PointOverview;}
+function TotalScoreFunc(Points){
+    TotalScore = TotalScore + Points;
+     document.getElementById("score").innerHTML = TotalScore;}
