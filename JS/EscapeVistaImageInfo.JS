@@ -704,7 +704,7 @@ var TaskList = [
     },
     {
         TaskID: "Hard- en Software",
-        TaskQuestion: "<h1>Hard- en Software</h1><br><br>Wat is het verschil tussen Hardware en Software?",
+        TaskQuestion: "<h1>Hard- en Software</h1>Wat is het verschil tussen Hardware en Software?",
         TaskAnswers: {
             A: "Hardware is gereedschap , Software is windows OS",
             B: "Hardware is de CPU, GPU, en processor van de PC en Software is het toetsenbord, beeldscherm en de luidsprekers van de PC.",

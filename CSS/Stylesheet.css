@@ -4,7 +4,10 @@
     font-size: 30px;
     fill: white;
 }
-
+h1{
+    margin: 0px;
+    padding: 0px;
+}
 #EscapeVistaBody {
     background-color: #e56a54;
     background-image:  linear-gradient(135deg, #004f59 25%, transparent 25%), linear-gradient(225deg, #004f59 25%, transparent 25%), linear-gradient(45deg, #004f59 25%, transparent 25%), linear-gradient(315deg, #004f59 25%, #e56a54 25%);
@@ -49,27 +52,32 @@
     background-color: white;
     border: black solid 3px;
     margin: 20px;
+    margin-left: 30px;
+    padding: 0px;
 }
 #score{
     grid-area: LeftGrid;
     background-color: white;
     font-style:Raleway;
     border: black solid 10px;
-    margin: 20px;; 
+    margin: 20px; 
 }
 /*Styling for the progress bar, just change the name to the correct thing*/
 /*Firefox styling*/
 #VistaScore::-moz-progress-bar { 
     background: #004f59; 
     transition: all 0.5s;
+   
 } 
 /*Chrome/Safari styling*/
 #VistaScore::-webkit-progress-value{
-    background: #004f59;
+    background: #e56a54;
     transition: all 0.5s;
+    
 }
 /*Internet Explorer/Edge styling*/
 #VistaScore { 
     background: #004f59; 
     transition: all 0.5s;
+    border: black solid 2px;
 } 

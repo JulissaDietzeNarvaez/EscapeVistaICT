@@ -66,7 +66,7 @@ function TaskQuestioning(QuestionTaskID){
                     //loop through the answers of the task
                     for(k in j.TaskAnswers){
                         //add the answer to the variable
-                        TaskAnswers.push("<label><input type='radio' name='TaskQuestion' value='"+k+"'> "+k+":"+j.TaskAnswers[k]+"</label><br>");
+                        TaskAnswers.push("<label><input type='radio' name='TaskQuestion' value='"+k+"'> "+k+":"+j.TaskAnswers[k]+"</label><br><br>");
                     };
                     //convert the variable to a string
                     TaskAnswers = TaskAnswers.toString();
@@ -76,7 +76,7 @@ function TaskQuestioning(QuestionTaskID){
                     TaskName = j.TaskID;
                     Taskname = toString(TaskName);
                     //place the question along with the answers and hint in the task holder div.
-                    document.getElementById("Taskholder").innerHTML =j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button id='AnswerTaskButton'>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
+                    document.getElementById("Taskholder").innerHTML =j.TaskQuestion +"<br><form>"+TaskAnswersCleaned+"</form><button id='AnswerTaskButton'>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
                     document.getElementById('AnswerTaskButton').setAttribute('onclick',"AnswerTask('"+TaskName+"','"+j.TaskCorrectAnswer+"')");
                 } 
                 //if the task has no hint, it is a destination for the student to visit
