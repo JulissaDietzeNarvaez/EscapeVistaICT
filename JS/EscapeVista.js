@@ -107,7 +107,7 @@ function LocationVisit(LocationID){
     }
 }
 //function is called if a question is answered
-function AnwserTask(InputTask, TrueAnswer){
+function AnswerTask(InputTask, TrueAnswer){
     //grab the value of the chosen answer
     var AnswerGiven = document.querySelector('input[name="TaskQuestion"]:checked').value;
     //place the task info in a variable for easy access
