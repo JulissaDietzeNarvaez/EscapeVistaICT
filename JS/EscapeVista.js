@@ -1,5 +1,5 @@
 //List for keeping track which tasks have points
-var PointList = {"Rekenen": 0, "Hard- en Software": 0, "Database": 0, "AMO": 0, "CCCCC":0};
+var PointList = {"Rekenen": 0, "Hard_en_Software": 0, "Database": 0, "AMO": 0, "CCCCC":0};
 var LocationList = [];
 //variables to make typing easier
 var Arrow1 = document.getElementById("ImageArrow1");
@@ -72,7 +72,9 @@ function TaskQuestioning(QuestionTaskID){
                     //clean de string, remove any unwanted , in the string
                     TaskAnswersCleaned = TaskAnswers.replace(/,/g,"");
                     //place the question along with the answers and hint in the task holder div.
-                    document.getElementById("Taskholder").innerHTML=j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button onclick=AnwserTask("+"'"+j.TaskID+"'"+","+"'"+j.TaskCorrectAnswer+"'"+")>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
+                    TaskHTML=j.TaskQuestion +"<br><br><form>"+TaskAnswersCleaned+"</form><button onclick=AnwserTask("+"'"+j.TaskID+"'"+","+"'"+j.TaskCorrectAnswer+"'"+")>Beantwoord vraag</button> <img id='TaskHint' src="+'"'+j.TaskHint+'"'+">";
+                    TaskHTML = TaskHTML.replace(/_/g," ");
+                    document.getElementById("Taskholder").innerHTML = TaskHTML;
                 } 
                 //if the task has no hint, it is a destination for the student to visit
                 else{ 
@@ -120,5 +122,17 @@ function AnwserTask(InputTask, TrueAnswer){
             PointList[InputTask]=0;
         }
     TaskVari.TaskCompleted = true;
-    }
+    } 
 }
+function test(){
+    console.log("yes");
+    PointList.forEach(m => console.log(m));
+for(k = 0; k < PointList.length; k++){
+    console.log("Points: "+PointList[k]);
+}
+}
+
+//for (i = 0, i < PointList.length, i++) {
+//    alert(i);
+//}
+//alert(`Je score is voor Rekenen:${PointList.Rekenen}, Databse: ${PointList.Database}, Amo: ${PointList.AMO},ccccc: ${PointList.CCCCC},${PointList.Hard- en Software}  , nice to see you!`);
