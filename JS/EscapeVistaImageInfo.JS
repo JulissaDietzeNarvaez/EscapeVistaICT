@@ -364,89 +364,11 @@ var ImageDataList = [
         Arrow4Direction: "Down",
         //Destinations
         Destination1: "B Toren Etage 1",
-        Destination2: "Onder aan Trap B Toren",
+        Destination2: "Lokaal B0.01",
         Destination3: "Kantine",
         Destination4: null,
         //tasks
-        Task: "B Toren",
-    },
-    {
-        //Id
-        ImageID: "Onder aan Trap B Toren",
-        //x Coordinates
-        Arrow1CoordsX: "360",
-        Arrow2CoordsX: "130",
-        Arrow3CoordsX: "550",
-        Arrow4CoordsX: "-50",
-        //y coordinates
-        Arrow1CoordsY: "500",
-        Arrow2CoordsY: "250",
-        Arrow3CoordsY: "250",
-        Arrow4CoordsY: "-50",
-        //Arrow Direction
-        Arrow1Direction: "Down",
-        Arrow2Direction: "Up",
-        Arrow3Direction: "Up",
-        Arrow4Direction: "Down",
-        //Destinations
-        Destination1: "B Toren",
-        Destination2: "Lokaal B0.01",
-        Destination3: "Lokaal B0.02",
-        Destination4: null,
-        //tasks
-        Task: "Docenten Kamer",
-    },
-    {
-        //Id
-        ImageID: "Lokaal B0.01",
-        //x Coordinates
-        Arrow1CoordsX: "360",
-        Arrow2CoordsX: "-50",
-        Arrow3CoordsX: "-50",
-        Arrow4CoordsX: "-50",
-        //y coordinates
-        Arrow1CoordsY: "500",
-        Arrow2CoordsY: "-50",
-        Arrow3CoordsY: "-50",
-        Arrow4CoordsY: "-50",
-        //Arrow Direction
-        Arrow1Direction: "Down",
-        Arrow2Direction: "Down",
-        Arrow3Direction: "Down",
-        Arrow4Direction: "Down",
-        //Destinations
-        Destination1: "Onder aan Trap B Toren",
-        Destination2: null,
-        Destination3: null,
-        Destination4: null,
-        //tasks
-        Task: "Rekenen",
-    },
-    {
-        //Id
-        ImageID: "Lokaal B0.02",
-        //x Coordinates
-        Arrow1CoordsX: "360",
-        Arrow2CoordsX: "-50",
-        Arrow3CoordsX: "-50",
-        Arrow4CoordsX: "-50",
-        //y coordinates
-        Arrow1CoordsY: "500",
-        Arrow2CoordsY: "-50",
-        Arrow3CoordsY: "-50",
-        Arrow4CoordsY: "-50",
-        //Arrow Direction
-        Arrow1Direction: "Down",
-        Arrow2Direction: "Down",
-        Arrow3Direction: "Down",
-        Arrow4Direction: "Down",
-        //Destinations
-        Destination1: "Onder aan Trap B Toren",
-        Destination2: null,
-        Destination3: null,
-        Destination4: null,
-        //tasks
-        Task: "CCCCC",
+        Task: null,
     },
     {
         //Id
@@ -455,50 +377,24 @@ var ImageDataList = [
         Arrow1CoordsX: "725",
         Arrow2CoordsX: "260",
         Arrow3CoordsX: "360",
-        Arrow4CoordsX: "70",
+        Arrow4CoordsX: "-50",
         //y coordinates
         Arrow1CoordsY: "250",
         Arrow2CoordsY: "220",
         Arrow3CoordsY: "500",
-        Arrow4CoordsY: "250",
+        Arrow4CoordsY: "-50",
         //Arrow Direction
         Arrow1Direction: "Up",
         Arrow2Direction: "Left",
         Arrow3Direction: "Down",
-        Arrow4Direction: "Left",
+        Arrow4Direction: "Down",
         //Destinations
         Destination1: "B Toren Etage 2",
         Destination2: "Gang naar docenten kamer",
         Destination3: "B Toren",
-        Destination4: "Lokaal B1.17",
-        //tasks
-        Task: null,
-    },
-    {
-        //Id
-        ImageID: "Lokaal B1.17",
-        //x Coordinates
-        Arrow1CoordsX: "360",
-        Arrow2CoordsX: "-50",
-        Arrow3CoordsX: "-50",
-        Arrow4CoordsX: "-50",
-        //y coordinates
-        Arrow1CoordsY: "500",
-        Arrow2CoordsY: "-50",
-        Arrow3CoordsY: "-50",
-        Arrow4CoordsY: "-50",
-        //Arrow Direction
-        Arrow1Direction: "Down",
-        Arrow2Direction: "Down",
-        Arrow3Direction: "Down",
-        Arrow4Direction: "Down",
-        //Destinations
-        Destination1: "B Toren Etage 1",
-        Destination2: null,
-        Destination3: null,
         Destination4: null,
         //tasks
-        Task: "Database",
+        Task: null,
     },
     {
         //Id
@@ -559,73 +455,21 @@ var ImageDataList = [
         Arrow1CoordsX: "120",
         Arrow2CoordsX: "120",
         Arrow3CoordsX: "360",
-        Arrow4CoordsX: "475",
+        Arrow4CoordsX: "-50",
         //y coordinates
         Arrow1CoordsY: "125",
         Arrow2CoordsY: "175",
         Arrow3CoordsY: "500",
-        Arrow4CoordsY: "200",
+        Arrow4CoordsY: "-50",
         //Arrow Direction
         Arrow1Direction: "Left",
         Arrow2Direction: "Right",
         Arrow3Direction: "Down",
-        Arrow4Direction: "Up",
+        Arrow4Direction: "Down",
         //Destinations
-        Destination1: "Gang Etage 2",
+        Destination1: "Lokaal B2.08",
         Destination2: "Kluisjes Etage 2",
         Destination3: "B Toren Etage 1",
-        Destination4: "Lokaal B2.01",
-        //tasks
-        Task: null,
-    },
-    {
-        //Id
-        ImageID: "Lokaal B2.01",
-        //x Coordinates
-        Arrow1CoordsX: "360",
-        Arrow2CoordsX: "-50",
-        Arrow3CoordsX: "-50",
-        Arrow4CoordsX: "-50",
-        //y coordinates
-        Arrow1CoordsY: "500",
-        Arrow2CoordsY: "-50",
-        Arrow3CoordsY: "-50",
-        Arrow4CoordsY: "-50",
-        //Arrow Direction
-        Arrow1Direction: "Down",
-        Arrow2Direction: "Down",
-        Arrow3Direction: "Down",
-        Arrow4Direction: "Down",
-        //Destinations
-        Destination1: "B Toren Etage 2",
-        Destination2: null,
-        Destination3: null,
-        Destination4: null,
-        //tasks
-        Task: "Hard- en Software",
-    },
-    {
-        //Id
-        ImageID: "Gang Etage 2",
-        //x Coordinates
-        Arrow1CoordsX: "360",
-        Arrow2CoordsX: "70",
-        Arrow3CoordsX: "-50",
-        Arrow4CoordsX: "-50",
-        //y coordinates
-        Arrow1CoordsY: "500",
-        Arrow2CoordsY: "250",
-        Arrow3CoordsY: "-50",
-        Arrow4CoordsY: "-50",
-        //Arrow Direction
-        Arrow1Direction: "Down",
-        Arrow2Direction: "Left",
-        Arrow3Direction: "Down",
-        Arrow4Direction: "Down",
-        //Destinations
-        Destination1: "B Toren Etage 2",
-        Destination2: "Lokaal B2.08",
-        Destination3: null,
         Destination4: null,
         //tasks
         Task: null,
@@ -654,7 +498,7 @@ var ImageDataList = [
         Destination3: null,
         Destination4: null,
         //tasks
-        Task: "AMO",
+        Task: null,
     },
     {
         //Id
@@ -773,22 +617,6 @@ var TaskList = [
     {
         TaskID: "IT helpdesk",
         TaskQuestion: "Hier bij de IT helpdesk kun je terecht komen als je ICT problemen hebt met je apparatuur.",
-        TaskAnswers: null,
-        TaskCorrectAnswer: null,
-        TaskCompleted: false,
-        TaskHint: null,
-    },
-    {
-        TaskID: "Docenten Kamer",
-        TaskQuestion: "De docenten kamer, de eerste locatie waar je zult gaan kijken om een docent te vinden",
-        TaskAnswers: null,
-        TaskCorrectAnswer: null,
-        TaskCompleted: false,
-        TaskHint: null,
-    },
-    {
-        TaskID: "B Toren",
-        TaskQuestion: "In de B toren zul je de meeste tijd doorbrengen, want dit is de toren die gebruikt wordt door ICT opleidingen.",
         TaskAnswers: null,
         TaskCorrectAnswer: null,
         TaskCompleted: false,
