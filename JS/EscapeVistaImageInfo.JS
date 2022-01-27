@@ -390,8 +390,8 @@ var ImageDataList = [
         Arrow4Direction: "Down",
         //Destinations
         Destination1: "B Toren",
-        Destination2: "Lokaal B0.01",
-        Destination3: "Lokaal B0.02",
+        Destination2: "Lokaal B0.02",
+        Destination3: "Lokaal B0.01",
         Destination4: null,
         //tasks
         Task: null,
