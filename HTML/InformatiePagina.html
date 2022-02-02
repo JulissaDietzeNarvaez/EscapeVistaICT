@@ -3,145 +3,671 @@
      opleidingen, vakken, docenten, huisregels, plattegrond en contactgegevens. -->
 <html>
     <head>
-        <link rel="stylesheet" href="../CSS/InformatiePagina.css">
-        <link rel="stylesheet" href="../SCSS/InformatiePagina.scss">
-        <link rel="icon"       href="../IMAGES/vista.jpg" type="image/x-icon">                        
-        <script src="/JS/script.js"></script>
-        <script src="/JS/jquery.min.js"></script>        
+        <link rel="stylesheet" href="../CSS/InformatiePagina.css">        
+        <link rel="icon"       href="../IMAGES/VistaLogo.png" type="image/x-icon">                        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
         <title>Escape Vista ICT</title>                 
     </head>
     <body>         
       <nav class="vertical-menu-wrapper">
         <div class="vertical-menu-logo">
-          <div><a href="#top">Vista College ICT</a></div>
-            <span class="open-menu-btn" onClick="close"><hr><hr><hr></span>
-          </div>
+          <div><a href="#top" style="font-weight: bolder;">Vista ICT</a></div>
+            <span class="open-menu-btn"><hr><hr><hr></span>
+        </div>
           <ul class="vertical-menu">            
-            <li>
-              <a href="#opleidingen"class="collapsible">Opleidingen</a></br>               
-                <!--
-                <a href="#">Medewerker ICT Support</a></br>
-                <a href="#">Allround Medewerker IT-Systems & Devices</a></br>
-                <a href="#">Expert IT-Systems & Devices</a></br>
-                <a href="#">Software Developer</a></br>
-                <a href="#">Vakexpert Geo, Data & Design</a></br>
-                -->
-            </li>
+              <li><a href="#opleidingen">Opleidingen</a></li>
               <li><a href="#vakken">Vakken</a></li>
               <li><a href="#docenten">Docenten</a></li>
-              <li><a href="#plattegrond">Plattegrond</a></li>
+              <li><a href="#medewerkers">Medewerkers</a></li>
+              <!--<li><a href="#plattegrond">Plattegrond</a></li>-->
               <li><a href="#huisregels">Huisregels</a></li>
-              <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      
+              <li><a href="#contact">Contact & locatie</a></li>
+          </ul>        
+      </nav>      
 
       <div class="content-wrapper">
-        <div class="content">       
+        <div class="content">     
+          <h1 class="welkom">Welkom op de informatie pagina</h1>
+            <p class="welkom">
+              Op deze pagina staat in het kort informatie over de ICT opleidingen op het Vista College in Heerlen.
+              Voor de nieuwe studenten willen wij via online de weg wijzen op onze locatie en jullie alles laten leren kennen. 
+              Dit kan gedaan worden via onze online Escape room of via deze pagina waar alle informatie direct is te vinden.
+            </p>
           <!-- Opleidingen -->
+        <div>
           <h1 class="opleidingen"><a class="target" name="opleidingen" style="pointer-events: none;">Opleidingen</a></h1>
-            <h3 class="opleiding1">Medewerker ICT Support - Niveau 2</h3>
-              <p class="p">tekst</p>
-            <h3 class="opleiding2">Allround Medewerker IT-Systems & Devices - Niveau 3</h3>
-              <p class="p">tekst</p>
-            <h3 class="opleiding3">Expert IT-Systems & Devices - Niveau 4</h3>
-              <p class="p">tekst</p>
-            <h3 class="opleiding4">Software Developer (ICT) - Niveau 4</h3>
-              <p class="p">tekst</p>                  
-            <h3 class="opleiding5">Vakexpert Geo, Data & Design - Niveau 4</h3>
-              <p class="p">tekst</p>
+          
+        <h3 class="opleiding">Medewerker ICT Support - Niveau 2</h3>
+        <h6 class="meerInformatie">Meer informatie</h6>
+          <div class="accordion-div">            
+              <button class="accordion">Opleidingsinformatie</button>
+                <div class="panel">
+                  <p>
+                  </br>  
+                  Als medewerker ICT ben je klantgericht, kritisch, creatief en flexibel. Je kunt goed samenwerken in multidisciplinaire teams én communiceren met mensen op alle niveaus. Van tijdsdruk word jij niet koud of warm. 
+                  Jij zorgt ervoor dat alle medewerkers op hun werkplek een goed functionerende computer vinden. Je stelt aan de hand van procedures gebruiksklare computers samen uit onderdelen en vervangt wat kapot is.
+                  </br>
+                  </br>
+                  Je installeert en onderhoud hardware, software, verbindingen en netwerken en behandelt incidentmeldingen van klanten of collega's. 
+                  Het is een divers vak, waarin veel vaardigheden van je gevraagd worden. Om die reden krijg je tijdens je opleiding theorie én praktijklessen waarmee je straks een mooie en brede basis hebt om aan de slag te gaan. 
+                  Op welke plek dan ook. Je volgt onder andere de vakken basis netwerkbeheer en hard- en software, maar ook avo (algemeen vormend onderwijs) vakken als Nederlands, Engels en rekenen.
+                  </br>  
+                  </p>                  
+                </div>
+            
+              <button class="accordion">Keuzedelen</button>
+                <div class="panel">
+                  <p>
+                  </br>
+                  Jouw opleiding bestaat uit een basis-, profiel- en keuzedeel (of -delen). Het keuzedeel - verbredend of verdiepend - maakt je studie interessanter. 
+                  Zo zorgen de keuzedelen voor een betere aansluiting op een eventuele vervolgstudie en bieden ze meerwaarde als je gaat solliciteren op de arbeidsmarkt.
+                  </p>
+                </div>
+            
+              <button class="accordion">Stage(s)</button>
+                <div class="panel">
+                  <p>
+                  </br>
+                  Naast de theoretische en praktische lessen op school loop je stage, ook wel beroepspraktijkvorming (BPV) genoemd. 
+                  Uiteraard betreft dit een erkend leerbedrijf (SBB). De praktijkbegeleider van school en je praktijkopleiders van het leerbedrijf beoordelen je beroepshouding, 
+                  resultaten en je inzet. Een positieve beoordeling van je stage is een voorwaarde om je diploma te halen.
+                  </br>
+                  </br>
+                  Je kunt stage lopen in een computerzaak, een technisch bedrijf of een kantoor of bij een helpdesk.
+              </p>
+                </div>
+              
+              <button class="accordion">Verder leren/werken</button>
+                <div class="panel">
+                <p>
+                </br>
+                  Als je wilt doorleren na deze opleiding, dan is onze opleiding Medewerker beheer ICT (niveau 3) misschien wel wat voor jou.
+                  </br>
+                  </br>
+                  Je kunt ook gaan werken. Medewerkers ICT zijn in allerlei organisaties te vinden. Je werk is te combineren met commerciële activiteiten, 
+                  bijvoorbeeld in de computer-detailhandel of met technische en administratieve activiteiten binnen diverse bedrijf. 
+                  Er zijn ook Medewerkers ICT die ondersteunend werk doen in het onderwijs of die worden ingezet bij het hergebruik (recyclen) van hardware-onderdelen.
+                </p>
+                </div>
+              </br>
+              </br>
+
+            <h3 class="opleiding">Allround Medewerker IT-Systems & Devices - Niveau 3</h3>
+            <h6 class="meerInformatie">Meer informatie</h6>
+            <button class="accordion">Opleidingsinformatie</button>
+            <div class="panel">
+              <p>
+              </br>
+                ICT is een breed vakgebied en dus kun jij straks bij veel verschillende organisaties aan de slag. 
+                 Tijdens deze opleiding volg je onder andere het vak basis netwerkbeheer en hard- en software met aandacht voor het installeren en onderhouden van hardware, 
+                 software en verbindingen, het behandelen van incidentmeldingen en het ondersteunen van gebruikers. 
+                 Je krijgt ook een aantal avo (algemeen vormend onderwijs)-vakken zoals Nederlands, Engels en rekenen en je gaat natuurlijk op stage om je vaardigheden verder te ontwikkelen. 
+                 Deze opleiding biedt je kortom de brede basis die je straks alle mogelijkheden biedt in het werkveld.
+                </p>
+            </div>
+        
+          <button class="accordion">Keuzedelen</button>
+            <div class="panel">
+              <p>
+              </br>
+                Jouw opleiding bestaat uit een basis-, profiel- en keuzedeel (of -delen). Het keuzedeel - verbredend of verdiepend - maakt je studie interessanter. 
+                Zo zorgen de keuzedelen voor een betere aansluiting op een eventuele vervolgstudie en bieden ze meerwaarde als je gaat solliciteren op de arbeidsmarkt.
+              </p>
+            </div>
+        
+          <button class="accordion">Stage(s)</button>
+            <div class="panel">
+              <p>
+              </br>
+              Naast de theoretische en praktische lessen op school loop je stage, ook wel beroepspraktijkvorming (BPV) genoemd. Uiteraard betreft dit een erkend leerbedrijf (SBB). 
+              De praktijkbegeleider van school en je praktijkopleiders van het leerbedrijf beoordelen je beroepshouding, resultaten en je inzet. 
+              Een positieve beoordeling van je stage is een voorwaarde om je diploma te halen.
+              </p>
+            </div>
+          
+          <button class="accordion">Verder leren/werken</button>
+            <div class="panel">
+              <p>
+              </br>
+              Als je wilt doorleren na deze opleiding, dan is onze opleiding ICT beheerder of Netwerk- en Mediabeheerder (niveau 4) misschien wel wat voor jou.
+              </br>
+              </br>
+              Kies je om direct te gaan werken na je opleiding, dan werk je in het bedrijfsleven voornamelijk in het midden- en kleinbedrijf op een helpdesk of een servicedesk. 
+              Je kan echter ook werken bij bedrijven die netwerk infrastructuren aanleggen en/of onderhouden.
+              </p>
+            </div>  
+          </br>
+          </br>
+            
+            <h3 class="opleiding">Expert IT-Systems & Devices - Niveau 4</h3>
+            <h6 class="meerInformatie">Meer informatie</h6>
+            <button class="accordion">Opleidingsinformatie</button>
+            <div class="panel">
+              <p>
+              </br>
+              Als ICT en mediabeheerder kun jij bij tal van organisatie gaan werken. De opleiding die we je bieden, 
+              beslaat dan ook breed het vakgebied en is een combinatie van theorie en praktijk om je kennis én vaardigheden te ontwikkelen. 
+              De vakken die je volgt gaan onder andere over netwerkbesturingssystemen, ICT security en hard- en software.
+              </br>
+              </br>
+              Je leert (onderdelen van) informatiesystemen te ontwikkelen, implementeren en beheren, systeemgebruikers te ondersteunen en een service- of helpdesk te organiseren. 
+              Naast al deze specifieke vakken krijg je ook de zogeheten avo-vakken (algemeen vormend onderwijs), zoals Nederlands, Engels en rekenen.
+              </p>
+            </div>
+        
+          <button class="accordion">Keuzedelen</button>
+            <div class="panel">
+              <p>
+              </br>
+              Jouw opleiding bestaat uit een basis-, profiel- en keuzedeel (of -delen). Het keuzedeel - verbredend of verdiepend - maakt je studie interessanter. 
+              Zo zorgen de keuzedelen voor een betere aansluiting op een eventuele vervolgstudie en bieden ze meerwaarde als je gaat solliciteren op de arbeidsmarkt.
+              </p>
+            </div>
+        
+          <button class="accordion">Stage(s)</button>
+            <div class="panel">
+              <p>
+              </br>
+              Naast de theoretische en praktische lessen op school loop je stage, ook wel beroepspraktijkvorming (BPV) genoemd. 
+              Uiteraard betreft dit een erkend leerbedrijf (SBB). De praktijkbegeleider van school en je praktijkopleiders van het leerbedrijf beoordelen je beroepshouding, resultaten en je inzet. 
+              Een positieve beoordeling van je stage is een voorwaarde om je diploma te halen.
+              </p>
+            </div>
+          
+          <button class="accordion">Verder leren/werken</button>
+            <div class="panel">
+              <p>
+              </br>
+              Kies je voor deze opleiding, dan kun je straks werken in de informatietechnologie. Denk daarbij aan bedrijven in het midden- en kleinbedrijf, 
+              die een informatiesysteem beheert willen hebben, bedrijven die ondersteunen bij het realiseren van nieuwe informatiesysteem of bedrijven die dienstverlenend optreden bij (grote) verstoringen in netwerk- en informatiesystemen. 
+              Er zijn kortom veel mogelijkheden voor jou.
+              </p>
+            </div>
+          </br>
+          </br>
+            
+            <h3 class="opleiding">Software Developer (ICT) - Niveau 4</h3>
+            <h6 class="meerInformatie">Meer informatie</h6>
+            <button class="accordion">Opleidingsinformatie</button>
+            <div class="panel">
+              <p>
+              </br>
+              Als Applicatie- en mediaontwikkelaar weet jij haarfijn welke wensen gebruikers hebben. Je bespreekt met hen hun ideeën en zet daar jouw gedachten tegenover. 
+              Vervolgens ontwikkel je nieuwe applicaties of past bestaande applicaties aan. Tijdens je opleiding leer je veel over interviewtechnieken, ontwikkeltechnieken, programmeren en verkooptechnieken.
+              </br>
+              </br>
+              Je leert projectmatig in verschillende talen te programmeren, websites te ontwerpen en te koppelen aan databases. 
+              Ook het ontwikkelen, testen en implementeren van applicaties staan op het programma. 
+              Omdat je vaak werkt in opdracht van anderen, moet je goed kunnen samenwerken. 
+              Tijdens de opleiding is er dan ook veel aandacht voor communicatie en sociale vaardigheden.
+              </br>
+              </br>
+              We stimuleren je om (web)applicaties te bedenken en maken en ervoor te zorgen dat programma’s goed werken én blijven werken. 
+              Je leert tevens anderen te instrueren, ook van buiten het bedrijf, over hoe ze met de programma’s moeten werken. 
+              Tot slot krijg je ook algemene vakken als Nederlands, Engels, Loopbaan en Burgerschap en rekenen. It's all in the game.
+              </p>
+            </div>
+        
+          <button class="accordion">Keuzedelen</button>
+            <div class="panel">
+              <p>
+              </br>
+              Jouw opleiding bestaat uit een basis-, profiel- en keuzedeel (of -delen). Het keuzedeel - verbredend of verdiepend - maakt je studie interessanter. 
+              Zo zorgen de keuzedelen voor een betere aansluiting op een eventuele vervolgstudie en bieden ze meerwaarde als je gaat solliciteren op de arbeidsmarkt.
+              </p>
+            </div>
+        
+          <button class="accordion">Stage(s)</button>
+            <div class="panel">
+              <p>
+              </br>
+              Tijdens je stage, je beroepspraktijkvorming, sta je met beide benen in de praktijk. Je past al het geleerde toe en leert nog veel meer vaardigheden van je praktijkopleider. 
+              De praktijkbegeleider van school en je praktijkopleiders van het leerbedrijf beoordelen je beroepshouding, resultaten en je inzet. 
+              Een positieve beoordeling van je stage is een voorwaarde om je diploma te halen.
+              </p>
+            </div>
+          
+          <button class="accordion">Verder leren/werken</button>
+            <div class="panel">
+              <p>
+              </br>
+              Jij kunt na deze opleiding verder studeren en een hbo-opleiding volgen, bijvoorbeeld ICT bij Zuyd Hogeschool
+              </p>
+            </div>
+          </br>
+          </br>
+            
+            <h3 class="opleiding">Vakexpert Geo, Data & Design - Niveau 4</h3>
+            <h6 class="meerInformatie">Meer informatie</h6>
+            <button class="accordion">Opleidingsinformatie</button>
+            <div class="panel">
+              <p>
+              </br>
+              Tijdens de opleiding Geo, Data & Design krijg je te maken met vakken als Dataverwerking, Geo- kennis en Digitaal Ontwerpen. 
+              Je leert hoe je moet werken met toegepaste softwareprogramma’s en applicaties. Ook maak je kennis met het bedienen van drones.
+              </br>
+              </br>
+              Naast vaktheorie krijg je ook een aantal algemene vakken als Nederlands, Rekenen, Engels en Loopbaan en Burgerschap.
+              </br>
+              </br>
+              De opleiding is ingedeeld in projecten. Een project start altijd vanuit een praktijksituatie. 
+              Je werkt samen met lokale overheden en je loopt stage bij bedrijven uit de regio. 
+              Zo maak je kennis met de verschillende sectoren die data verzamelen en toepassen. Je ervaart direct hoe dynamisch de wereld van ‘geo’ in elkaar zit.
+              </br>
+              </br>
+              Elke dag is anders: als je even niet bezig bent met het verzamelen van data vanuit satellieten, dan ben je te vinden in de natuur of in woonwijken of landschappen. 
+              Vervolgens ga je aan de slag met het ontwerpen van topografische kaarten. Na afloop van deze opleiding heb je veel praktijkervaring opgedaan en een brede basiskennis ontwikkeld.
+              </p>
+            </div>
+        
+          <button class="accordion">Keuzedelen</button>
+            <div class="panel">
+              <p>
+              </br>
+              De opleiding bestaat uit een basis-, profiel- en keuzedeel (of -delen). Het keuzedeel - verbredend of verdiepend - maakt je studie interessanter. 
+              Het speelt namelijk in op ontwikkelingen in onze regio of binnen het bedrijfsleven. Zo zorgt het voor een (nog) betere aansluiting op een eventuele vervolgstudie en biedt het meerwaarde als je gaat solliciteren.
+              </p>
+            </div>
+              
+          <button class="accordion">Verder leren/werken</button>
+            <div class="panel">
+              <p>
+              </br>
+              Jij bepaalt zelf wat je gaat doen. Als je wilt gaan werken, heb je volop kansen op de arbeidsmarkt. 
+              Bedrijven uit allerlei sectoren zijn op zoek naar medewerkers binnen jouw vakgebied. Denk aan:
+              </br>
+              </br>
+              geo advies en consultancy bedrijven;
+              <li>overheidsinstanties (provincies, gemeenten, defensie);</li>
+              <li>kadaster;</li>
+              <li>waterschappen;</li>
+              <li>natuurorganisaties;</li>
+              <li>bouw- en infrabedrijven;</li>
+              <li>groenbedrijven en;</li>
+              <li>gezondheidsdiensten.</li>
+              </br>
+              Maar je kunt ook gewoon doorstuderen. Aan het HBO. Bijvoorbeeld bij de HAS Hogeschool in Den Bosch. Daar bieden ze een opleiding Geo, Media & Design aan.
+              </p>
+            </div>
+          </div>
+        </div>
 
           <!-- Vakken -->
+        <div>
           <h1 class="vakken"><a class="target" name="vakken" style="pointer-events: none;">Vakken</a></h1>
-            <h3>AMO (Applicatie- en Media Ontwikkelaar)</h3>
+            <h3 class="vakken">AMO (Applicatie- en media ontwikkelaar)</h3>
               <p class="p">tekst</p>
-            <h3>Burgerschap</h3>
+            <h3 class="vakken">Burgerschap</h3>
               <p class="p">tekst</p>
-            <h3>C#</h3>
+            <h3 class="vakken">C#</h3>
               <p class="p">tekst</p>
-            <h3>CCCCC</h3>
+            <h3 class="vakken">CCCCC</h3>
               <p class="p">tekst</p>
-            <h3>Database</h3>
+            <h3 class="vakken">Database</h3>
               <p class="p">tekst</p>
-            <h3>Dataverwerking</h3>
+            <h3 class="vakken">Dataverwerking</h3>
               <p class="p">tekst</p>
-            <h3>Engels</h3>
+            <h3 class="vakken">Engels</h3>
               <p class="p">tekst</p>
-            <h3>Geo- Kennis en Digitaal Ontwerpen</h3>
+            <h3 class="vakken">Geo- kennis en digitaal ontwerpen</h3>
               <p class="p">tekst</p>
-            <h3>Hard- en software</h3>
+            <h3 class="vakken">Hard- en software</h3>
               <p class="p">tekst</p>
-            <h3>ICT Security</h3>
+            <h3 class="vakken">ICT Security</h3>
               <p class="p">tekst</p>
-            <h3>Nederlands</h3>
+            <h3 class="vakken">Nederlands</h3>
               <p class="p">tekst</p>
-            <h3>Netwerk Beheer</h3>
+            <h3 class="vakken">Netwerk beheer</h3>
               <p class="p">tekst</p>
-            <h3>Netwerkbesturingssystemen</h3>
+            <h3 class="vakken">Netwerkbesturingssystemen</h3>
               <p class="p">tekst</p>
-            <h3>PHP</h3>
+            <h3 class="vakken">PHP</h3>
               <p class="p">tekst</p>
-            <h3>Rekenen</h3>
+            <h3 class="vakken">Rekenen</h3>
               <p class="p">tekst</p>
-                
+        </div>
+
           <!-- Docenten -->
           <h1 class="docenten"><a class="target" name="docenten" style="pointer-events: none;">Docenten</a></h1>
-            <h3>Guy Bastiaens</h3>
-              <p class="p">tekst</p>
-            <h3>Dieter Bollen</h3>
-              <p class="p">tekst</p>
-            <h3>Mark van den Bosch</h3>
-              <p class="p">tekst</p>
-            <h3>Egbert Buchem</h3>
-              <p class="p">tekst</p>
-            <h3>Jeroen Busselman</h3>
-              <p class="p">tekst</p>
-            <h3>Paul Derix</h3>
-              <p class="p">tekst</p>
-            <h3>Joan van Deur</h3>
-              <p class="p">tekst</p>
-            <h3>Nicole Dubuisson</h3>
-              <p class="p">tekst</p>
-            <h3>Erik van Heusden</h3>
-              <p class="p">tekst</p>
-            <h3>Ivo Heuts</h3>
-              <p class="p">tekst</p>
-            <h3>Johan de klijn</h3>
-              <p class="p">tekst</p>
-            <h3>Jo Limpens</h3>
-              <p class="p">tekst</p>
-            <h3>Ron Limpens</h3>
-              <p class="p">tekst</p>
-            <h3>Gert-Jan Lonussen</h3>
-              <p class="p">tekst</p>
-            <h3>Arend Lunenborg</h3>
-              <p class="p">tekst</p>
-            <h3>Lennert de Moor</h3>
-              <p class="p">tekst</p>
-            <h3>John Munnichs</h3>
-              <p class="p">tekst</p>
-            <h3>Yvonne Schwochow</h3>
-              <p class="p">tekst</p>
-            <h3>Erika Vallinga</h3>
-              <p class="p">tekst</p>
-            <h3>Eva Wagemans</h3>
-              <p class="p">tekst</p>
-            <h3>René van der Zander</h3>
-              <p class="p">tekst</p>
+          <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Guy Bastiaens</h4>
+                  <p class="email">g.bastiaens@vistacollege.nl</p>
+                  <p class="title">Docent</p>
+                  <p>
+                    Vakken:
+                    <li>Server</li>
+                    <li>Cloud</li>
+                    <li>Security</li>
+                    <li>Keuzedeel</li>
+                  </p>                          
+                </div>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Dieter Bollen</h4>
+                  <p class="email">d.bollen@vistacollege.nl</p>
+                  <p class="title">Docent - Projectcoördinator</p>
+                  <p>
+                    Vakken:
+                    <li>Digitale vaardigheden</li>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Egbert Buchem</h4>
+                  <p class="email">e.buchem@vistacollege.nl</p>
+                  <p class="title">Docent</p>
+                  <p>
+                    Vakken:
+                    <li>Simulatie</li>
+                    <li>Hardware</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Jeroen Busselman</h4>
+                  <p class="email">j.busselman@vistacollege.nl</p>
+                  <p class="title">Docent</p>
+                  <p>
+                    Vakken:
+                    <li>Simulatie</li>
+                    <li>Project management</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Paul Derix</h4>
+                  <p class="email">p.derix@vistacollege.nl</p>
+                  <p class="title">Docent - Examencoördinator</p>
+                  <p>
+                    Vakken:
+                    <li>Engels</li>
+                    <li>Keuzedeel Engels B2</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Joan van Deur</h4>
+                  <p class="email">j.vandeur@vistacollege.nl</p>
+                  <p class="title">Docent</p>
+                  <p>
+                    Vakken:
+                    <li>Nederlands</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Ivo Heuts</h4>
+                  <p class="email">i.heuts@vistacollege.nl</p>
+                  <p class="title">Docent</p>
+                  <p>
+                    Vakken:
+                   <li>Wordpress</li>
+                   <li>Python</li>
+                   <li>Keuzedeel HBO</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Johan de klijn</h4>
+                  <p class="email">j.deklijn@vistacollege.nl</p>
+                  <p class="title">Docent - Roostermaker - OER-beheerder (onderwijs en examenregeling)</p>
+                  <p>
+                    Vakken:
+                    <li>SD</li>
+                    <li>PHP</li>
+                    <li>Keuzedeel veilig programmeren</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Jo Limpens</h4>
+                  <p class="email">j.limpens@vistacollege.nl</p>
+                  <p class="title">Docent</p>
+                  <p>
+                    Vakken:
+                   <li>Database</li>
+                   <li>Infosystemen</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Ron Limpens</h4>
+                  <p class="email">r.limpens@vistacollege.nl</p>
+                  <p class="title">Docent</p>
+                  <p>
+                    Vakken:
+                    <li>Database</li>
+                    <li>Droning</li>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Gert-Jan Lonussen</h4>
+                  <p class="email">g.lonussen@vistacollege.nl</p>
+                  <p class="title">Docent</p>
+                  <p>
+                    Vakken:
+                    <li>Operating systems</li>
+                    <li>Virtualisatie</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Lennert de Moor</h4>
+                  <p class="email">l.demoor@vistacollege.nl</p>
+                  <p class="title">Docent</p>
+                  <p>
+                    Vakken:
+                    <li>C#</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Yvonne Schwochow</h4>
+                  <p class="email">y.niessen@vistacollege.nl</p>
+                  <p class="title">Docent</p>
+                  <p>
+                    Vakken:
+                    <li>Linux</li>
+                    <li>Server</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Erika Vallinga</h4>
+                  <p class="email">e.aalders@vistacollege.nl</p>
+                  <p class="title">Docent - Stagecoördinator</p>
+                  <p>
+                    Vakken:
+                    <li>Rekenen</li>
+                    <li>Keuzedeel ondernemend gedrag</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">Eva Wagemans</h4>
+                  <p class="email">e.wagemans@vistacollege.nl</p>
+                  <p class="title">Docent - Teamafgevaardigde - Hoofd AVO curriculum</p>
+                  <p>
+                    Vakken:
+                    <li>Nederlands</li>
+                    <li>Engels</li>
+                    <li>Burgerschap</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card">
+                <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                <div class="container">
+                  <h4 class="name">René van der Zander</h4>
+                  <p class="email">r.vanderzander@vistacollege.nl</p>
+                  <p class="title">Docent - Teamafgevaardigde</p>
+                  <p>
+                    Vakken:
+                    <li>Rekenen</li>
+                    <li>Keuzedeel</li>
+                    <li>Software</li>
+                  </p>                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medewerkers -->
+          <h1 class="medewerkers"><a class="target" name="medewerkers" style="pointer-events: none;">Medewerkers</a></h1>
+            <div class="row">
+              <div class="column">
+                <div class="card">
+                  <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                  <div class="container">
+                    <h4 class="name">Mark van den Bosch</h4>
+                    <p class="email">m.vandenbosch@vistacollege.nl</p>
+                    <p class="title">Onderwijsmanager</br>Opleidingsmanager</p>                  
+                  </div>
+                </div>
+              </div>
+
+              <div class="column">
+                <div class="card">
+                  <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                  <div class="container">
+                    <h4 class="name">Nicole Dubuisson</h4>
+                    <p class="email">n.dubuisson@vistacollege.nl</p>
+                    <p class="title">Secretaresse van opleidingsmanager</p>                  
+                  </div>
+                </div>
+              </div>
+
+              <div class="column">
+                <div class="card">
+                  <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                  <div class="container">
+                    <h4 class="name">Arend Lunenborg</h4>
+                    <p class="email">a.lunenborg@vistacollege.nl</p>
+                    <p class="title">Interne begeleider</p>                  
+                  </div>
+                </div>
+              </div>
+
+              <div class="column">
+                <div class="card">
+                  <img src="../IMAGES/istockphoto.jpg" style="width:100%">
+                  <div class="container">
+                    <h4 class="name">John Munnichs</h4>
+                    <p class="email">j.munnichs@vistacollege.nl</p>
+                    <p class="title">Studieondersteuner</p>                  
+                  </div>
+                </div>
+              </div>
+            </div>
 
           <!-- Plattegrond -->
-          <h1 class="plattegrond"><a class="target" name="plattegrond" style="pointer-events: none;">Plattegrond</a></h1>
+          <!--<h1 class="plattegrond"><a class="target" name="plattegrond" style="pointer-events: none;">Plattegrond</a></h1>-->
 
           <!-- Huisregels -->
           <h1 class="huisregels"><a class="target" name="huisregels" style="pointer-events: none;">Huisregels</a></h1>
+          <center><embed class="pdf" src="../Documenten/Studentenstatuut-VISTA-college.pdf" width="99%" height="800px"/></center>
 
           <!-- Contact -->
-          <h1 class="contact"><a class="target" name="contact" style="pointer-events: none;">Contact</a></h1>
+          <div>
+            <h1 class="contact"><a class="target" name="contact" style="pointer-events: none;">Contact & locatie</a></h1>
+            <h6 class="locatie">Heerlen</h6>
+                <p class="locatie">
+                  Valkenburgerweg 148</br>
+                  6419AW Heerlen</br>
+                  Telefoon: 088 - 001 50 00</br>
+                  E-mailadres: info@vistacollege.nl</br>
+                </p>  
+            <iframe style="width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7120.34798850613!2d5.95707769862366!3d50.87887774976183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0bdc7aa05ae5b%3A0xb9026263fa8e0a1f!2sVISTA%20college!5e0!3m2!1snl!2snl!4v1639126969258!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                
+          </div>
+          
         </div>
       </div>          
-        
-              
+      
+      
+      <script src="../JS/jquery.min.js"></script>
+      <script src="../JS/script.js"></script>
 
     </body>
 </html>
