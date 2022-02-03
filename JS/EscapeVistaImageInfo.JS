@@ -661,12 +661,12 @@ var ImageDataList = [
         ImageID: "Kluisjes Etage 2",
         //x Coordinates
         Arrow1CoordsX: "360",
-        Arrow2CoordsX: "-50",
+        Arrow2CoordsX: "350",
         Arrow3CoordsX: "-50",
         Arrow4CoordsX: "-50",
         //y coordinates
         Arrow1CoordsY: "500",
-        Arrow2CoordsY: "-50",
+        Arrow2CoordsY: "80",
         Arrow3CoordsY: "-50",
         Arrow4CoordsY: "-50",
         //Arrow Direction
@@ -676,11 +676,12 @@ var ImageDataList = [
         Arrow4Direction: "Down",
         //Destinations
         Destination1: "B Toren Etage 2",
-        Destination2: null,
+       Destination2: "Hoofdingang",
         Destination3: null,
         Destination4: null,
         //tasks
         Task: null,
+     
     }
 ]
 //Tasklist explanation
