@@ -682,8 +682,21 @@ var ImageDataList = [
         //tasks
         Task: null,
      
+    },
+    //
+    {
+        //Id
+        ImageID: "VistaCollege",
+        //x Coordinates
+    .innerHTML= "<p id='Home' onclick='GoBack()'> go back</p>"; 
+     
     }
+    //
 ]
+
+function GoBack() {
+    document.getElementById("Home").innerHTML=<a href="HTML\InformatiePagina.html"></a>";
+  }
 //Tasklist explanation
 //TaskID: ID of the task
 //TaskQuestion: The question given to the student, if the destination is simply a location, it's just text
