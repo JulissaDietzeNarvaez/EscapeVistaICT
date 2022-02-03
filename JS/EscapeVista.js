@@ -101,7 +101,7 @@ function LocationVisit(LocationID){
             document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 10;
             //set TaskCompleted to true so it's information won't show up a second time when visited.
             LocationVari.TaskCompleted = true;
-            Locations(25);
+            PointUpdate(25);
         }
     }
 }
@@ -111,31 +111,40 @@ function AnswerTask(InputTask, TrueAnswer){
     var AnswerGiven = document.querySelector('input[name="TaskQuestion"]:checked').value;
     //place the task info in a variable for easy access
     var TaskVari = (TaskList.find(i=>i.TaskID == InputTask));
+    //this is to prevent the user from answering again while the task is still on screen
     if(TaskVari.TaskCompleted == false){
-        //check de gekozen waarde tegenover de correcte waarde
+        //Check the chosen answer against the correct answer
         if (AnswerGiven == TrueAnswer) {
-            //als de waarde overeen komen, zet de verkregen punten naar 50
+            //if the values are equal, give 50 points to the user
             PointList[InputTask]= 50;
             //update the progress bar
             document.getElementById('VistaScore').value = document.getElementById('VistaScore').value + 10;
-            Locations(50);
+            PointUpdate(50);
         }else{
-            //als de waardes niet overeen komen, zet de verkregen punten naar 0. dit voorkomt ook dat gebruiker ieder gegeven antwoord kunnen invoeren en de punten alsnog krijgen ondanks een fout antwoord 
+            //If the Values are not equal, set obtained points to 0. this prevents that the user can insert any answer and still get the points through brute force. 
             PointList[InputTask]=0;
-            Locations(0);
+            PointUpdate(0);
         }
+    //set task to completed so it cannot be performed again
     TaskVari.TaskCompleted = true;
     } 
 }
-// function to view the score of the Locations
-function Locations(Points){
+// function to view the achieved score 
+function PointUpdate(Points){
     var PointOverview = "";
+    //calculate total points
     TotalScore = TotalScore + Points;
+    //walk through the point lists and show the points to the user
+    //points from tasks
     for(var k in PointList){
+        //add the points to the string
         PointOverview = PointOverview.concat("<br>Points van "+k+": "+PointList[k]+"<br>");
     }
+    //points from visiting location
     for(var k in LocationList){
+        //add the points to the string
         PointOverview = PointOverview.concat("<br>Points van "+k+": "+LocationList[k]+"<br>");
-        document.getElementById("score").innerHTML = PointOverview + "<br> Je Totale Score is: "+TotalScore;   
     }
+    //write the points to the screen to show the user
+        document.getElementById("score").innerHTML = PointOverview + "<br> Je Totale Score is: "+TotalScore;   
 }
