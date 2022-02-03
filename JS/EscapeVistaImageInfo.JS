@@ -676,7 +676,7 @@ var ImageDataList = [
         Arrow4Direction: "Down",
         //Destinations
         Destination1: "B Toren Etage 2",
-       Destination2: "Hoofdingang",
+        Destination2: "VistaCollege",
         Destination3: null,
         Destination4: null,
         //tasks
