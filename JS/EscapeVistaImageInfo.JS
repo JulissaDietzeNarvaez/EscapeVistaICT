@@ -688,15 +688,15 @@ var ImageDataList = [
         //Id
         ImageID: "VistaCollege",
         //x Coordinates
-    .innerHTML= "<p id='Home' onclick='GoBack()'> go back</p>"; 
+    innerHTML= <image href="../IMAGES/VistaArrow.png" x="930" y="276" onclick="location.href='EscapeVista.html';"/>
      
     }
     //
 ]
 
 function GoBack() {
-    document.getElementById("Home").innerHTML=<a href="HTML\InformatiePagina.html"></a>";
-  }
+    document.getElementById("Home").innerHTML=<a href="HTML\InformatiePagina.html"></a>;
+  
 //Tasklist explanation
 //TaskID: ID of the task
 //TaskQuestion: The question given to the student, if the destination is simply a location, it's just text
@@ -808,4 +808,4 @@ var TaskList = [
         TaskCompleted: false,
         TaskHint: null,
     }
-]
+]}
