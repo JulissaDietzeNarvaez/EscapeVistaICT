@@ -48,7 +48,10 @@ function TravelPath(Destination){
             let LandingsPage = false;
             if(i.ImageID ==="VistaCollege"){
             LandingsPage= true;
-                
+            document.getElementById("landingpage_button").addEventListener("click", () => {
+                window.location.href="LandingsPagina.html"
+
+            })
         }else{
 
         }
@@ -158,6 +161,6 @@ function PointUpdate(Points){
 //Go back to LandingsPage
 function GoHome(Home){ 
     //simutale a mouse click
-    window. location.href="HTML\LandingsPagina.html";
+    window.location.href="HTML\LandingsPagina.html";
 
 }
