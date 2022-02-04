@@ -688,7 +688,7 @@ var ImageDataList = [
         //Id
         ImageID: "VistaCollege",
         //x Coordinates
-    innerHTML= <image href="../IMAGES/VistaArrow.png" x="930" y="276" onclick="location.href='EscapeVista.html';"/>
+   // innerHTML= <image href="../IMAGES/VistaArrow.png" x="930" y="276" onclick="location.href='EscapeVista.html';"/>
      
     }
     //
