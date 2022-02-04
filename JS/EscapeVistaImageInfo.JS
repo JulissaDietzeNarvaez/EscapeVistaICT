@@ -661,7 +661,7 @@ var ImageDataList = [
         ImageID: "Kluisjes Etage 2",
         //x Coordinates
         Arrow1CoordsX: "360",
-        Arrow2CoordsX: "50",
+        Arrow2CoordsX: "350",
         Arrow3CoordsX: "-50",
         Arrow4CoordsX: "-50",
         //y coordinates
