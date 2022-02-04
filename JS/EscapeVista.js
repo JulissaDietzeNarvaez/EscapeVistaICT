@@ -45,6 +45,13 @@ function TravelPath(Destination){
                 //If the destination has no task, set the style of the taskholder div to none, so it is not continously displayed
                 document.getElementById("Taskholder").style.display=("none");
             }
+            let LandingsPage = false;
+            if(i.ImageID ==="VistaCollege"){
+            LandingsPage= true;
+                
+        }else{
+
+        }
         } 
     })
 }
@@ -147,4 +154,10 @@ function PointUpdate(Points){
     }
     //write the points to the screen to show the user
         document.getElementById("score").innerHTML = PointOverview + "<br> Je Totale Score is: "+TotalScore;   
+}
+//Go back to LandingsPage
+function GoHome(Home){ 
+    //simutale a mouse click
+    window. location.href="HTML\LandingsPagina.html";
+
 }

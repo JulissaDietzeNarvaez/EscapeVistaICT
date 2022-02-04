@@ -661,12 +661,12 @@ var ImageDataList = [
         ImageID: "Kluisjes Etage 2",
         //x Coordinates
         Arrow1CoordsX: "360",
-        Arrow2CoordsX: "350",
+        Arrow2CoordsX: "50",
         Arrow3CoordsX: "-50",
         Arrow4CoordsX: "-50",
         //y coordinates
         Arrow1CoordsY: "500",
-        Arrow2CoordsY: "80",
+        Arrow2CoordsY: "50",
         Arrow3CoordsY: "-50",
         Arrow4CoordsY: "-50",
         //Arrow Direction
@@ -681,22 +681,35 @@ var ImageDataList = [
         Destination4: null,
         //tasks
         Task: null,
-     
     },
-    //
     {
         //Id
         ImageID: "VistaCollege",
         //x Coordinates
-   // innerHTML= <image href="../IMAGES/VistaArrow.png" x="930" y="276" onclick="location.href='EscapeVista.html';"/>
-     
+        Arrow1CoordsX: "360",
+        Arrow2CoordsX: "-50",
+        Arrow3CoordsX: "-50",
+        Arrow4CoordsX: "-50",
+        //y coordinates
+        Arrow1CoordsY: "500",
+        Arrow2CoordsY: "-50",
+        Arrow3CoordsY: "-50",
+        Arrow4CoordsY: "-50",
+        //Arrow Direction
+        Arrow1Direction: "Down",
+        Arrow2Direction: "Down",
+        Arrow3Direction: "Down",
+        Arrow4Direction: "Down",
+        //Destinations
+        Destination1: "B Toren Etage 2",
+        Destination2: null,
+        Destination3: null,
+        Destination4: null,
+        //tasks
+        Task: null,
+       
     }
-    //
 ]
-
-function GoBack() {
-    document.getElementById("Home").innerHTML=<a href="HTML\InformatiePagina.html"></a>;
-  
 //Tasklist explanation
 //TaskID: ID of the task
 //TaskQuestion: The question given to the student, if the destination is simply a location, it's just text
@@ -718,7 +731,7 @@ var TaskList = [
     },
     {
         TaskID: "Hard- en Software",
-        TaskQuestion: "<h1>Hard- en Software</h1>Wat is het verschil tussen Hardware en Software?",
+        TaskQuestion: "<h1>Hard- en Software</h1><br><br>Wat is het verschil tussen Hardware en Software?",
         TaskAnswers: {
             A: "Hardware is gereedschap en Software is windows OS",
             B: "Hardware is de CPU, GPU, en processor van de PC en Software is het toetsenbord, beeldscherm en de luidsprekers van de PC.",
@@ -808,4 +821,4 @@ var TaskList = [
         TaskCompleted: false,
         TaskHint: null,
     }
-]}
+]
