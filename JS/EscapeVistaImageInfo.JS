@@ -363,7 +363,7 @@ var ImageDataList = [
         Arrow3Direction: "Down",
         Arrow4Direction: "Down",
         //Destinations
-        Destination1: "B Toren Etage 1",
+        Destination1: "B-toren_etage_1",
         Destination2: "Onder aan Trap B Toren",
         Destination3: "Kantine",
         Destination4: null,
@@ -450,7 +450,7 @@ var ImageDataList = [
     },
     {
         //Id
-        ImageID: "B Toren Etage 1",
+        ImageID: "B-toren_etage_1",
         //x Coordinates
         Arrow1CoordsX: "725",
         Arrow2CoordsX: "260",
@@ -520,7 +520,7 @@ var ImageDataList = [
         Arrow4Direction: "Down",
         //Destinations
         Destination1: "Docenten Kamer",
-        Destination2: "B Toren Etage 1",
+        Destination2: "B-toren_etage_1",
         Destination3: null,
         Destination4: null,
         //tasks
@@ -573,7 +573,7 @@ var ImageDataList = [
         //Destinations
         Destination1: "Gang Etage 2",
         Destination2: "Kluisjes Etage 2",
-        Destination3: "B Toren Etage 1",
+        Destination3: "B-toren_etage_1",
         Destination4: "Lokaal B2.01",
         //tasks
         Task: null,
