@@ -164,3 +164,6 @@ function GoHome(Home){
     window.location.href="HTML\LandingsPagina.html";
 
 }
+function cheater(block) {
+oncontextmenu="() => false;"; onkeydown="() => false;"; onmousedown="() => false;" 
+}
