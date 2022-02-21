@@ -493,7 +493,7 @@ var ImageDataList = [
         Arrow3Direction: "Down",
         Arrow4Direction: "Down",
         //Destinations
-        Destination1: "B Toren Etage 1",
+        Destination1: "B-toren_etage_1",
         Destination2: null,
         Destination3: null,
         Destination4: null,
